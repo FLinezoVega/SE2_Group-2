@@ -3,3 +3,4 @@ Scholar Station
 
 Jimmy - Tester
 Brandon - Developer/Gnome
+Franklin - ???(test)
