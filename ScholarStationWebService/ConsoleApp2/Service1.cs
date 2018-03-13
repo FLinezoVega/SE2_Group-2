@@ -10,7 +10,74 @@
 
 namespace ConsoleApp2
 {
+    using System.Runtime.Serialization;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/DataClasses")]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+        
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string BioField;
+        
+        private string UniversityField;
+        
+        private string UserIDField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Bio
+        {
+            get
+            {
+                return this.BioField;
+            }
+            set
+            {
+                this.BioField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string University
+        {
+            get
+            {
+                return this.UniversityField;
+            }
+            set
+            {
+                this.UniversityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserID
+        {
+            get
+            {
+                return this.UserIDField;
+            }
+            set
+            {
+                this.UserIDField = value;
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ConsoleApp2.IService1")]
@@ -28,6 +95,12 @@ namespace ConsoleApp2
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
         System.Threading.Tasks.Task<string> getUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getTestUser", ReplyAction="http://tempuri.org/IService1/getTestUserResponse")]
+        ConsoleApp2.User getTestUser(string name, string bio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getTestUser", ReplyAction="http://tempuri.org/IService1/getTestUserResponse")]
+        System.Threading.Tasks.Task<ConsoleApp2.User> getTestUserAsync(string name, string bio);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -82,6 +155,16 @@ namespace ConsoleApp2
         public System.Threading.Tasks.Task<string> getUsersAsync()
         {
             return base.Channel.getUsersAsync();
+        }
+        
+        public ConsoleApp2.User getTestUser(string name, string bio)
+        {
+            return base.Channel.getTestUser(name, bio);
+        }
+        
+        public System.Threading.Tasks.Task<ConsoleApp2.User> getTestUserAsync(string name, string bio)
+        {
+            return base.Channel.getTestUserAsync(name, bio);
         }
     }
 }

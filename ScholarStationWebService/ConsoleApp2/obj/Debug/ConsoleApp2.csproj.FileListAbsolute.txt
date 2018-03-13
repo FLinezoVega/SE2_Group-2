@@ -19,3 +19,5 @@ C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2\obj\Debug\ConsoleApp2.exe
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2\bin\Debug\DataClasses.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ConsoleApp2\bin\Debug\DataClasses.pdb

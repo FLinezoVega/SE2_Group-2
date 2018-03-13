@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using System.Data.SqlClient;
+using DataClasses;
 
 namespace WCFServiceWebRole1
 {
@@ -41,13 +42,13 @@ namespace WCFServiceWebRole1
 
                 string query = "SELECT * FROM TestUser";
 
-                using (SqlConnection connection = new SqlConnection(builder.ConnectionString)) 
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
 
-                    
 
-                    
+
+
                     SqlCommand cmd = new SqlCommand(query, connection);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -55,7 +56,7 @@ namespace WCFServiceWebRole1
                         output.Append(reader[0]);
                         output.Append(reader[1]);
                     }
-                    
+
                 }
             }
             catch (Exception e)
@@ -65,6 +66,15 @@ namespace WCFServiceWebRole1
             return output.ToString();
         }
 
+
+        public User getTestUser(string name, string bio)
+        {
+            User temp = new User();
+            temp.Bio = bio;
+            temp.UserID = name;
+
+            return temp;
+        }
         
     }
 }

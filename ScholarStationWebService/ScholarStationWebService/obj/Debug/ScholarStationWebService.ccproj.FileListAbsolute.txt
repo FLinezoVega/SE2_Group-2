@@ -116,3 +116,5 @@ C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStat
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\zh-Hant\Microsoft.Data.OData.resources.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.pdb

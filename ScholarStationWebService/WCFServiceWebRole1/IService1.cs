@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using DataClasses;
 
 namespace WCFServiceWebRole1
 {
@@ -18,6 +19,9 @@ namespace WCFServiceWebRole1
 
         [OperationContract]
         string getUsers();
+
+        [OperationContract]
+        User getTestUser(string name, string bio);
 
         // TODO: Add your service operations here
     }

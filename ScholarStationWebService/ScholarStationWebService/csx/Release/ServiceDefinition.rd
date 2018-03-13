@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScholarStationWebService" generation="1" functional="0" release="0" Id="b0cca32b-83aa-491a-ae57-22ef1370ef47" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScholarStationWebService" generation="1" functional="0" release="0" Id="f7815212-d368-45c2-bbf5-9164044c132e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="ScholarStationWebServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="WCFServiceWebRole1" generation="1" functional="0" release="0" software="C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\csx\Release\roles\WCFServiceWebRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="WCFServiceWebRole1" generation="1" functional="0" release="0" software="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\csx\Release\roles\WCFServiceWebRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="6611340a-c11b-4aac-b017-d2aa1296905c" ref="Microsoft.RedDog.Contract\ServiceContract\ScholarStationWebServiceContract@ServiceDefinition">
+    <implementation Id="cbbecbd1-7f6a-4d3c-9a4b-9a453c394c7c" ref="Microsoft.RedDog.Contract\ServiceContract\ScholarStationWebServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="add6ab84-96e1-4a31-b178-298f6ec95dcd" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="fcc6ad8e-8345-433e-a983-037202d768b8" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/ScholarStationWebService/ScholarStationWebServiceGroup/WCFServiceWebRole1:Endpoint1" />
           </inPort>

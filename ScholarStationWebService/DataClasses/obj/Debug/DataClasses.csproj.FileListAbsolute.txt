@@ -1,0 +1,6 @@
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\bin\Debug\DataClasses.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\bin\Debug\DataClasses.pdb
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Debug\DataClasses.csprojResolveAssemblyReference.cache
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Debug\DataClasses.csproj.CoreCompileInputs.cache
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Debug\DataClasses.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Debug\DataClasses.pdb

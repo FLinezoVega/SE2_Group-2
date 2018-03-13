@@ -15,14 +15,14 @@
     <Property name="SetConfiguration" value="Configuration=Release" />
     <Property name="SetPlatform" value="Platform=AnyCPU" />
     <Property name="RoleTargetFramework" value="v4.5.1" />
-    <Property name="OutputDir" value="C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\" />
+    <Property name="OutputDir" value="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\" />
     <Property name="EntryPoint" value="WCFServiceWebRole1.dll" />
-    <Property name="SourceDir" value="C:\Users\bpoin\source\repos\ScholarStationWebService\WCFServiceWebRole1\" />
-    <Property name="SitePhysicalPath" value="C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\" />
+    <Property name="SourceDir" value="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\WCFServiceWebRole1\" />
+    <Property name="SitePhysicalPath" value="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\" />
     <Property name="TargetRuntimeVersion" value="v4.0" />
   </Properties>
   <Sites>
-    <Site name="Web" physicalDirectory="C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\">
+    <Site name="Web" physicalDirectory="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Release\WCFServiceWebRole1\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>

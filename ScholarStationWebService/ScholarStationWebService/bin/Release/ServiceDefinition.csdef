@@ -25,7 +25,7 @@
     </Endpoints>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\rcf\Release\WCFServiceWebRole1Content\" />
+        <SourceDirectory path="C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\rcf\Release\WCFServiceWebRole1Content\" />
       </Content>
     </Contents>
   </WebRole>

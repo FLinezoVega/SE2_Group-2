@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp2.ServiceReference1;
+using DataClasses;
 
 namespace ConsoleApp2
 {
@@ -19,8 +20,18 @@ namespace ConsoleApp2
 
             string y = a.getUsers();
             Console.WriteLine(y);
-            Console.ReadKey();
 
+
+            //testing to make sure user is properly referenced and whatnot
+            //User user = new User();
+            //user.Bio = "This is a bio";
+            // Console.WriteLine(user.Bio);
+
+            User user = a.getTestUser("Pauly", "adfadfadf");
+            Console.WriteLine(user.Bio);
+
+
+            Console.ReadKey();
             a.Close();
         }
     }
