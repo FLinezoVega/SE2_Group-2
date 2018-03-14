@@ -25,6 +25,12 @@
   <wsdl:message name="IService1_getTestUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:getTestUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_createNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:createNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_createNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createNewUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="getTestUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getTestUser" message="tns:IService1_getTestUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getTestUserResponse" message="tns:IService1_getTestUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/createNewUser" message="tns:IService1_createNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/createNewUserResponse" message="tns:IService1_createNewUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="getTestUser">
       <soap:operation soapAction="http://tempuri.org/IService1/getTestUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/createNewUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

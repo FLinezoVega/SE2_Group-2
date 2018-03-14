@@ -23,6 +23,7 @@ namespace WCFServiceWebRole1
         [OperationContract]
         User getTestUser(string name, string bio);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        bool createNewUser(User newUser);
     }
 }

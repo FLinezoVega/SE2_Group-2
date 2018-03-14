@@ -30,7 +30,7 @@ namespace WCFServiceWebRole1
         public string getUsers()
         {
 
-            StringBuilder output = new StringBuilder();
+            StringBuilder output = new StringBuilder();//delet this
             try
             {
                 //return "got here";
@@ -45,10 +45,6 @@ namespace WCFServiceWebRole1
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
-
-
-
-
                     SqlCommand cmd = new SqlCommand(query, connection);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -75,6 +71,35 @@ namespace WCFServiceWebRole1
 
             return temp;
         }
-        
+
+
+        public bool createNewUser(User newUser)
+        {
+            try
+            {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "se2group2.database.windows.net";
+                builder.UserID = "ScholarStationAdmin";
+                builder.Password = "scholarGroup2";
+                builder.InitialCatalog = "SoftwareEngineeringGroup2";
+
+                using (SqlConnection con = new SqlConnection(builder.ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand newUserCmd = new SqlCommand("Insert into Customer(userName, bio, university) values(@userName, @bio, @university)", con);
+                    newUserCmd.Parameters.AddWithValue("@userName", newUser.UserID);
+                    newUserCmd.Parameters.AddWithValue("@bio", newUser.Bio);
+                    newUserCmd.Parameters.AddWithValue("@university", newUser.University);
+                    newUserCmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+            return false;
+        }
     }
 }

@@ -101,6 +101,12 @@ namespace ConsoleApp2
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getTestUser", ReplyAction="http://tempuri.org/IService1/getTestUserResponse")]
         System.Threading.Tasks.Task<ConsoleApp2.User> getTestUserAsync(string name, string bio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewUser", ReplyAction="http://tempuri.org/IService1/createNewUserResponse")]
+        bool createNewUser(ConsoleApp2.User newUser);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewUser", ReplyAction="http://tempuri.org/IService1/createNewUserResponse")]
+        System.Threading.Tasks.Task<bool> createNewUserAsync(ConsoleApp2.User newUser);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -165,6 +171,16 @@ namespace ConsoleApp2
         public System.Threading.Tasks.Task<ConsoleApp2.User> getTestUserAsync(string name, string bio)
         {
             return base.Channel.getTestUserAsync(name, bio);
+        }
+        
+        public bool createNewUser(ConsoleApp2.User newUser)
+        {
+            return base.Channel.createNewUser(newUser);
+        }
+        
+        public System.Threading.Tasks.Task<bool> createNewUserAsync(ConsoleApp2.User newUser)
+        {
+            return base.Channel.createNewUserAsync(newUser);
         }
     }
 }

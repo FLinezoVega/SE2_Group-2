@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScholarStationWebService" generation="1" functional="0" release="0" Id="f7815212-d368-45c2-bbf5-9164044c132e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScholarStationWebService" generation="1" functional="0" release="0" Id="b23a0389-8f50-4eb6-bc2a-ea373776e3e0" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="ScholarStationWebServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="cbbecbd1-7f6a-4d3c-9a4b-9a453c394c7c" ref="Microsoft.RedDog.Contract\ServiceContract\ScholarStationWebServiceContract@ServiceDefinition">
+    <implementation Id="fb076107-0300-4561-b9e7-af9cadb6b011" ref="Microsoft.RedDog.Contract\ServiceContract\ScholarStationWebServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="fcc6ad8e-8345-433e-a983-037202d768b8" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="88246ffd-4cb0-4731-9055-7845ed600709" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/ScholarStationWebService/ScholarStationWebServiceGroup/WCFServiceWebRole1:Endpoint1" />
           </inPort>

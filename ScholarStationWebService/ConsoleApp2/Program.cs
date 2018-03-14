@@ -29,6 +29,17 @@ namespace ConsoleApp2
 
             User user = a.getTestUser("Pauly", "adfadfadf");
             Console.WriteLine(user.Bio);
+            user.University = "University of West Florida";
+            user.Bio = "I am a science major";
+            user.UserID = "Tyler";
+
+            if (a.createNewUser(user))
+            {
+                Console.WriteLine("Created the user");
+            }
+            else {
+                Console.WriteLine("Did not create the user");
+            }
 
 
             Console.ReadKey();
