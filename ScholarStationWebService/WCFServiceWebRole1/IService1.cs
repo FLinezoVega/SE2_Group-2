@@ -15,15 +15,12 @@ namespace WCFServiceWebRole1
     {
 
         [OperationContract]
-        string GetData(string value);
-
-        [OperationContract]
         string getUsers();
 
         [OperationContract]
-        User getTestUser(string name, string bio);
-
-        [OperationContract]
         bool createNewUser(User newUser);
+
+       [OperationContract]
+       bool updateUser(User user);
     }
 }

@@ -14,24 +14,12 @@ namespace ConsoleApp2
         {
             Service1Client a = new Service1Client();
 
-            string x = a.GetData("This is a test string to test reversal service. This is a test.");
-            Console.WriteLine(x);
-            
 
-            string y = a.getUsers();
-            Console.WriteLine(y);
-
-
-            //testing to make sure user is properly referenced and whatnot
-            //User user = new User();
-            //user.Bio = "This is a bio";
-            // Console.WriteLine(user.Bio);
-
-            User user = a.getTestUser("Pauly", "adfadfadf");
+            User user = new User();
             Console.WriteLine(user.Bio);
             user.University = "University of West Florida";
-            user.Bio = "I am a science major";
-            user.UserID = "Tyler";
+            user.Bio = "I am a poliSci major";
+            user.UserID = "Brad";
 
             if (a.createNewUser(user))
             {
@@ -41,6 +29,17 @@ namespace ConsoleApp2
                 Console.WriteLine("Did not create the user");
             }
 
+            user.Bio = "I like trains";
+
+
+            if (a.updateUser(user))
+            {
+                Console.WriteLine("Updated the user");
+            }
+           // else
+           // {
+           //     Console.WriteLine("Did not update the user");
+           // }
 
             Console.ReadKey();
             a.Close();

@@ -7,23 +7,11 @@
       <xsd:import schemaLocation="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataClasses" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_getUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:getUsers" />
   </wsdl:message>
   <wsdl:message name="IService1_getUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:getUsersResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getTestUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:getTestUser" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getTestUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getTestUserResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_createNewUser_InputMessage">
     <wsdl:part name="parameters" element="tns:createNewUser" />
@@ -31,35 +19,28 @@
   <wsdl:message name="IService1_createNewUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:createNewUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="getUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsers" message="tns:IService1_getUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersResponse" message="tns:IService1_getUsers_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="getTestUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getTestUser" message="tns:IService1_getTestUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getTestUserResponse" message="tns:IService1_getTestUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="createNewUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/createNewUser" message="tns:IService1_createNewUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/createNewUserResponse" message="tns:IService1_createNewUser_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateUser" message="tns:IService1_updateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateUserResponse" message="tns:IService1_updateUser_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="getUsers">
       <soap:operation soapAction="http://tempuri.org/IService1/getUsers" style="document" />
       <wsdl:input>
@@ -69,8 +50,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getTestUser">
-      <soap:operation soapAction="http://tempuri.org/IService1/getTestUser" style="document" />
+    <wsdl:operation name="createNewUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/createNewUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -78,8 +59,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="createNewUser">
-      <soap:operation soapAction="http://tempuri.org/IService1/createNewUser" style="document" />
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

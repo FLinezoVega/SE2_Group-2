@@ -14,18 +14,6 @@ namespace WCFServiceWebRole1
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(string value)
-        {
-            string output = "aaa";
-
-            for (int i = value.Length - 1; i >= 0; i--)
-            {
-                output += value[i];
-            }
-
-            return output;
-        }
-
 
         public string getUsers()
         {
@@ -62,17 +50,6 @@ namespace WCFServiceWebRole1
             return output.ToString();
         }
 
-
-        public User getTestUser(string name, string bio)
-        {
-            User temp = new User();
-            temp.Bio = bio;
-            temp.UserID = name;
-
-            return temp;
-        }
-
-
         public bool createNewUser(User newUser)
         {
             try
@@ -93,13 +70,41 @@ namespace WCFServiceWebRole1
                     newUserCmd.ExecuteNonQuery();
                 }
 
+                return true;
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e.ToString());
+                return false;
+            }
+        }
+        
+        public bool updateUser(User user)
+        {
+            try
+            {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "se2group2.database.windows.net";
+                builder.UserID = "ScholarStationAdmin";
+                builder.Password = "scholarGroup2";
+                builder.InitialCatalog = "SoftwareEngineeringGroup2";
+
+                using (SqlConnection con = new SqlConnection(builder.ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand newUserCmd = new SqlCommand("Update Customer SET bio = @bio, university = @university WHERE userName = @userName", con);
+                    newUserCmd.Parameters.AddWithValue("@userName", user.UserID);
+                    newUserCmd.Parameters.AddWithValue("@bio", user.Bio);
+                    newUserCmd.Parameters.AddWithValue("@university", user.University);
+                    newUserCmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch (SqlException e)
+            {
+                return false;
             }
 
-            return false;
         }
+        
     }
 }

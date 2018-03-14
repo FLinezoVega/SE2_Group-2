@@ -15,29 +15,23 @@ namespace ConsoleApp2.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(string value);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
         string getUsers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
         System.Threading.Tasks.Task<string> getUsersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getTestUser", ReplyAction="http://tempuri.org/IService1/getTestUserResponse")]
-        DataClasses.User getTestUser(string name, string bio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getTestUser", ReplyAction="http://tempuri.org/IService1/getTestUserResponse")]
-        System.Threading.Tasks.Task<DataClasses.User> getTestUserAsync(string name, string bio);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewUser", ReplyAction="http://tempuri.org/IService1/createNewUserResponse")]
         bool createNewUser(DataClasses.User newUser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewUser", ReplyAction="http://tempuri.org/IService1/createNewUserResponse")]
         System.Threading.Tasks.Task<bool> createNewUserAsync(DataClasses.User newUser);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateUser", ReplyAction="http://tempuri.org/IService1/updateUserResponse")]
+        bool updateUser(DataClasses.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateUser", ReplyAction="http://tempuri.org/IService1/updateUserResponse")]
+        System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,14 +61,6 @@ namespace ConsoleApp2.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(string value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(string value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
         public string getUsers() {
             return base.Channel.getUsers();
         }
@@ -83,20 +69,20 @@ namespace ConsoleApp2.ServiceReference1 {
             return base.Channel.getUsersAsync();
         }
         
-        public DataClasses.User getTestUser(string name, string bio) {
-            return base.Channel.getTestUser(name, bio);
-        }
-        
-        public System.Threading.Tasks.Task<DataClasses.User> getTestUserAsync(string name, string bio) {
-            return base.Channel.getTestUserAsync(name, bio);
-        }
-        
         public bool createNewUser(DataClasses.User newUser) {
             return base.Channel.createNewUser(newUser);
         }
         
         public System.Threading.Tasks.Task<bool> createNewUserAsync(DataClasses.User newUser) {
             return base.Channel.createNewUserAsync(newUser);
+        }
+        
+        public bool updateUser(DataClasses.User user) {
+            return base.Channel.updateUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user) {
+            return base.Channel.updateUserAsync(user);
         }
     }
 }
