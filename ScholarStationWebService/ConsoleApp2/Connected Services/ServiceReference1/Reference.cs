@@ -32,6 +32,12 @@ namespace ConsoleApp2.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateUser", ReplyAction="http://tempuri.org/IService1/updateUserResponse")]
         System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/retrieveUser", ReplyAction="http://tempuri.org/IService1/retrieveUserResponse")]
+        DataClasses.User retrieveUser(string userName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/retrieveUser", ReplyAction="http://tempuri.org/IService1/retrieveUserResponse")]
+        System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace ConsoleApp2.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user) {
             return base.Channel.updateUserAsync(user);
+        }
+        
+        public DataClasses.User retrieveUser(string userName) {
+            return base.Channel.retrieveUser(userName);
+        }
+        
+        public System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName) {
+            return base.Channel.retrieveUserAsync(userName);
         }
     }
 }

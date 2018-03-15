@@ -59,10 +59,10 @@ C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\ob
 C:\Users\bpoin\source\repos\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\bin\Debug\ServiceConfiguration.cscfg
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\bin\Debug\ServiceDefinition.csdef
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.dll
+C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.pdb
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\MonAgentListener.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\WCFServiceWebRole1.dll
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\WCFServiceWebRole1.dll.config
 C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\WCFServiceWebRole1.pdb
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.dll
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\ScholarStationWebService\obj\Debug\WCFServiceWebRole1\bin\DataClasses.pdb

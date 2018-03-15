@@ -15,6 +15,20 @@ namespace WCFServiceWebRole1
     public class Service1 : IService1
     {
 
+        private string ConnectionString;
+
+        public Service1()
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "se2group2.database.windows.net";
+            builder.UserID = "ScholarStationAdmin";
+            builder.Password = "scholarGroup2";
+            builder.InitialCatalog = "SoftwareEngineeringGroup2";
+
+            ConnectionString = builder.ConnectionString;
+        }
+
+
         public string getUsers()
         {
 
@@ -28,7 +42,7 @@ namespace WCFServiceWebRole1
                 builder.Password = "scholarGroup2";
                 builder.InitialCatalog = "SoftwareEngineeringGroup2";
 
-                string query = "SELECT * FROM TestUser";
+                string query = "SELECT * FROM TestUser WHERE ";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -50,17 +64,40 @@ namespace WCFServiceWebRole1
             return output.ToString();
         }
 
+
+        public User retrieveUser(string userName)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university FROM Customer WHERE userName = @userName", con);//add more fields when increasing the number of colums
+                    cmd.Parameters.AddWithValue("@userName", userName);//user.UserID);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        User newUser = new User();
+                        reader.Read();
+                        newUser.UserID = reader.GetString(0);
+                        newUser.Bio = reader.GetString(1);
+                        newUser.University = reader.GetString(2);
+                        return newUser;
+                    }
+                }
+            }
+            catch (Exception e)//FIXME
+            {
+
+            }
+            return new User();
+        }
+
         public bool createNewUser(User newUser)
         {
             try
             {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "se2group2.database.windows.net";
-                builder.UserID = "ScholarStationAdmin";
-                builder.Password = "scholarGroup2";
-                builder.InitialCatalog = "SoftwareEngineeringGroup2";
-
-                using (SqlConnection con = new SqlConnection(builder.ConnectionString))
+                using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
                     SqlCommand newUserCmd = new SqlCommand("Insert into Customer(userName, bio, university) values(@userName, @bio, @university)", con);
@@ -69,11 +106,9 @@ namespace WCFServiceWebRole1
                     newUserCmd.Parameters.AddWithValue("@university", newUser.University);
                     newUserCmd.ExecuteNonQuery();
                 }
-
                 return true;
             }
-            catch (SqlException e)
-            {
+            catch (SqlException e){
                 return false;
             }
         }
@@ -82,13 +117,7 @@ namespace WCFServiceWebRole1
         {
             try
             {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "se2group2.database.windows.net";
-                builder.UserID = "ScholarStationAdmin";
-                builder.Password = "scholarGroup2";
-                builder.InitialCatalog = "SoftwareEngineeringGroup2";
-
-                using (SqlConnection con = new SqlConnection(builder.ConnectionString))
+                using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
                     SqlCommand newUserCmd = new SqlCommand("Update Customer SET bio = @bio, university = @university WHERE userName = @userName", con);
@@ -103,8 +132,6 @@ namespace WCFServiceWebRole1
             {
                 return false;
             }
-
-        }
-        
+        } 
     }
 }

@@ -8,77 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataClasses
-{
-    using System.Runtime.Serialization;
-    
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/DataClasses")]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-        
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string BioField;
-        
-        private string UniversityField;
-        
-        private string UserIDField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bio
-        {
-            get
-            {
-                return this.BioField;
-            }
-            set
-            {
-                this.BioField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string University
-        {
-            get
-            {
-                return this.UniversityField;
-            }
-            set
-            {
-                this.UniversityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserID
-        {
-            get
-            {
-                return this.UserIDField;
-            }
-            set
-            {
-                this.UserIDField = value;
-            }
-        }
-    }
-}
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -103,6 +32,12 @@ public interface IService1
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateUser", ReplyAction="http://tempuri.org/IService1/updateUserResponse")]
     System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/retrieveUser", ReplyAction="http://tempuri.org/IService1/retrieveUserResponse")]
+    DataClasses.User retrieveUser(string userName);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/retrieveUser", ReplyAction="http://tempuri.org/IService1/retrieveUserResponse")]
+    System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -167,5 +102,15 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     public System.Threading.Tasks.Task<bool> updateUserAsync(DataClasses.User user)
     {
         return base.Channel.updateUserAsync(user);
+    }
+    
+    public DataClasses.User retrieveUser(string userName)
+    {
+        return base.Channel.retrieveUser(userName);
+    }
+    
+    public System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName)
+    {
+        return base.Channel.retrieveUserAsync(userName);
     }
 }

@@ -22,5 +22,8 @@ namespace WCFServiceWebRole1
 
        [OperationContract]
        bool updateUser(User user);
+
+        [OperationContract]
+        User retrieveUser(string userName);
     }
 }

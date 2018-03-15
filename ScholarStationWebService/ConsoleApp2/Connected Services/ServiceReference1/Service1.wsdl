@@ -25,6 +25,12 @@
   <wsdl:message name="IService1_updateUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:updateUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_retrieveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="getUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsers" message="tns:IService1_getUsers_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="updateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateUser" message="tns:IService1_updateUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateUserResponse" message="tns:IService1_updateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveUser" message="tns:IService1_retrieveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveUserResponse" message="tns:IService1_retrieveUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="updateUser">
       <soap:operation soapAction="http://tempuri.org/IService1/updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
