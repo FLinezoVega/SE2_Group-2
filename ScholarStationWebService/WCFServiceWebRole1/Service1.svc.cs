@@ -155,7 +155,7 @@ namespace WCFServiceWebRole1
             }
         }
 
-        public List<User> getAllUsers()
+        public List<User> getAllUsers()//maybe add check for empty list inside try block
         {
             List<User> userList =  new List<User>();
             try
