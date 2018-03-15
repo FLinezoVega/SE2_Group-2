@@ -1,5 +1,0 @@
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\bin\Release\DataClasses.dll
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\bin\Release\DataClasses.pdb
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Release\DataClasses.csproj.CoreCompileInputs.cache
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Release\DataClasses.dll
-C:\Users\bpoin\Documents\GitHub\SE2_Group-2\ScholarStationWebService\DataClasses\obj\Release\DataClasses.pdb
