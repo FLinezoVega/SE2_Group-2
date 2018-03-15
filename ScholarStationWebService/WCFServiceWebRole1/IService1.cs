@@ -13,17 +13,16 @@ namespace WCFServiceWebRole1
     [ServiceContract]
     public interface IService1
     {
-
-        [OperationContract]
-        string getUsers();
-
         [OperationContract]
         bool createNewUser(User newUser);
 
-       [OperationContract]
-       bool updateUser(User user);
+        [OperationContract]
+        bool updateUser(User user);
 
         [OperationContract]
         User retrieveUser(string userName);
+
+        [OperationContract]
+        bool createNewListing(Listing newListing);
     }
 }

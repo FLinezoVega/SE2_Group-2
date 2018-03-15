@@ -7,12 +7,6 @@
       <xsd:import schemaLocation="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataClasses" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_getUsers_InputMessage">
-    <wsdl:part name="parameters" element="tns:getUsers" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getUsers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getUsersResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_createNewUser_InputMessage">
     <wsdl:part name="parameters" element="tns:createNewUser" />
   </wsdl:message>
@@ -31,11 +25,13 @@
   <wsdl:message name="IService1_retrieveUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:retrieveUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_createNewListing_InputMessage">
+    <wsdl:part name="parameters" element="tns:createNewListing" />
+  </wsdl:message>
+  <wsdl:message name="IService1_createNewListing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createNewListingResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="getUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsers" message="tns:IService1_getUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersResponse" message="tns:IService1_getUsers_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="createNewUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/createNewUser" message="tns:IService1_createNewUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/createNewUserResponse" message="tns:IService1_createNewUser_OutputMessage" />
@@ -48,18 +44,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveUser" message="tns:IService1_retrieveUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveUserResponse" message="tns:IService1_retrieveUser_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="createNewListing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/createNewListing" message="tns:IService1_createNewListing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/createNewListingResponse" message="tns:IService1_createNewListing_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="getUsers">
-      <soap:operation soapAction="http://tempuri.org/IService1/getUsers" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="createNewUser">
       <soap:operation soapAction="http://tempuri.org/IService1/createNewUser" style="document" />
       <wsdl:input>
@@ -80,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="retrieveUser">
       <soap:operation soapAction="http://tempuri.org/IService1/retrieveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewListing">
+      <soap:operation soapAction="http://tempuri.org/IService1/createNewListing" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -15,12 +15,6 @@
 public interface IService1
 {
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
-    string getUsers();
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
-    System.Threading.Tasks.Task<string> getUsersAsync();
-    
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewUser", ReplyAction="http://tempuri.org/IService1/createNewUserResponse")]
     bool createNewUser(DataClasses.User newUser);
     
@@ -38,6 +32,12 @@ public interface IService1
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/retrieveUser", ReplyAction="http://tempuri.org/IService1/retrieveUserResponse")]
     System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewListing", ReplyAction="http://tempuri.org/IService1/createNewListingResponse")]
+    bool createNewListing(DataClasses.Listing newListing);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewListing", ReplyAction="http://tempuri.org/IService1/createNewListingResponse")]
+    System.Threading.Tasks.Task<bool> createNewListingAsync(DataClasses.Listing newListing);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -74,16 +74,6 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     {
     }
     
-    public string getUsers()
-    {
-        return base.Channel.getUsers();
-    }
-    
-    public System.Threading.Tasks.Task<string> getUsersAsync()
-    {
-        return base.Channel.getUsersAsync();
-    }
-    
     public bool createNewUser(DataClasses.User newUser)
     {
         return base.Channel.createNewUser(newUser);
@@ -112,5 +102,15 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     public System.Threading.Tasks.Task<DataClasses.User> retrieveUserAsync(string userName)
     {
         return base.Channel.retrieveUserAsync(userName);
+    }
+    
+    public bool createNewListing(DataClasses.Listing newListing)
+    {
+        return base.Channel.createNewListing(newListing);
+    }
+    
+    public System.Threading.Tasks.Task<bool> createNewListingAsync(DataClasses.Listing newListing)
+    {
+        return base.Channel.createNewListingAsync(newListing);
     }
 }

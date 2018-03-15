@@ -15,6 +15,8 @@ namespace ConsoleApp2
 
             
             Service1Client a = new Service1Client();
+
+            /*
             User user = new User();
             //Console.WriteLine(user.Bio);
             user.University = "University of West Florida";
@@ -50,13 +52,16 @@ namespace ConsoleApp2
             Console.WriteLine("Bio: {0}    User: {1}    Uni: {2}", c.Bio, c.UserID, c.University);
             
             a.Close();
-
-
-           
-
+            */
             Listing lis = new Listing();
             lis.Author = "Ted";
-            Console.WriteLine("{0}, {1}", lis.isNull(), lis.Author);
+            lis.Body = "This is the body of the listing, can theoretically be very very long";
+            lis.Heading = "This is the Heading of the Listing. Think A Title";
+
+            if (a.createNewListing(lis))
+            {
+                Console.WriteLine("Created the Listing");
+            }
 
 
             Console.ReadKey();

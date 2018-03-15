@@ -8,4 +8,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Listing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Heading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListingID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Listing" nillable="true" type="tns:Listing" />
 </xs:schema>

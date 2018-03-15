@@ -24,7 +24,6 @@ namespace WCFServiceWebRole1
             builder.UserID = "ScholarStationAdmin";
             builder.Password = "scholarGroup2";
             builder.InitialCatalog = "SoftwareEngineeringGroup2";
-
             ConnectionString = builder.ConnectionString;
         }
 
@@ -106,9 +105,9 @@ namespace WCFServiceWebRole1
                     newUserCmd.Parameters.AddWithValue("@university", newUser.University);
                     newUserCmd.ExecuteNonQuery();
                 }
-                return true;
+                return true;//add test to check if ExecuteNonQuery is 1 or whatever the value is
             }
-            catch (SqlException e){
+            catch (SqlException e){//FIX this, maybe
                 return false;
             }
         }
@@ -132,6 +131,28 @@ namespace WCFServiceWebRole1
             {
                 return false;
             }
-        } 
+        }
+
+        public bool createNewListing(Listing newListing)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand newListingCmd = new SqlCommand("Insert into Listing(author, listingID, heading, body) values(@author, @listingID, @heading, @body )", con);
+                    newListingCmd.Parameters.AddWithValue("@author", newListing.Author);
+                    newListingCmd.Parameters.AddWithValue("@listingID", newListing.ListingID);
+                    newListingCmd.Parameters.AddWithValue("@heading", newListing.Heading);
+                    newListingCmd.Parameters.AddWithValue("@body", newListing.Body);
+                    newListingCmd.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }
