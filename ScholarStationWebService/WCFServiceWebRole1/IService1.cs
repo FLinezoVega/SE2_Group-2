@@ -24,5 +24,9 @@ namespace WCFServiceWebRole1
 
         [OperationContract]
         bool createNewListing(Listing newListing);
+
+
+        [OperationContract]
+        List<User> getAllUsers();
     }
 }

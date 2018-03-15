@@ -38,6 +38,12 @@ namespace ConsoleApp2.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/createNewListing", ReplyAction="http://tempuri.org/IService1/createNewListingResponse")]
         System.Threading.Tasks.Task<bool> createNewListingAsync(DataClasses.Listing newListing);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllUsers", ReplyAction="http://tempuri.org/IService1/getAllUsersResponse")]
+        System.Collections.Generic.List<DataClasses.User> getAllUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllUsers", ReplyAction="http://tempuri.org/IService1/getAllUsersResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<DataClasses.User>> getAllUsersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace ConsoleApp2.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> createNewListingAsync(DataClasses.Listing newListing) {
             return base.Channel.createNewListingAsync(newListing);
+        }
+        
+        public System.Collections.Generic.List<DataClasses.User> getAllUsers() {
+            return base.Channel.getAllUsers();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<DataClasses.User>> getAllUsersAsync() {
+            return base.Channel.getAllUsersAsync();
         }
     }
 }

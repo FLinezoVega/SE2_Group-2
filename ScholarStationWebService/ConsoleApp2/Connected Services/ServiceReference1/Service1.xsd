@@ -57,4 +57,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getAllUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataClasses" minOccurs="0" name="getAllUsersResult" nillable="true" type="q5:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

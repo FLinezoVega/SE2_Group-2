@@ -154,5 +154,35 @@ namespace WCFServiceWebRole1
                 return false;
             }
         }
+
+        public List<User> getAllUsers()
+        {
+            List<User> userList =  new List<User>();
+            try
+            {
+                
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Customer", connection);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        User temp = new User();
+                        temp.UserID = reader.GetString(0);
+                        temp.Bio = reader.GetString(1);
+                        temp.University = reader.GetString(2);
+                        userList.Add(temp);
+                    }
+
+                    return userList;
+                }
+            }
+            catch(Exception e)
+            {
+                userList.Add(new User());
+                return userList;
+            }
+        }
     }
 }

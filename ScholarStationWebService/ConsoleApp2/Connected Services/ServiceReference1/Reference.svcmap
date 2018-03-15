@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="16bbc47f-b733-47c2-9a4e-c0916d48702d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="178c86ae-9067-4d72-a4ad-99a1681b4541" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -9,7 +9,9 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -22,11 +24,11 @@
     <MetadataSource Address="http://scholarstation.cloudapp.net/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="a3260d78-03c1-4a41-a236-150717d2a736" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="c84d0b05-8ffb-44d1-bfd8-60d44bd0c04d" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="fd17765a-1aff-4a9f-ab20-ea7b20696bdf" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?disco" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="83305e2f-3fc9-41a5-aae2-aa67e3fe7e1e" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="866987dd-256b-4972-9be5-5f6b0371dabb" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="7cdbd41c-2058-4ce1-af63-81ac88b32714" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="0919c4c7-12d5-478f-b5b1-1a50bfe8f9e7" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="b78f6f50-653a-48a7-8567-d74cce19a342" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?disco" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="3f739164-3a7d-400b-875b-4011c7c8c2e7" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="2a296cce-f9ae-4827-af1b-9b22e0ac364e" SourceId="1" SourceUrl="http://scholarstation.cloudapp.net/Service1.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

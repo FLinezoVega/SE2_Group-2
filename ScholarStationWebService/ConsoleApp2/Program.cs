@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ConsoleApp2.ServiceReference1;
 using DataClasses;
 
-namespace ConsoleApp2
+namespace ConsoleApp2//this is only a temporary testing class that is used for client side activities
 {
     class Program
     {
@@ -61,6 +61,13 @@ namespace ConsoleApp2
             if (a.createNewListing(lis))
             {
                 Console.WriteLine("Created the Listing");
+            }
+
+            List<User> myList  = new List<User>(a.getAllUsers());
+            Console.WriteLine(myList.Count);
+            foreach (User u in myList)
+            {
+                Console.WriteLine(u.UserID + ":   " + u.Bio);
             }
 
 
