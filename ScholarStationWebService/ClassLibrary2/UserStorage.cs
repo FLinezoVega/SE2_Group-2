@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataClasses;
+<<<<<<< HEAD
 using System.Data.SqlClient;
+=======
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
 
 
 namespace DataAccess
 {
     public class UserStorage
     {
+<<<<<<< HEAD
         private string ConnectionString;
 
         public UserStorage()
@@ -88,12 +92,24 @@ namespace DataAccess
                 return true;
             }
             catch (SqlException e)
+=======
+
+        public async Task<bool> storeNewUser(User user)
+        {
+            try
+            {
+                Service1Client client = new Service1Client();
+                return await client.createNewUserAsync(user);
+            }
+            catch (Exception e)
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
             {
                 return false;
             }
         }
 
 
+<<<<<<< HEAD
         public List<User> getAllUsers()//maybe add check for empty list inside try block
         {
             List<User> userList = new List<User>();
@@ -125,4 +141,20 @@ namespace DataAccess
         }
     }
 
+=======
+        public async Task<User> retrieveUser(string userName)
+        {
+            try
+            {
+                Service1Client client = new Service1Client();
+                User user = await client.retrieveUserAsync(userName);
+                return user;
+            }
+            catch (Exception e)
+            {
+                return new User();
+            }
+        }
+    }
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
 }

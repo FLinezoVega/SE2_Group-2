@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "ScholarStationWebService", "ScholarStationWebService\ScholarStationWebService.ccproj", "{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}"
 EndProject
@@ -13,8 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "ClassLibrary2\DataAccess.csproj", "{194DEBF9-064E-43C6-8502-D661486EC64B}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATemporaryTestClient", "TemporaryTestClient\ATemporaryTestClient.csproj", "{5437AEF8-8D42-4BAF-9085-75D88072F4CB}"
 EndProject
+=======
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +110,7 @@ Global
 		{194DEBF9-064E-43C6-8502-D661486EC64B}.Release|x64.Build.0 = Release|Any CPU
 		{194DEBF9-064E-43C6-8502-D661486EC64B}.Release|x86.ActiveCfg = Release|Any CPU
 		{194DEBF9-064E-43C6-8502-D661486EC64B}.Release|x86.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -123,6 +127,8 @@ Global
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Release|x64.Build.0 = Release|Any CPU
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{5437AEF8-8D42-4BAF-9085-75D88072F4CB}.Release|x86.Build.0 = Release|Any CPU
+=======
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

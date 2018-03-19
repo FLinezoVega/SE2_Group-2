@@ -71,7 +71,10 @@ namespace ConsoleApp2//this is only a temporary testing class that is used for c
                 Console.WriteLine(u.UserID + ":   " + u.Bio);
             }
             */
+<<<<<<< HEAD
             /*
+=======
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
             UserStorage uStore = new UserStorage();
             User testUser = new User();
             testUser.Bio = "Test User Bio";

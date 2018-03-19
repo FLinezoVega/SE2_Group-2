@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 using DataClasses;
 
@@ -153,4 +154,12 @@ namespace DataAccess
         }
     }
 
+=======
+
+namespace ClassLibrary2
+{
+    class ListingStorage
+    {
+    }
+>>>>>>> a897421ad3d7416807ac4ed05d6bfbd57be4e3c6
 }
