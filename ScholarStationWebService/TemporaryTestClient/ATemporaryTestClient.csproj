@@ -49,8 +49,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\DataAccess.csproj">
-      <Project>{194debf9-064e-43c6-8502-d661486ec64b}</Project>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{450897f6-02ef-4ec6-9bb6-47543015caa6}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataClasses\DataClasses.csproj">

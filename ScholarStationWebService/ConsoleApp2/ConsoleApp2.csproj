@@ -71,10 +71,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\DataAccess.csproj">
-      <Project>{194debf9-064e-43c6-8502-d661486ec64b}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataClasses\DataClasses.csproj">
       <Project>{22dbebd8-1a85-4854-9a33-8cc73b85a6fa}</Project>
       <Name>DataClasses</Name>

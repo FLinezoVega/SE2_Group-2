@@ -45,7 +45,7 @@ namespace TemporaryTestClient
             */
             
             Appointment a = new Appointment();
-            a.ClientID = "Jerry";
+            a.ClientID = null;
             a.TutorID = "Layne";
             a.Timeslot = "The 90s";
             AppointmentStorage store = new AppointmentStorage();
