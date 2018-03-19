@@ -15,7 +15,7 @@ namespace ConsoleApp2//this is only a temporary testing class that is used for c
         {
 
             
-            Service1Client a = new Service1Client();
+           // Service1Client a = new Service1Client();
 
             /*
             User user = new User();
@@ -71,6 +71,7 @@ namespace ConsoleApp2//this is only a temporary testing class that is used for c
                 Console.WriteLine(u.UserID + ":   " + u.Bio);
             }
             */
+            /*
             UserStorage uStore = new UserStorage();
             User testUser = new User();
             testUser.Bio = "Test User Bio";
@@ -90,6 +91,7 @@ namespace ConsoleApp2//this is only a temporary testing class that is used for c
             Console.WriteLine(x.Bio);
 
             Console.ReadKey();
+            */
         }
     }
 }

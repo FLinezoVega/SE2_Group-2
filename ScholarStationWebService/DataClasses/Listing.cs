@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
-
+//FIXME be sure to implement null object pattern
 namespace DataClasses
 {
     [DataContract]
@@ -24,7 +24,7 @@ namespace DataClasses
         }
 
         [DataMember]
-        public int ListingID
+        public int ListingID//fix m, update to reflect final decision on database ID incrementing or whatever
         {
             get { return this.listingID < 0 ? this.listingID : -1; }
             set { this.listingID = value; }
