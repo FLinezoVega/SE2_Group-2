@@ -31,7 +31,14 @@ namespace DataAccess
                     con.Open();
                     SqlCommand cmd = new SqlCommand("Insert into Appointment(tutorID, clientID, timeslot) values(@tutorID, @clientID, @timeslot)", con);
                     cmd.Parameters.AddWithValue("@tutorID", appt.TutorID);
-                    cmd.Parameters.AddWithValue("@clientID", appt.ClientID);
+                    if (appt.ClientID != null)
+                    {
+                        cmd.Parameters.AddWithValue("@clientID", appt.ClientID);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@clientID", DBNull.Value);
+                    }
                     cmd.Parameters.AddWithValue("@timeslot", appt.Timeslot);
                     cmd.ExecuteNonQuery();
                 }
