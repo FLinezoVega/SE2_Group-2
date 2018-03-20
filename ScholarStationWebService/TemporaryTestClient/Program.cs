@@ -43,14 +43,22 @@ namespace TemporaryTestClient
                 Console.WriteLine(l.Author + " " + l.ListingID + " " + l.Heading +" " + l.Body);
             }
             */
-            
+            /*
             Appointment a = new Appointment();
             a.ClientID = null;
             a.TutorID = "Layne";
             a.Timeslot = "The 90s";
+            */
             AppointmentStorage store = new AppointmentStorage();
-            Console.WriteLine(store.createNewAppointment(a));
-            
+            //Console.WriteLine(store.createNewAppointment(a));
+
+            List<Appointment> aList = store.getAllAppointmentsByClient("Jerry");
+            foreach (Appointment a in aList)
+            {
+                Console.WriteLine(a.TutorID + " " + a.ClientID + " " + a.Timeslot);
+            }
+
+
             Console.ReadKey();
         }
     }

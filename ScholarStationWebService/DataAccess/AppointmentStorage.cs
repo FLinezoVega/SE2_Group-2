@@ -49,5 +49,139 @@ namespace DataAccess
                 return false;
             }
         }
+
+
+        public List<Appointment> getAllAppointmentsByTutor(string tutorID)
+        {
+            List<Appointment> appList = new List<Appointment>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID", connection);
+                    cmd.Parameters.AddWithValue("@tutorID", tutorID);
+                    
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    //Console.WriteLine("here1");
+                    while (reader.HasRows)
+                    {
+                        
+                        Appointment a = new Appointment();
+                        reader.Read();
+                        a.TutorID = reader.GetString(0);
+                        a.ClientID = (reader.GetValue(1).ToString());
+                        a.Timeslot = reader.GetString(2);
+                        appList.Add(a);
+                    }
+                    return appList;
+                }
+            }
+            catch (Exception e)
+            {
+                appList.Add(new Appointment());
+                //Console.WriteLine("weeeeee");
+                return appList;
+            }
+        }
+
+
+        public List<Appointment> getAllEmptyAppointmentsByTutor(string tutorID)
+        {
+            List<Appointment> appList = new List<Appointment>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NULL", connection);
+                    cmd.Parameters.AddWithValue("@tutorID", tutorID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.HasRows)
+                    {
+
+                        Appointment a = new Appointment();
+                        reader.Read();
+                        a.TutorID = reader.GetString(0);
+                        a.ClientID = (reader.GetValue(1).ToString());
+                        a.Timeslot = reader.GetString(2);
+                        appList.Add(a);
+                    }
+                    return appList;
+                }
+            }
+            catch (Exception e)
+            {
+                appList.Add(new Appointment());
+                return appList;
+            }
+        }
+
+        public List<Appointment> getAllFilledAppointmentsByTutor(string tutorID)
+        {
+            List<Appointment> appList = new List<Appointment>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NOT NULL", connection);
+                    cmd.Parameters.AddWithValue("@tutorID", tutorID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.HasRows)
+                    {
+
+                        Appointment a = new Appointment();
+                        reader.Read();
+                        a.TutorID = reader.GetString(0);
+                        a.ClientID = (reader.GetValue(1).ToString());
+                        a.Timeslot = reader.GetString(2);
+                        appList.Add(a);
+                    }
+                    return appList;
+                }
+            }
+            catch (Exception e)
+            {
+                appList.Add(new Appointment());
+                return appList;
+            }
+        }
+
+
+        public List<Appointment> getAllAppointmentsByClient(string clientID)
+        {
+            List<Appointment> appList = new List<Appointment>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE clientID = @clientID", connection);
+                    cmd.Parameters.AddWithValue("@clientID", clientID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.HasRows)
+                    {
+
+                        Appointment a = new Appointment();
+                        reader.Read();
+                        a.TutorID = reader.GetString(0);
+                        a.ClientID = (reader.GetValue(1).ToString());
+                        a.Timeslot = reader.GetString(2);
+                        appList.Add(a);
+                    }
+                    return appList;
+                }
+            }
+            catch (Exception e)
+            {
+                appList.Add(new Appointment());
+                return appList;
+            }
+        }
     }
 }
+
