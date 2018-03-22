@@ -8,12 +8,12 @@
       Title="ListingSearch">
     <Page.Resources>
         <DataTemplate x:Key="ListingViewDataTemplate">
-            <Grid Width="300" Background="#FF5D5AA0" Height="102">
-                <StackPanel Margin="10,22,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+            <Grid Width="600" Background="#FF5D5AA0" Height="150">
+                <StackPanel Margin="50,22,0,0" Orientation="Horizontal" VerticalAlignment="Top">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Author:" VerticalAlignment="Top"/>
                     <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Author}" Margin="5,0,0,0"/>
                 </StackPanel>
-                <StackPanel Margin="10,76,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel Margin="10,76,0,0" Orientation="Horizontal" VerticalAlignment="Center">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Heading:" VerticalAlignment="Top"/>
                     <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Heading}" Margin="5,0,0,0"/>
                 </StackPanel>
