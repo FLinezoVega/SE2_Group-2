@@ -52,7 +52,7 @@ namespace TemporaryTestClient
             AppointmentStorage store = new AppointmentStorage();
             //Console.WriteLine(store.createNewAppointment(a));
 
-            List<Appointment> aList = store.getAllAppointmentsByClient("Jerry");
+            List<Appointment> aList = store.getAllAppointmentsByClient("Joe");
             foreach (Appointment a in aList)
             {
                 Console.WriteLine(a.TutorID + " " + a.ClientID + " " + a.Timeslot);

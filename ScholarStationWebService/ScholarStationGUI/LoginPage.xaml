@@ -1,0 +1,17 @@
+﻿<Page x:Name="Login" x:Class="ScholarStationGUI.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      Title="LoginPage" Width="1200" Height="900">
+
+    <Grid x:Name="___Login_">
+        <Button Content="Login" HorizontalAlignment="Left" Margin="475,566,0,0" VerticalAlignment="Top" Width="333" Click="LoginButtonClick" Height="83.96" FontSize="40"/>
+        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="63" Margin="446,228,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="414" FontSize="40"/>
+        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="446,392,0,0" VerticalAlignment="Top" Width="414" Height="65" FontSize="40"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="236,228,0,0" VerticalAlignment="Top" Width="194" Height="63" FontSize="40"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="254,392,0,0" VerticalAlignment="Top" Width="187" Height="65" FontSize="40"/>
+
+    </Grid>
+</Page>

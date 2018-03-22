@@ -1,0 +1,13 @@
+﻿<Page x:Name="Opening" x:Class="ScholarStationGUI.OpeningPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      Title="OpeningPage" Width="1200" Height="900">
+
+    <Grid x:Name="___Grid_">
+        <Button Content="Sign In" HorizontalAlignment="Left" Margin="415,269,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="415,494,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
+    </Grid>
+</Page>
