@@ -17,10 +17,10 @@ namespace TemporaryTestClient
         
             
             ListingStorage ls = new ListingStorage();
-            List<Listing> myList = ls.getMatchingListings(null, -1,null, -1, null, null);
+            List<Listing> myList = ls.getMatchingListings(null, -1,null, -5, null, "Fasdas");
             foreach (Listing l in myList)
             {
-                Console.WriteLine(l.Author + " " + " " + l.Heading + " " + l.ListingType + " " + l.University);
+                Console.WriteLine(l.Author + " " + " " + l.Heading + " " + l.Body + " " + l.ListingType + " " + l.Subject + " " + l.University);
             }
             
             Console.ReadKey();

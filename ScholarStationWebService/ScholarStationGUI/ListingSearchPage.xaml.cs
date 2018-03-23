@@ -51,8 +51,8 @@ namespace ScholarStationGUI
 
         private void getListings()
         {
-            int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
-            ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, listingType, SubjectBox.Text, UniversityBox.Text);
+            //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
+            ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, null, UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)

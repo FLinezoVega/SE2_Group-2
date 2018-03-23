@@ -144,7 +144,7 @@ namespace DataAccess
         {
             bool hasOne = false;//if there is nothing added to the default select yet, this is false. 
             StringBuilder s = new StringBuilder("Select author, listingID, heading, body, ListingType, Subject, University From Listing ");
-            if (author != null || ID > 0 || heading != null)
+            if (author != null || ID > 0 || heading != null || ListingType > 0 || Subject != null || University != null)
             {
                 s.Append("Where ");
                 if (author != null)
@@ -182,7 +182,7 @@ namespace DataAccess
 
         private void addListingListSqlParameters(string author, int ID, string heading, int ListingType, string Subject, string University, SqlCommand cmd)
         {
-            if (author != null || ID > 0 || heading != null)
+            if (author != null || ID > 0 || heading != null || ListingType > 0 || Subject != null || University != null)
             {
                 if (author != null)
                 {
