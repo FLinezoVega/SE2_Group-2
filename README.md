@@ -11,7 +11,7 @@ Jimmy - Tester
 
 Brandon - Developer/Gnome
 
-Franklin - 
+Franklin - SCRUM Master
 
-Gabrielle - 
+Gabrielle - Developer
 
