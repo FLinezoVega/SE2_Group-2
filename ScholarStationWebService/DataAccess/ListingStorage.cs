@@ -144,10 +144,10 @@ namespace DataAccess
         {
             bool hasOne = false;//if there is nothing added to the default select yet, this is false. 
             StringBuilder s = new StringBuilder("Select author, listingID, heading, body, ListingType, Subject, University From Listing ");
-            if (author != null || ID > 0 || heading != null || ListingType > 0 || Subject != null || University != null)
+            if (!string.IsNullOrEmpty(author) || ID > 0 || !string.IsNullOrEmpty(heading) || ListingType > 0 || !string.IsNullOrEmpty(Subject) || !string.IsNullOrEmpty(University))
             {
                 s.Append("Where ");
-                if (author != null)
+                if (!string.IsNullOrEmpty(author))
                 {
                     s.Append("author = @author ");
                     hasOne = true;
@@ -157,7 +157,7 @@ namespace DataAccess
                     s.Append(hasOne ? "AND listingID = @ID " : "listingID = @ID ");
                     hasOne = true;
                 }
-                if (heading != null)
+                if (!string.IsNullOrEmpty(heading))
                 {
                     s.Append(hasOne ? "AND heading = @heading " : "heading = @heading ");
                 }
@@ -165,11 +165,11 @@ namespace DataAccess
                 {
                    s.Append(hasOne ? "AND ListingType = @ListingType " : "ListingType = @ListingType ");
                 }
-                if (Subject != null && !Subject.Equals(""))
+                if (!string.IsNullOrEmpty(Subject))
                 {
                     s.Append(hasOne ? "AND Subject = @Subject " : "Subject = @Subject ");
                 }
-                if (University != null && !University.Equals(""))
+                if (!string.IsNullOrEmpty(University))
                 {
                     s.Append(hasOne ? "AND University = @University " : "University = @University ");
                 }
@@ -182,9 +182,9 @@ namespace DataAccess
 
         private void addListingListSqlParameters(string author, int ID, string heading, int ListingType, string Subject, string University, SqlCommand cmd)
         {
-            if (author != null || ID > 0 || heading != null || ListingType > 0 || Subject != null || University != null)
+            if (!string.IsNullOrEmpty(author) || ID > 0 || !string.IsNullOrEmpty(heading) || ListingType > 0 || !string.IsNullOrEmpty(Subject) || !string.IsNullOrEmpty(University))
             {
-                if (author != null)
+                if (!string.IsNullOrEmpty(author))
                 {
                     cmd.Parameters.AddWithValue("@author", author);
                 }
@@ -192,7 +192,7 @@ namespace DataAccess
                 {
                     cmd.Parameters.AddWithValue("@ID", ID);
                 }
-                if (heading != null)
+                if (!string.IsNullOrEmpty(heading))
                 {
                     cmd.Parameters.AddWithValue("@heading", heading);
                 }
@@ -200,11 +200,11 @@ namespace DataAccess
                 {
                     cmd.Parameters.AddWithValue("@ListingType", ListingType);
                 }
-                if (Subject != null && !Subject.Equals(""))
+                if (!string.IsNullOrEmpty(Subject))
                 {
                     cmd.Parameters.AddWithValue("@Subject", Subject);
                 }
-                if (University != null && !University.Equals(""))
+                if (!string.IsNullOrEmpty(University))
                 {
                     cmd.Parameters.AddWithValue("@University", University);
                 }
