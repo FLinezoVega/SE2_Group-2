@@ -8,6 +8,6 @@ namespace DataClasses
 {
     public enum ListingType
     {
-        Tutoring, StudyGroup
+        Tutoring = 1, StudyGroup = 2
     };
 }

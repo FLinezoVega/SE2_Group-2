@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using DataAccess;
 
 namespace ScholarStationGUI
 {
@@ -22,22 +22,30 @@ namespace ScholarStationGUI
     public partial class LoginPage : Page
     {
 
-
-        public LoginPage()
+        DataManager manager;
+        public LoginPage(DataManager man)
         {
             InitializeComponent();
+            manager = man;
         }
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            if (UserNameBox.Text.Equals("Hello"))
+            try
             {
-                this.NavigationService.Navigate(new ListingSearchPage());
-
+                if (manager.getLoginManager().checkExisting(UserNameBox.Text, PasswordTextBox.Password))
+                {
+                    manager.setLocalUser(manager.AccessUserStorage().retrieveUser(UserNameBox.Text));
+                    this.NavigationService.Navigate(new ListingSearchPage(manager));
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Login Credentials", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid Login Credentials", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show("Try Again", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
     }

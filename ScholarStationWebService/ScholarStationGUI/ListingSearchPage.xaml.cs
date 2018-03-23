@@ -24,31 +24,34 @@ namespace ScholarStationGUI
     {
         List<Listing> myList;
 
-        public ListingSearchPage()
+
+        DataManager manager;
+
+        public ListingSearchPage(DataManager man)
         {
             InitializeComponent();
-            UniversityBox.ItemsSource = new List<string>() { "UWF", "FSU", "UF", "UCF" };
-            UniversityBox.SelectedIndex = 0;
-            createTestUsers();
-            ListingView.ItemsSource = myList;
+
+
+            manager = man;
+
+            
         }
 
-
-        private void createTestUsers()
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ListingStorage x = new ListingStorage();
-            myList = x.getMatchingListings("Robby", -22, null);
-            /*
-            myList = new List<Listing>();
-            for (int i = 0; i < 35; i++)
-            {
-                Listing temp = new Listing();
-                temp.Author = i.ToString();
-                temp.Heading = i.ToString() + i + i;
-                temp.Body = "Hullo";
-                myList.Add(temp);
-            }
-            */
+            UniversityBox.ItemsSource = manager.getUniversities();
+            UniversityBox.SelectedIndex = 0;
+            TypeBox.ItemsSource = manager.getTypes();
+            TypeBox.SelectedIndex = 0;
+            SubjectBox.ItemsSource = manager.getSubjects();
+            SubjectBox.SelectedIndex = 0;
+
+            getListings();
+        }
+
+        private void getListings()
+        {
+            ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings("TESTAUTHOR", -1, null);
         }
     }
 }

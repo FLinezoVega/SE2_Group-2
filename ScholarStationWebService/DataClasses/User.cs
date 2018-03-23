@@ -13,6 +13,7 @@ namespace DataClasses
         private string userID;
         private string bio;
         private string university;
+        private string email;
 
         [DataMember(Name = "UserID")]
         public string UserID
@@ -35,6 +36,12 @@ namespace DataClasses
             set { this.university = value; }
         }
 
+        [DataMember(Name = "Email")]
+        public string Email
+        {
+            get { return this.email!= null ? this.email : "Null"; }
+            set { this.email = value; }
+        }
 
         public bool isNull()//Test this extensively
         {

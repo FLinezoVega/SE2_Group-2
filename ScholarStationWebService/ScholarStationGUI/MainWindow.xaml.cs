@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess;
+
 
 namespace ScholarStationGUI
 {
@@ -20,10 +22,14 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataManager manager;
         public MainWindow()
         {
             InitializeComponent();
-            _mainFrame.Navigate(new OpeningPage());
+
+            manager = new DataManager();
+            _mainFrame.Navigate(new OpeningPage(manager));
+            //_mainFrame.Navigate(new CreateListingPage(manager));
         }
 
     }

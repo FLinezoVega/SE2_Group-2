@@ -18,47 +18,14 @@ namespace TemporaryTestClient
             User user = new User();
             user.Bio = "Test client after the sql has been put directly into the code";
             user.University = "UCF";
-            user.UserID = "David";
+            user.UserID = "Memera";
+            user.Email = "robertCali@asdasd.com";
             Console.WriteLine(us.createNewUser(user));
+            User x = us.retrieveUser("Memera");
+            Console.WriteLine(x.Email + " " + x.UserID);
             */
-
-            /*
-            ListingStorage ls = new ListingStorage();
-            Listing x = new Listing();
-            x.Author = "Robby";
-            x.ListingID = 77;
-            x.Heading = "Stanhope";
-            x.Body = "Sunnyvaleasdasd";
-
-            Console.WriteLine(ls.createNewListing(x));
-
-            //Listing y = ls.retrieveListing();
-            //Console.WriteLine(y.Body);
-            */
-            /*
-            ListingStorage ls = new ListingStorage();
-            List<Listing> theList = ls.getMatchingListings("Sally", -1, null);
-            foreach(Listing l in theList)
-            {
-                Console.WriteLine(l.Author + " " + l.ListingID + " " + l.Heading +" " + l.Body);
-            }
-            */
-            /*
-            Appointment a = new Appointment();
-            a.ClientID = null;
-            a.TutorID = "Layne";
-            a.Timeslot = "The 90s";
-            */
-            AppointmentStorage store = new AppointmentStorage();
-            //Console.WriteLine(store.createNewAppointment(a));
-
-            List<Appointment> aList = store.getAllAppointmentsByClient("Joe");
-            foreach (Appointment a in aList)
-            {
-                Console.WriteLine(a.TutorID + " " + a.ClientID + " " + a.Timeslot);
-            }
-
-
+            LoginManager lm = new DataAccess.LoginManager();
+            Console.WriteLine(lm.checkExisting("bkp5", "password123"));
             Console.ReadKey();
         }
     }

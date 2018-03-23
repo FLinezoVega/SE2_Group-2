@@ -29,11 +29,14 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand newListingCmd = new SqlCommand("Insert into Listing(author, listingID, heading, body) values(@author, @listingID, @heading, @body )", con);
+                    SqlCommand newListingCmd = new SqlCommand("Insert into Listing(author, listingID, heading, body, ListingType, Subject, University) values(@author, @listingID, @heading, @body, @ListingType, @Subject, @University )", con);
                     newListingCmd.Parameters.AddWithValue("@author", newListing.Author);
-                    newListingCmd.Parameters.AddWithValue("@listingID", newListing.ListingID);
-                    newListingCmd.Parameters.AddWithValue("@heading", newListing.Heading);
+                    newListingCmd.Parameters.AddWithValue("@listingID", newListing.ListingID);// < 0 ? newListing.ListingID: DBNull.Value);
+                    newListingCmd.Parameters.AddWithValue("@heading", newListing.Heading);// != null ? newListing.Heading: DBNull.Value);
                     newListingCmd.Parameters.AddWithValue("@body", newListing.Body);
+                    newListingCmd.Parameters.AddWithValue("@ListingType", newListing.ListingType);
+                    newListingCmd.Parameters.AddWithValue("@Subject", newListing.Subject);
+                    newListingCmd.Parameters.AddWithValue("@University", newListing.University);
                     newListingCmd.ExecuteNonQuery();
                     return true;
                 }

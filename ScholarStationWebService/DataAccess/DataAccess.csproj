@@ -43,6 +43,7 @@
     <Compile Include="AppointmentStorage.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="ListingStorage.cs" />
+    <Compile Include="LoginManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserStorage.cs" />
   </ItemGroup>

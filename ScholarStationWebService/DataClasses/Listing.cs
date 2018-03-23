@@ -15,6 +15,9 @@ namespace DataClasses
         private int listingID;
         private string heading;
         private string body;
+        private string university;
+        private int listingType;
+        private string subject;
 
         [DataMember]
         public string Author
@@ -43,10 +46,32 @@ namespace DataClasses
             set { this.body = value; }
         }
 
+        [DataMember]
+        public string University
+        {
+            get { return this.university != null ? this.university : "Null"; }
+            set { this.university = value; }
+        }
+
+        [DataMember]
+        public int ListingType
+        {
+            get { return this.listingType; }//< 0 ? this.listingType : -1; }
+            set { this.listingType = value; }
+        }
+
+        [DataMember]
+        public string Subject
+        {
+            get { return this.subject != null ? this.subject : "Null"; }
+            set { this.subject = value; }
+        }
+
 
         public Listing()
         {
             listingID = -1;
+            listingType = -1;
         }
 
 

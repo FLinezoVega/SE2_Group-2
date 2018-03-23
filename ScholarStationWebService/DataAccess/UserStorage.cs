@@ -33,10 +33,11 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand newUserCmd = new SqlCommand("Insert into Customer(userName, bio, university) values(@userName, @bio, @university)", con);
+                    SqlCommand newUserCmd = new SqlCommand("Insert into Customer(userName, bio, university, email) values(@userName, @bio, @university, @email)", con);
                     newUserCmd.Parameters.AddWithValue("@userName", newUser.UserID);
                     newUserCmd.Parameters.AddWithValue("@bio", newUser.Bio);
                     newUserCmd.Parameters.AddWithValue("@university", newUser.University);
+                    newUserCmd.Parameters.AddWithValue("@email", newUser.Email);
                     newUserCmd.ExecuteNonQuery();
                 }
                 return true;//add test to check if ExecuteNonQuery is 1 or whatever the value is
@@ -54,7 +55,7 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university FROM Customer WHERE userName = @userName", con);//add more fields when increasing the number of colums
+                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university, email FROM Customer WHERE userName = @userName", con);//add more fields when increasing the number of colums
                     cmd.Parameters.AddWithValue("@userName", userName);//user.UserID);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
@@ -64,6 +65,7 @@ namespace DataAccess
                         newUser.UserID = reader.GetString(0);
                         newUser.Bio = reader.GetString(1);
                         newUser.University = reader.GetString(2);
+                        newUser.Email = reader.GetString(3);
                         return newUser;
                     }
                 }

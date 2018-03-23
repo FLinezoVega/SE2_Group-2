@@ -11,6 +11,7 @@ namespace DataClasses
         private string tutorID;
         private string clientID;
         private string timeslot;
+        private int id;
 
         public string TutorID
         {
@@ -28,6 +29,11 @@ namespace DataClasses
         {
             get;
             set;
+        }
+
+        public int ID
+        {
+            get { return this.id; }
         }
     }
 }
