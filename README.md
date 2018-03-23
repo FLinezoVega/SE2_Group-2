@@ -8,6 +8,10 @@ A service that helps students identify qualified tutors and study groups for the
 
 
 Jimmy - Tester
+
 Brandon - Developer/Gnome
+
 Franklin - 
+
 Gabrielle - 
+
