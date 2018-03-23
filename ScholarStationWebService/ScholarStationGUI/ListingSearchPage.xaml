@@ -26,7 +26,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid>
+    <Grid Background="#FF659E89">
         <ListView x:Name="ListingView" Margin="250, 50, 30, 0" ItemTemplate="{StaticResource ListingViewDataTemplate}"/>
         <StackPanel Margin="20, 50, 30, 30" Width="200" HorizontalAlignment="Left">
             <StackPanel HorizontalAlignment="Left" Height="880" Margin="5,10,0,10" VerticalAlignment="Top" Width="235">

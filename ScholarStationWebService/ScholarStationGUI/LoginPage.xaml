@@ -6,7 +6,7 @@
       mc:Ignorable="d"
       Title="LoginPage" Width="1200" Height="900">
 
-    <Grid x:Name="___Login_">
+    <Grid x:Name="___Login_" Background="#FF659E89">
         <Button Content="Login" HorizontalAlignment="Left" Margin="475,566,0,0" VerticalAlignment="Top" Width="333" Click="LoginButtonClick" Height="83.96" FontSize="40"/>
         <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="63" Margin="446,228,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="414" FontSize="40"/>
         <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="446,392,0,0" VerticalAlignment="Top" Width="414" Height="65" FontSize="40"/>
