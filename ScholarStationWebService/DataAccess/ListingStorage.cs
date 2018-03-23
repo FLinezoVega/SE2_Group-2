@@ -77,7 +77,7 @@ namespace DataAccess
             return new Listing();
         }//currently broken based on Listing returning -1 for every listing. This is due to eventual plans of have an auto id assignment for database
 
-        public List<Listing> getMatchingListings(string author, int ID, string heading)
+        public List<Listing> getMatchingListings(string author, int ID, string heading, int ListingType, string Subject, string University)
         {
             List<Listing> s = new List<Listing>();
             try
@@ -86,20 +86,49 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    string query = getListingListSqlString(author, ID, heading);
+                    string query = getListingListSqlString(author, ID, heading, ListingType, Subject, University);
                     SqlCommand cmd = new SqlCommand(query, con);
-                    addListingListSqlParameters(author, ID, heading, cmd);
+                    addListingListSqlParameters(author, ID, heading, ListingType, Subject, University, cmd);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
+
                         while (reader.Read())
                         {
+
+
                             Listing listing = new Listing();
-                            listing.Author = reader.GetString(0);
-                            listing.ListingID = reader.GetInt32(1);
+                            if (reader.GetValue(0) != DBNull.Value)
+                            {
+                                listing.Author = reader.GetString(0);
+                            }
+                            if (reader.GetValue(1) != DBNull.Value)
+                            {
+                                listing.ListingID = reader.GetInt32(1);
+                            }
+                            if (reader.GetValue(2) != DBNull.Value)
+                            { 
                             listing.Heading = reader.GetString(2);
-                            listing.Body = reader.GetString(3);
+                            }
+                            if (reader.GetValue(3) != DBNull.Value)
+                            {
+                                listing.Body = reader.GetString(3);
+                            }
+                            if (reader.GetValue(4) != DBNull.Value)
+                            {
+                                listing.ListingType = (int)reader.GetValue(4);
+                            }
+                            if (reader.GetValue(5) != DBNull.Value)
+                            {
+                                listing.Subject = reader.GetString(5);
+                            }
+                            if (reader.GetValue(6) != DBNull.Value)
+                            {
+                                listing.University = reader.GetString(6);
+                            }  
+                            
                             s.Add(listing);
+                            
                         }
                     }
                 }
@@ -111,10 +140,10 @@ namespace DataAccess
             return s;
         }
 
-        private string getListingListSqlString(string author, int ID, string heading)
+        private string getListingListSqlString(string author, int ID, string heading, int ListingType, string Subject, string University)
         {
             bool hasOne = false;//if there is nothing added to the default select yet, this is false. 
-            StringBuilder s = new StringBuilder("Select * From Listing ");
+            StringBuilder s = new StringBuilder("Select author, listingID, heading, body, ListingType, Subject, University From Listing ");
             if (author != null || ID > 0 || heading != null)
             {
                 s.Append("Where ");
@@ -132,11 +161,26 @@ namespace DataAccess
                 {
                     s.Append(hasOne ? "AND heading = @heading " : "heading = @heading ");
                 }
+                if (ListingType > 0)
+                {
+                   s.Append(hasOne ? "AND ListingType = @ListingType " : "ListingType = @ListingType ");
+                }
+                if (Subject != null && !Subject.Equals(""))
+                {
+                    s.Append(hasOne ? "AND Subject = @Subject " : "Subject = @Subject ");
+                }
+                if (University != null && !University.Equals(""))
+                {
+                    s.Append(hasOne ? "AND University = @University " : "University = @University ");
+                }
+
+                
             }
+            Console.WriteLine(s.ToString());
             return s.ToString();
         }
 
-        private void addListingListSqlParameters(string author, int ID, string heading, SqlCommand cmd)
+        private void addListingListSqlParameters(string author, int ID, string heading, int ListingType, string Subject, string University, SqlCommand cmd)
         {
             if (author != null || ID > 0 || heading != null)
             {
@@ -151,6 +195,18 @@ namespace DataAccess
                 if (heading != null)
                 {
                     cmd.Parameters.AddWithValue("@heading", heading);
+                }
+                if (ListingType > 0)
+                {
+                    cmd.Parameters.AddWithValue("@ListingType", ListingType);
+                }
+                if (Subject != null && !Subject.Equals(""))
+                {
+                    cmd.Parameters.AddWithValue("@Subject", Subject);
+                }
+                if (University != null && !University.Equals(""))
+                {
+                    cmd.Parameters.AddWithValue("@University", University);
                 }
             }
         }

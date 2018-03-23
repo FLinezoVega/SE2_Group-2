@@ -12,21 +12,19 @@ namespace TemporaryTestClient
     {
         static void Main(string[] args)
         {
-            /*
-            TestClient tc = new TestClient();
-            UserStorage us = new UserStorage();
-            User user = new User();
-            user.Bio = "Test client after the sql has been put directly into the code";
-            user.University = "UCF";
-            user.UserID = "Memera";
-            user.Email = "robertCali@asdasd.com";
-            Console.WriteLine(us.createNewUser(user));
-            User x = us.retrieveUser("Memera");
-            Console.WriteLine(x.Email + " " + x.UserID);
-            */
-            LoginManager lm = new DataAccess.LoginManager();
-            Console.WriteLine(lm.checkExisting("bkp5", "password123"));
+
+
+        
+            
+            ListingStorage ls = new ListingStorage();
+            List<Listing> myList = ls.getMatchingListings(null, -1,null, -1, null, null);
+            foreach (Listing l in myList)
+            {
+                Console.WriteLine(l.Author + " " + " " + l.Heading + " " + l.ListingType + " " + l.University);
+            }
+            
             Console.ReadKey();
+           
         }
     }
 }
