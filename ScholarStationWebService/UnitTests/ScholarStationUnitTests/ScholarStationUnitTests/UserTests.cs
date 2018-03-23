@@ -6,13 +6,16 @@ using DataClasses;
 namespace ScholarStationUnitTests
 {
     [TestClass]
-    public class UserClassTests
+    public class UserTests
     {
         [TestMethod]
         public void TestUser()
         {
             //Arrange
-            var user = new Mock<User>(UserType.Basic);
+            var user0 = new Mock<User>(UserType.Basic);
+            var user1 = new Mock<User>(UserType.Tutor);
+            var user2 = new Mock<User>(UserType.Faculty);
+            var user3 = new Mock<User>(UserType.Admin);
 
             //Act
 
