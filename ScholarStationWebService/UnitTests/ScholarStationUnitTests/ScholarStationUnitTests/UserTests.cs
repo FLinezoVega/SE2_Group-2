@@ -26,12 +26,12 @@ namespace ScholarStationUnitTests
 
 
             //Act
-            sut.isNull();
-            sut1.isNull();
+            var sutResult = sut.isNull();
+            var sut1Result = sut1.isNull();
 
             //Assert
-            Assert.AreNotEqual(sut.isNull(), true);
-            Assert.AreEqual(sut1.isNull(), true);
+            Assert.AreNotEqual(sutResult, true);
+            Assert.AreEqual(sut1Result, true);
 
         }
     }
