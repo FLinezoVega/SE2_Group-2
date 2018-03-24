@@ -12,18 +12,15 @@ namespace ScholarStationUnitTests
         public void TestUser()
         {
             //Arrange
-            var userB = new Mock<User>(UserType.Basic);
-            userB.Setup(r => r.isNull().Equals("Null"));
-            /*var mockUser = new Mock<IUser>();
-            userB.Setup(r => r.isNull().Equals(userB.Object));
-            var sut = userB.Object;*/
+            var userB = new User();
+            var sut = userB;
 
 
             //Act
-            /*sut.isNull();*/
+            sut.isNull();
 
             //Assert
-            /*Assert.AreEqual(sut.isNull(), "Null");*/
+            Assert.AreNotEqual(sut.isNull(), null);
 
         }
     }
