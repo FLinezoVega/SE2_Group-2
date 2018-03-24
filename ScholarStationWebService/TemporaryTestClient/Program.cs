@@ -17,7 +17,7 @@ namespace TemporaryTestClient
         
             
             ListingStorage ls = new ListingStorage();
-            List<Listing> myList = ls.getMatchingListings("", -1,null, -5, "", "UWF");
+            List<Listing> myList = ls.getMatchingListings("", -1,null, -5, "Math", "");
             foreach (Listing l in myList)
             {
                 Console.WriteLine(l.Author + " " + " " + l.Heading + " " + l.Body + " " + l.ListingType + " " + l.Subject + " " + l.University);
