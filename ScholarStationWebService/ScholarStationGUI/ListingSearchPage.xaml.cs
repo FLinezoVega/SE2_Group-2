@@ -52,13 +52,36 @@ namespace ScholarStationGUI
         private void getListings()
         {
             //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
-            ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);
-            System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
+            try
+            {
+                ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);
+                                                                                                                                         //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not load listings", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
             getListings();
+        }
+
+        private void NavigateToCreateClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new CreateListingPage(manager));
+        }
+
+        private void NavigateToCreateAppointmentClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Clicked Manage appointment");
+            this.NavigationService.Navigate(new ManageAppointmentsPage(manager));
+        }
+
+        private void ViewAppointmentsClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Clicked view appointment appointment");
         }
     }
 }

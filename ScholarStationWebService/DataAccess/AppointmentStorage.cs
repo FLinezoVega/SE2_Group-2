@@ -29,17 +29,12 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Appointment(tutorID, clientID, timeslot) values(@tutorID, @clientID, @timeslot)", con);
+                    SqlCommand cmd = new SqlCommand("Insert into Appointment(tutorID, timeslot) values(@tutorID, @timeslot)", con);
+
                     cmd.Parameters.AddWithValue("@tutorID", appt.TutorID);
-                    if (appt.ClientID != null)
-                    {
-                        cmd.Parameters.AddWithValue("@clientID", appt.ClientID);
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@clientID", DBNull.Value);
-                    }
+
                     cmd.Parameters.AddWithValue("@timeslot", appt.Timeslot);
+
                     cmd.ExecuteNonQuery();
                 }
                 return true;//add test to check if ExecuteNonQuery is 1 or whatever the value is
@@ -50,6 +45,44 @@ namespace DataAccess
             }
         }
 
+        public bool updateAppointment(Appointment appt)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Update Appointment set clientID =@clientID, clientMai = @clientMail where ID = @ID", con);
+                    cmd.Parameters.AddWithValue("@tutorID", appt.TutorID);
+                    if (!String.IsNullOrEmpty(appt.ClientID))
+                    {
+                        cmd.Parameters.AddWithValue("@clientID", appt.ClientID);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@clientID", DBNull.Value);
+                    }
+
+                    if (!String.IsNullOrEmpty(appt.ClientMail))
+                    {
+                        cmd.Parameters.AddWithValue("@clientMail", appt.ClientMail);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@clientMail", DBNull.Value);
+                    }
+
+                    cmd.Parameters.AddWithValue("@ID", appt.ID);
+
+                    cmd.ExecuteNonQuery();
+                }
+                return true;//add test to check if ExecuteNonQuery is 1 or whatever the value is
+            }
+            catch (SqlException e)
+            {//FIX this, maybe
+                return false;
+            }
+        }
 
         public List<Appointment> getAllAppointmentsByTutor(string tutorID)
         {
@@ -64,15 +97,23 @@ namespace DataAccess
                     
                     SqlDataReader reader = cmd.ExecuteReader();
                     //Console.WriteLine("here1");
-                    while (reader.HasRows)
+                    if (reader.HasRows)
                     {
-                        
-                        Appointment a = new Appointment();
-                        reader.Read();
-                        a.TutorID = reader.GetString(0);
-                        a.ClientID = (reader.GetValue(1).ToString());
-                        a.Timeslot = reader.GetString(2);
-                        appList.Add(a);
+                        while (reader.Read())
+                        {
+                            Appointment a = new Appointment();
+
+                            //a.TutorID = reader.GetString(0);
+                            a.TutorID = reader.GetValue(0) == DBNull.Value ? "..." : reader.GetValue(0).ToString();
+                            // a.ClientID = (reader.GetValue(1).ToString());
+                            a.ClientID = reader.GetValue(1) == DBNull.Value ? "..." : reader.GetValue(1).ToString();
+                            // a.Timeslot = reader.GetString(2);
+                            a.Timeslot = reader.GetValue(2) == DBNull.Value ? "..." : reader.GetValue(2).ToString();
+                            a.ID = (int)reader.GetValue(3);
+                           /// a.ClientMail = reader.GetString(4);
+                            a.ClientMail = reader.GetValue(4) == DBNull.Value ? "..." : reader.GetValue(4).ToString();
+                            appList.Add(a);
+                        }
                     }
                     return appList;
                 }
@@ -98,15 +139,19 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@tutorID", tutorID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.HasRows)
+                    if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            Appointment a = new Appointment();
 
-                        Appointment a = new Appointment();
-                        reader.Read();
-                        a.TutorID = reader.GetString(0);
-                        a.ClientID = (reader.GetValue(1).ToString());
-                        a.Timeslot = reader.GetString(2);
-                        appList.Add(a);
+                            a.TutorID = reader.GetString(0);
+                            a.ClientID = (reader.GetValue(1).ToString());
+                            a.Timeslot = reader.GetString(2);
+                            a.ClientMail = reader.GetString(4);
+                            a.ID = (int)reader.GetValue(3);
+                            appList.Add(a);
+                        }
                     }
                     return appList;
                 }
@@ -130,15 +175,19 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@tutorID", tutorID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.HasRows)
+                    if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            Appointment a = new Appointment();
 
-                        Appointment a = new Appointment();
-                        reader.Read();
-                        a.TutorID = reader.GetString(0);
-                        a.ClientID = (reader.GetValue(1).ToString());
-                        a.Timeslot = reader.GetString(2);
-                        appList.Add(a);
+                            a.TutorID = reader.GetString(0);
+                            a.ClientID = (reader.GetValue(1).ToString());
+                            a.Timeslot = reader.GetString(2);
+                            a.ID = (int)reader.GetValue(3);
+                            a.ClientMail = reader.GetValue(4).ToString();
+                            appList.Add(a);
+                        }
                     }
                     return appList;
                 }
@@ -163,15 +212,19 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@clientID", clientID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.HasRows)
+                    if(reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            Appointment a = new Appointment();
 
-                        Appointment a = new Appointment();
-                        reader.Read();
-                        a.TutorID = reader.GetString(0);
-                        a.ClientID = (reader.GetValue(1).ToString());
-                        a.Timeslot = reader.GetString(2);
-                        appList.Add(a);
+                            a.TutorID = reader.GetString(0);
+                            a.ClientID = (reader.GetString(1));
+                            a.Timeslot = reader.GetString(2);
+                            a.ID = (int)reader.GetValue(3);
+                            a.ClientMail = reader.GetString(4);
+                            appList.Add(a);
+                        }
                     }
                     return appList;
                 }

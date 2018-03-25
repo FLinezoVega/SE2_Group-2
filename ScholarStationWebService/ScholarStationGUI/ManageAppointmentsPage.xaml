@@ -1,0 +1,45 @@
+﻿<Page x:Class="ScholarStationGUI.ManageAppointmentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScholarStationGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1200"
+      Loaded="Page_Loaded"
+      Title="ManageAppointmentsPage">
+    <Page.Resources>
+        <DataTemplate x:Key="ClientViewDataTemplate">
+            <Canvas HorizontalAlignment="Left" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+                <TextBlock Canvas.Left="0" TextWrapping="Wrap" Text="Tutor:" Canvas.Top="3"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding TutorID}" Canvas.Top="3"  FontSize="20"/>
+                <TextBlock Canvas.Left="0" TextWrapping="Wrap" Text="Time:" Canvas.Top="25"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding Timeslot}" Canvas.Top="25"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding ID}" Canvas.Top="25"  FontSize="20" Visibility="Hidden"/>
+
+            </Canvas>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="TutorViewDataTemplate">
+            <Canvas HorizontalAlignment="Left" Height="60" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+                <TextBlock Canvas.Left="0" TextWrapping="Wrap" Text="Client:" Canvas.Top="0"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding ClientID}" Canvas.Top="3"  FontSize="20"/>
+                <TextBlock Canvas.Left="0" TextWrapping="Wrap" Text="Time:" Canvas.Top="20"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding Timeslot}" Canvas.Top="20"  FontSize="20"/>
+                <TextBlock Canvas.Left="0" TextWrapping="Wrap" Text="Contact:" Canvas.Top="38"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding ClientMail}" Canvas.Top="38"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding ID}" Canvas.Top="25"  FontSize="20" Visibility="Hidden"/>
+            </Canvas>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid HorizontalAlignment="Left" Height="900" Margin="10,21.281,0,0" VerticalAlignment="Top" Width="1200">
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="45" Click="BackButtonClick"/>
+        <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="716" Margin="50,122.719,0,0" VerticalAlignment="Top" Width="425" ItemTemplate="{StaticResource ClientViewDataTemplate}">
+        </ListView>
+        <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="622" Margin="680,122.719,0,0" VerticalAlignment="Top" Width="425" ItemTemplate="{StaticResource TutorViewDataTemplate}">
+        </ListView>
+        <TextBox x:Name ="text" HorizontalAlignment="Left" Height="45" Margin="680,46.719,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="312" SelectionChanged="TextSelectionChanged" FontSize="24" MaxLength ="64"/>
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="1014,46.719,0,0" VerticalAlignment="Top" Width="91" Height="45" Click="CreateButtonClick" Visibility="Hidden"/>
+    </Grid>
+</Page>

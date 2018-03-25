@@ -29,7 +29,7 @@ namespace DataClasses
         [DataMember]
         public int ListingID//fix m, update to reflect final decision on database ID incrementing or whatever
         {
-            get { return this.listingID < 0 ? this.listingID : -1; }
+            get { return this.listingID; }
             set { this.listingID = value; }
         }
         [DataMember]
