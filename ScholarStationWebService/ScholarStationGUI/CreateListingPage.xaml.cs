@@ -61,7 +61,8 @@ namespace ScholarStationGUI
                 }
                 if (manager.AccessListingStorage().createNewListing(aListing))
                 {
-                    TitleBox.Text = "GOOOD!";
+                    TitleBox.Text = "New Listing......";
+                    BodyBox.Text = "";
                 }
             }
             catch (Exception ex)
@@ -83,9 +84,10 @@ namespace ScholarStationGUI
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
+
             if (this.NavigationService.CanGoBack)
             {
-                this.NavigationService.GoBack();
+              this.NavigationService.GoBack();
             }
 
         }

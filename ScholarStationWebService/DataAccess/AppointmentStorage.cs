@@ -145,11 +145,15 @@ namespace DataAccess
                         {
                             Appointment a = new Appointment();
 
-                            a.TutorID = reader.GetString(0);
-                            a.ClientID = (reader.GetValue(1).ToString());
-                            a.Timeslot = reader.GetString(2);
-                            a.ClientMail = reader.GetString(4);
+                            //a.TutorID = reader.GetString(0);
+                            a.TutorID = reader.GetValue(0) == DBNull.Value ? "..." : reader.GetValue(0).ToString();
+                            // a.ClientID = (reader.GetValue(1).ToString());
+                            a.ClientID = reader.GetValue(1) == DBNull.Value ? "..." : reader.GetValue(1).ToString();
+                            // a.Timeslot = reader.GetString(2);
+                            a.Timeslot = reader.GetValue(2) == DBNull.Value ? "..." : reader.GetValue(2).ToString();
                             a.ID = (int)reader.GetValue(3);
+                            /// a.ClientMail = reader.GetString(4);
+                            a.ClientMail = reader.GetValue(4) == DBNull.Value ? "..." : reader.GetValue(4).ToString();
                             appList.Add(a);
                         }
                     }
@@ -181,11 +185,15 @@ namespace DataAccess
                         {
                             Appointment a = new Appointment();
 
-                            a.TutorID = reader.GetString(0);
-                            a.ClientID = (reader.GetValue(1).ToString());
-                            a.Timeslot = reader.GetString(2);
+                            //a.TutorID = reader.GetString(0);
+                            a.TutorID = reader.GetValue(0) == DBNull.Value ? "..." : reader.GetValue(0).ToString();
+                            // a.ClientID = (reader.GetValue(1).ToString());
+                            a.ClientID = reader.GetValue(1) == DBNull.Value ? "..." : reader.GetValue(1).ToString();
+                            // a.Timeslot = reader.GetString(2);
+                            a.Timeslot = reader.GetValue(2) == DBNull.Value ? "..." : reader.GetValue(2).ToString();
                             a.ID = (int)reader.GetValue(3);
-                            a.ClientMail = reader.GetValue(4).ToString();
+                            /// a.ClientMail = reader.GetString(4);
+                            a.ClientMail = reader.GetValue(4) == DBNull.Value ? "..." : reader.GetValue(4).ToString();
                             appList.Add(a);
                         }
                     }
@@ -218,11 +226,15 @@ namespace DataAccess
                         {
                             Appointment a = new Appointment();
 
-                            a.TutorID = reader.GetString(0);
-                            a.ClientID = (reader.GetString(1));
-                            a.Timeslot = reader.GetString(2);
+                            //a.TutorID = reader.GetString(0);
+                            a.TutorID = reader.GetValue(0) == DBNull.Value ? "..." : reader.GetValue(0).ToString();
+                            // a.ClientID = (reader.GetValue(1).ToString());
+                            a.ClientID = reader.GetValue(1) == DBNull.Value ? "..." : reader.GetValue(1).ToString();
+                            // a.Timeslot = reader.GetString(2);
+                            a.Timeslot = reader.GetValue(2) == DBNull.Value ? "..." : reader.GetValue(2).ToString();
                             a.ID = (int)reader.GetValue(3);
-                            a.ClientMail = reader.GetString(4);
+                            /// a.ClientMail = reader.GetString(4);
+                            a.ClientMail = reader.GetValue(4) == DBNull.Value ? "..." : reader.GetValue(4).ToString();
                             appList.Add(a);
                         }
                     }

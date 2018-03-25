@@ -1,0 +1,18 @@
+﻿<Page x:Class="ScholarStationGUI.SelectAppointmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScholarStationGUI"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="900" d:DesignWidth="1200"
+      Title="SelectAppointmentPage">
+
+    <Grid>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="60" Height="29.96" Click="BackButtonClick"/>
+        <Label Content="Appointments for" HorizontalAlignment="Left" Margin="344,152,0,0" VerticalAlignment="Top" Height="52" Width="216" FontSize=" 25"/>
+        <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="559,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="185.29" FontSize="25"/>
+        <ComboBox x:Name="AppointmentBox" HorizontalAlignment="Left" Margin="344,290,0,0" VerticalAlignment="Top" Width="416" Height="49.96" FontSize="20"/>
+        <Button Content="Choose" HorizontalAlignment="Left" Margin="398,456,0,0" VerticalAlignment="Top" Width="301" Height="39.96" Click="ChooseButtonClick"/>
+    </Grid>
+</Page>

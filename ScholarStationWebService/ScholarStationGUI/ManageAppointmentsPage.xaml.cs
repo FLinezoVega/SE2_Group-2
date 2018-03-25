@@ -63,6 +63,7 @@ namespace ScholarStationGUI
             {
                 MessageBox.Show("Could not create appointment", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
+            getTutorAppointments();
         }
 
         private void textCheck()

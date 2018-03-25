@@ -23,7 +23,7 @@ namespace ScholarStationGUI
     public partial class ListingSearchPage : Page
     {
         List<Listing> myList;
-
+        string selectedUserName;
 
         DataManager manager;
 
@@ -46,6 +46,7 @@ namespace ScholarStationGUI
             SubjectBox.ItemsSource = manager.getSubjects();
             SubjectBox.SelectedIndex = 0;
 
+
             getListings();
         }
 
@@ -54,18 +55,27 @@ namespace ScholarStationGUI
             //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
             try
             {
-                ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);
-                                                                                                                                         //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
+                ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);   
+                //ListingView.SelectedIndex = 0;
+                //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
             }
             catch (Exception e)
             {
-                MessageBox.Show("Could not load listings", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+              //  MessageBox.Show("Could not load listings", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
             getListings();
+        }
+
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Listing l = e.AddedItems[0] as Listing;
+            selectedUserName = l.Author;
+            ViewAppointmentButton.IsEnabled = true;
         }
 
         private void NavigateToCreateClick(object sender, RoutedEventArgs e)
@@ -81,7 +91,15 @@ namespace ScholarStationGUI
 
         private void ViewAppointmentsClick(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Clicked view appointment appointment");
+            try {
+
+                User tutor = manager.AccessUserStorage().retrieveUser(selectedUserName);
+                this.NavigationService.Navigate(new SelectAppointmentPage(manager, tutor));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Could not load Tutor Data", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
     }
 }
