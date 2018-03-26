@@ -7,12 +7,21 @@
       mc:Ignorable="d" Loaded="Page_Loaded"
       d:DesignHeight="900" d:DesignWidth="1200"
       Title="SelectAppointmentPage">
+    <Page.Resources>
+        <DataTemplate x:Key="AppointmentDataTemplate">
+            <Canvas HorizontalAlignment="Left" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding Timeslot}" Canvas.Top="0"  FontSize="20"/>
+                <TextBlock Canvas.Left="100" TextWrapping="Wrap" Text="{Binding ID}" Canvas.Top="25"  FontSize="20" Visibility="Hidden"/>
+            </Canvas>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
+        <ListView x:Name="AppointmentView" HorizontalAlignment="Left" Height="716" Margin="277,102,0,0" VerticalAlignment="Top" Width="613" ItemTemplate="{StaticResource AppointmentDataTemplate}" SelectionChanged="SelectionChanged">
+        </ListView>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="60" Height="29.96" Click="BackButtonClick"/>
-        <Label Content="Appointments for" HorizontalAlignment="Left" Margin="344,152,0,0" VerticalAlignment="Top" Height="52" Width="216" FontSize=" 25"/>
-        <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="559,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="185.29" FontSize="25"/>
-        <ComboBox x:Name="AppointmentBox" HorizontalAlignment="Left" Margin="344,290,0,0" VerticalAlignment="Top" Width="416" Height="49.96" FontSize="20"/>
-        <Button Content="Choose" HorizontalAlignment="Left" Margin="398,456,0,0" VerticalAlignment="Top" Width="301" Height="39.96" Click="ChooseButtonClick"/>
+        <Label Content="Appointments for" HorizontalAlignment="Left" Margin="266,45,0,0" VerticalAlignment="Top" Height="52" Width="216" FontSize=" 25"/>
+        <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="482,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="186" FontSize="25"/>
+        <Button x:Name="ChooseButton" Content="Choose" HorizontalAlignment="Left" Margin="430,823,0,0" VerticalAlignment="Top" Width="301" Height="40" Click="ChooseButtonClick" IsEnabled="False"/>
     </Grid>
 </Page>

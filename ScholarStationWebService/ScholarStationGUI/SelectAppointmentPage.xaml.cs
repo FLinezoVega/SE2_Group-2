@@ -24,6 +24,8 @@ namespace ScholarStationGUI
     {
         DataManager manager;
         User Tutor;
+        List<Appointment> apptList;
+
         public SelectAppointmentPage(DataManager man, User Tutor)
         {
             InitializeComponent();
@@ -43,13 +45,8 @@ namespace ScholarStationGUI
         {
             try
             {
-                List<Appointment> apptList = manager.AccessAppointmentStorage().getAllEmptyAppointmentsByTutor(Tutor.UserID);
-                List<string> timeList = new List<string>();
-                foreach (Appointment a in apptList)
-                {
-                    timeList.Add(a.Timeslot);
-                }
-                AppointmentBox.ItemsSource = timeList;
+                apptList = manager.AccessAppointmentStorage().getAllEmptyAppointmentsByTutor(Tutor.UserID);
+                AppointmentView.ItemsSource = apptList;      
             }
             catch (Exception e)
             {
@@ -66,14 +63,30 @@ namespace ScholarStationGUI
            }
         }
 
-        private void ChooseButtonClick(object sender, RoutedEventArgs e)
-        {
-           // string user = manager.getLocalUser().UserID;
-          //  string mail = manager.getLocalUser().Email;
 
-          //  manager.AccessAppointmentStorage().
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //SelectedAppointment = e.AddedItems[0] as Appointment;
+            //var clicker = (FrameworkElement)sender;
+            //selectedAppointment = (Appointment)clicker.DataContext as Appointment;
+            //System.Diagnostics.Debug.WriteLine(SelectedAppointment.TutorID);
+
+            ChooseButton.IsEnabled = true;
         }
 
-
+        private void ChooseButtonClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                apptList[AppointmentView.SelectedIndex].ClientID = manager.getLocalUser().UserID;
+                apptList[AppointmentView.SelectedIndex].ClientMail = manager.getLocalUser().Email;
+                manager.AccessAppointmentStorage().updateAppointment(apptList[AppointmentView.SelectedIndex]);
+                this.NavigationService.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not choose appointment", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
     }
 }

@@ -50,13 +50,13 @@ namespace ScholarStationGUI
             getListings();
         }
 
-        private void getListings()
+        private async void getListings()
         {
             //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
             try
             {
+                myList = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);
                 ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);   
-                //ListingView.SelectedIndex = 0;
                 //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
             }
             catch (Exception e)
@@ -74,7 +74,7 @@ namespace ScholarStationGUI
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Listing l = e.AddedItems[0] as Listing;
-            selectedUserName = l.Author;
+            selectedUserName = l.Author;// myList[ListingView.SelectedIndex].Author;//
             ViewAppointmentButton.IsEnabled = true;
         }
 

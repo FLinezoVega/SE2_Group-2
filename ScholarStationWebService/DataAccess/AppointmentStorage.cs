@@ -52,7 +52,7 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Update Appointment set clientID =@clientID, clientMai = @clientMail where ID = @ID", con);
+                    SqlCommand cmd = new SqlCommand("Update Appointment set clientID =@clientID, clientMail = @clientMail where ID = @ID", con);
                     cmd.Parameters.AddWithValue("@tutorID", appt.TutorID);
                     if (!String.IsNullOrEmpty(appt.ClientID))
                     {
