@@ -14,14 +14,19 @@
                 <GradientStop Color="#FF89CFB5" Offset="0.438"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
-        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="198,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144"/>
-        <Label Content="Title" HorizontalAlignment="Left" Margin="87.75,189,0,0" VerticalAlignment="Top" Width="80" Height="50" FontSize="30"/>
+        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="28,807,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
+        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="90,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144"/>
+        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="88,129,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
         <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35"/>
         <Button x:Name="CreateButton" Content="Create Listing" HorizontalAlignment="Left" Margin="416,778,0,0" Visibility="Hidden" VerticalAlignment="Top" Width="401" Height="67.96" Click="CreateListingButtonClick"/>
-        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,286,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
-        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,450,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
+        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,320,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
+        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,466,0,0" VerticalAlignment="Top" Width="280" Height="76"/>
         <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,611,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
+        <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Body" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="University" HorizontalAlignment="Left" Margin="870,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="870,416,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Subject" HorizontalAlignment="Left" Margin="870,561,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
 
 
     </Grid>

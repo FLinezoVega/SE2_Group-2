@@ -9,12 +9,13 @@
     <Grid x:Name="___Grid_">
         <Grid.Background>
             <RadialGradientBrush>
-                <GradientStop Color="#FF53ACB0"/>
+                <GradientStop Color="White" Offset="0.435"/>
                 <GradientStop Color="#FF63A88F" Offset="1"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button Content="Sign In" HorizontalAlignment="Left" Margin="415,509,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="415,671,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
-        <Image Margin="253,24,307,396" Source="sstationlogo.png" Stretch="Fill"/>
+        <Button Content="Sign In" HorizontalAlignment="Left" Margin="415,647,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="415,759,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
+        <Image Margin="311,227,343,288" Source="sstationlogo.png" Stretch="Fill"/>
+        <Label Content="Scholar Station" HorizontalAlignment="Center" Margin="393,557,425,0" VerticalAlignment="Top" Width="382" Height="77" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
     </Grid>
 </Page>
