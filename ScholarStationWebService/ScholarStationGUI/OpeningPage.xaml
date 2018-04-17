@@ -13,12 +13,8 @@
                 <GradientStop Color="#FF63A88F" Offset="1"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Image x:Name="Logo" Margin="334,91,367,439" Source="sstationlogo.png" Stretch="Fill">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="sstationlogo.png"/>
-            </Image.OpacityMask>
-        </Image>
         <Button Content="Sign In" HorizontalAlignment="Left" Margin="415,509,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
         <Button Content="Sign Up" HorizontalAlignment="Left" Margin="415,671,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
+        <Image Margin="253,24,307,396" Source="sstationlogo.png" Stretch="Fill"/>
     </Grid>
 </Page>

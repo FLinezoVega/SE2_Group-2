@@ -148,14 +148,5 @@
   <ItemGroup>
     <Resource Include="sstationlogo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="devilmancrybabywallpaper.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="dwowning.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="GyDHEGJ_waifu2x_art_noise3_tta_1 - Copy.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
