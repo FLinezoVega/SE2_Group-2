@@ -8,7 +8,7 @@ using DataClasses;
 
 namespace DataAccess
 {
-    public class ListingStorage
+    public class ListingStorage : IListingStorage
     {
         private string ConnectionString;
 

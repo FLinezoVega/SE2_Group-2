@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class LoginManager
+    public class LoginManager : ILoginManager
     {
         private string ConnectionString;
 

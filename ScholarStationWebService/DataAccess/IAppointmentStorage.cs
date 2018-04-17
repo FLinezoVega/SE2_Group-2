@@ -7,13 +7,14 @@ using DataClasses;
 
 namespace DataAccess
 {
-    interface IAppointmentStorage
+    public interface IAppointmentStorage
     {
         bool createNewAppointment(Appointment appt);
         List<Appointment> getAllAppointmentsByTutor(string tutorID);
         List<Appointment> getAllEmptyAppointmentsByTutor(string tutorID);
         List<Appointment> getAllFilledAppointmentsByTutor(string tutorID);
         List<Appointment> getAllAppointmentsByClient(string clientID);
+        bool updateAppointment(Appointment appt);
 
 
 
