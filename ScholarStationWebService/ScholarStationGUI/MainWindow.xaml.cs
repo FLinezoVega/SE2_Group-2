@@ -26,8 +26,13 @@ namespace ScholarStationGUI
         public MainWindow()
         {
             InitializeComponent();
+            //woot woot dependency injection
+            IListingStorage l = new ListingStorage();
+            IUserStorage u = new UserStorage();
+            IAppointmentStorage a = new AppointmentStorage();
+            ILoginManager login = new LoginManager();
 
-            manager = new DataManager();
+            manager = new DataManager(l, u, a, login);
             _mainFrame.Navigate(new OpeningPage(manager));
             //_mainFrame.Navigate(new CreateListingPage(manager));
         }

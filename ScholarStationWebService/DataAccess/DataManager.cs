@@ -12,42 +12,42 @@ namespace DataAccess
 
         private User localUser;
 
-        private ListingStorage lStore;
-        private UserStorage uStore;
-        private AppointmentStorage aStore;
-        private LoginManager lManager;
+        private IListingStorage lStore;
+        private IUserStorage uStore;
+        private IAppointmentStorage aStore;
+        private ILoginManager lManager;
 
         private List<string> UniversityList;
         private List<string> SubjectList;
         private List<string> TypeList;
-        public DataManager()
+        public DataManager(IListingStorage l, IUserStorage u, IAppointmentStorage a, ILoginManager login)
         {
-            lStore = new ListingStorage();
-            uStore = new UserStorage();
-            aStore = new AppointmentStorage();
-            lManager = new LoginManager();
+            lStore = l;// new ListingStorage();
+            uStore = u;// new UserStorage();
+            aStore = a;// new AppointmentStorage();
+            lManager = login;// new LoginManager();
 
             UniversityList = new List<string>() { "UWF", "FSU", "UCF", "UF", "UM" };
             SubjectList = new List<string>() { "Math", "CompSci", "History", "English", "Biology", "Chemistry" };
             TypeList = new List<string>() { "Tutoring", "Study Group" };
         }
 
-        public ListingStorage AccessListingStorage()
+        public IListingStorage AccessListingStorage()
         {
             return lStore;
         }
 
-        public UserStorage AccessUserStorage()
+        public IUserStorage AccessUserStorage()
         {
             return uStore;
         }
 
-        public AppointmentStorage AccessAppointmentStorage()
+        public IAppointmentStorage AccessAppointmentStorage()
         {
             return aStore;
         }
 
-        public LoginManager getLoginManager()
+        public ILoginManager getLoginManager()
         {
             return lManager;
         }

@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class UserStorage
+    public class UserStorage : IUserStorage
     {
 
         private string ConnectionString;
