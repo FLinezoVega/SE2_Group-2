@@ -8,7 +8,7 @@ using DataClasses;
 
 namespace DataAccess
 {
-    public class AppointmentStorage
+    public class AppointmentStorage : IAppointmentStorage
     {
         string ConnectionString;
 
