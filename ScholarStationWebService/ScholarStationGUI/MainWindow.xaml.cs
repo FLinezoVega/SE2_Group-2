@@ -37,5 +37,9 @@ namespace ScholarStationGUI
             //_mainFrame.Navigate(new CreateListingPage(manager));
         }
 
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
