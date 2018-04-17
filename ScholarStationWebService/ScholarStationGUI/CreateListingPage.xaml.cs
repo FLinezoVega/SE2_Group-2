@@ -47,7 +47,7 @@ namespace ScholarStationGUI
             try
             {
                 Listing aListing = new Listing();
-                aListing.Author = "TESTAUTHOR";
+                aListing.Author = manager.getLocalUser().UserID;
                 aListing.Heading = TitleBox.Text;
                 aListing.Body = BodyBox.Text;
                 aListing.University = UniversityBox.Text;
@@ -61,7 +61,8 @@ namespace ScholarStationGUI
                 }
                 if (manager.AccessListingStorage().createNewListing(aListing))
                 {
-                    TitleBox.Text = "GOOOD!";
+                    TitleBox.Text = "New Listing......";
+                    BodyBox.Text = "";
                 }
             }
             catch (Exception ex)
@@ -79,6 +80,16 @@ namespace ScholarStationGUI
             else {
                 CreateButton.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+
+            if (this.NavigationService.CanGoBack)
+            {
+              this.NavigationService.GoBack();
+            }
+
         }
     }
 }

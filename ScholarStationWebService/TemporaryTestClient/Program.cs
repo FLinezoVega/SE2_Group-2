@@ -14,14 +14,13 @@ namespace TemporaryTestClient
         {
 
 
-        
-            
-            ListingStorage ls = new ListingStorage();
-            List<Listing> myList = ls.getMatchingListings("", -1,null, -5, "", "UWF");
-            foreach (Listing l in myList)
-            {
-                Console.WriteLine(l.Author + " " + " " + l.Heading + " " + l.Body + " " + l.ListingType + " " + l.Subject + " " + l.University);
-            }
+
+
+            AppointmentStorage a = new AppointmentStorage();
+            Appointment g = new Appointment();
+            g.TutorID = "12345";
+            g.Timeslot = "testTimeSlot";
+            Console.WriteLine(a.createNewAppointment(g));
             
             Console.ReadKey();
            

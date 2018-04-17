@@ -29,9 +29,9 @@ namespace DataAccess
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand newListingCmd = new SqlCommand("Insert into Listing(author, listingID, heading, body, ListingType, Subject, University) values(@author, @listingID, @heading, @body, @ListingType, @Subject, @University )", con);
+                    SqlCommand newListingCmd = new SqlCommand("Insert into Listing(author, heading, body, ListingType, Subject, University) values(@author, @heading, @body, @ListingType, @Subject, @University )", con);
                     newListingCmd.Parameters.AddWithValue("@author", newListing.Author);
-                    newListingCmd.Parameters.AddWithValue("@listingID", newListing.ListingID);// < 0 ? newListing.ListingID: DBNull.Value);
+                    //newListingCmd.Parameters.AddWithValue("@listingID", newListing.ListingID);// < 0 ? newListing.ListingID: DBNull.Value);
                     newListingCmd.Parameters.AddWithValue("@heading", newListing.Heading);// != null ? newListing.Heading: DBNull.Value);
                     newListingCmd.Parameters.AddWithValue("@body", newListing.Body);
                     newListingCmd.Parameters.AddWithValue("@ListingType", newListing.ListingType);

@@ -12,34 +12,28 @@ namespace DataClasses
         private string clientID;
         private string timeslot;
         private int id;
-        private string clientMail;
 
         public string TutorID
         {
-            get { return this.tutorID; }
-            set { this.tutorID = value; }
+            get;
+            set;
         }
-        public string ClientMail
-        {
-            get { return this.clientMail; }
-            set { this.clientMail = value; }
-        }
+
         public string ClientID
         {
-            get { return this.clientID; }
-            set { this.clientID = value; }
+            get;
+            set;
         }
 
         public string Timeslot
         {
-            get { return this.timeslot; }
-            set { this.timeslot = value; }
+            get;
+            set;
         }
 
         public int ID
         {
             get { return this.id; }
-            set { this.id = value; }
         }
     }
 }

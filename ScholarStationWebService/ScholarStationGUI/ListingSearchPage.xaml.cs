@@ -23,7 +23,7 @@ namespace ScholarStationGUI
     public partial class ListingSearchPage : Page
     {
         List<Listing> myList;
-
+        string selectedUserName;
 
         DataManager manager;
 
@@ -46,19 +46,60 @@ namespace ScholarStationGUI
             SubjectBox.ItemsSource = manager.getSubjects();
             SubjectBox.SelectedIndex = 0;
 
+
             getListings();
         }
 
-        private void getListings()
+        private async void getListings()
         {
             //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
-            ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);
-            System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
+            try
+            {
+                myList = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);
+                ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);   
+                //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
+            }
+            catch (Exception e)
+            {
+              //  MessageBox.Show("Could not load listings", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
             getListings();
+        }
+
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Listing l = e.AddedItems[0] as Listing;
+            selectedUserName = l.Author;// myList[ListingView.SelectedIndex].Author;//
+            ViewAppointmentButton.IsEnabled = true;
+        }
+
+        private void NavigateToCreateClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new CreateListingPage(manager));
+        }
+
+        private void NavigateToCreateAppointmentClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Clicked Manage appointment");
+            this.NavigationService.Navigate(new ManageAppointmentsPage(manager));
+        }
+
+        private void ViewAppointmentsClick(object sender, RoutedEventArgs e)
+        {
+            try {
+
+                User tutor = manager.AccessUserStorage().retrieveUser(selectedUserName);
+                this.NavigationService.Navigate(new SelectAppointmentPage(manager, tutor));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Could not load Tutor Data", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
     }
 }
