@@ -17,6 +17,12 @@
     </Page.Resources>
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC3C3C3" Offset="0"/>
+                <GradientStop Color="#FF659E89" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <ListView x:Name="AppointmentView" HorizontalAlignment="Left" Height="716" Margin="277,102,0,0" VerticalAlignment="Top" Width="613" ItemTemplate="{StaticResource AppointmentDataTemplate}" SelectionChanged="SelectionChanged">
         </ListView>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="60" Height="29.96" Click="BackButtonClick"/>

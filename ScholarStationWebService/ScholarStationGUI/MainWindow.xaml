@@ -9,7 +9,7 @@
         <Frame NavigationUIVisibility ="Hidden" x:Name="_mainFrame" >
             <Frame.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF1E684D" Offset="1"/>
+                    <GradientStop Color="#FF45EAAE" Offset="1"/>
                     <GradientStop Color="#FF659E89"/>
                 </RadialGradientBrush>
             </Frame.Background>
