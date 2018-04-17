@@ -34,6 +34,12 @@
     </Page.Resources>
 
     <Grid HorizontalAlignment="Left" Height="900" Margin="10,21.281,0,0" VerticalAlignment="Top" Width="1200">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF75A694" Offset="0"/>
+                <GradientStop Color="#FF1A8B61" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="45" Click="BackButtonClick"/>
         <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="716" Margin="50,122.719,0,0" VerticalAlignment="Top" Width="425" ItemTemplate="{StaticResource ClientViewDataTemplate}">
         </ListView>

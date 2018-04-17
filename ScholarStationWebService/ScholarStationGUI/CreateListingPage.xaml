@@ -9,7 +9,10 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush/>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF29AC7B" Offset="1"/>
+                <GradientStop Color="#FF89CFB5" Offset="0.438"/>
+            </RadialGradientBrush>
         </Grid.Background>
         <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
         <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="198,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144"/>
