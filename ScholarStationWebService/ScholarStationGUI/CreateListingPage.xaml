@@ -14,7 +14,7 @@
                 <GradientStop Color="#FF89CFB5" Offset="0.438"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="28,807,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
+        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="43,739,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
         <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="90,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144"/>
         <Label Content="Listing Title" HorizontalAlignment="Left" Margin="88,129,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
         <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35"/>

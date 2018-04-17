@@ -14,10 +14,11 @@
             </RadialGradientBrush>
         </Grid.Background>
         <Button Content="Login" HorizontalAlignment="Left" Margin="475,566,0,0" VerticalAlignment="Top" Width="333" Click="LoginButtonClick" Height="83.96" FontSize="40"/>
-        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="63" Margin="446,228,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="414" FontSize="40" />
-        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="446,392,0,0" VerticalAlignment="Top" Width="414" Height="65" FontSize="40"/>
-        <Label Content="UserName" HorizontalAlignment="Left" Margin="236,228,0,0" VerticalAlignment="Top" Width="194" Height="63" FontSize="40"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="254,392,0,0" VerticalAlignment="Top" Width="187" Height="65" FontSize="40"/>
+        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="45" Margin="475,360,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" />
+        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="475,478,0,0" VerticalAlignment="Top" Width="327" Height="47" FontSize="20"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="475,318,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="475,439,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
+        <Image Margin="443,114,385,545" Source="sstationlogo.png" Stretch="Fill"/>
 
     </Grid>
 </Page>

@@ -36,19 +36,20 @@
     <Grid HorizontalAlignment="Left" Height="900" Margin="10,21.281,0,0" VerticalAlignment="Top" Width="1200">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF75A694" Offset="0"/>
-                <GradientStop Color="#FF1A8B61" Offset="1"/>
+                <GradientStop Color="#FFA0E2CA" Offset="0"/>
+                <GradientStop Color="#FF40D19B" Offset="0.996"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="45" Click="BackButtonClick" Margin="25,826,0,0"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="45" Click="BackButtonClick" Margin="50,750,0,0"/>
         <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="559" Margin="50,186,0,0" VerticalAlignment="Top" Width="425" ItemTemplate="{StaticResource ClientViewDataTemplate}">
         </ListView>
         <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="559" Margin="680,186,0,0" VerticalAlignment="Top" Width="425" ItemTemplate="{StaticResource TutorViewDataTemplate}">
         </ListView>
         <TextBox x:Name ="text" HorizontalAlignment="Left" Height="45" Margin="680,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="312" SelectionChanged="TextSelectionChanged" FontSize="24" MaxLength ="64"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="1014,46.719,0,0" VerticalAlignment="Top" Width="91" Height="45" Click="CreateButtonClick" Visibility="Hidden"/>
-        <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="50,47,670,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="50,28,670,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
         <Label Content="Client View" HorizontalAlignment="Left" Margin="50,136,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
         <Label Content="Tutor View" HorizontalAlignment="Left" Margin="680,144,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="680,54,0,0" VerticalAlignment="Top" Width="236" Height="50" FontSize="30"/>
     </Grid>
 </Page>
