@@ -6,6 +6,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="950" Width="1200">
     <DockPanel Background="#06225e">
-        <Frame NavigationUIVisibility ="Hidden" x:Name="_mainFrame" />
+        <Frame NavigationUIVisibility ="Hidden" x:Name="_mainFrame" >
+            <Frame.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF1E684D" Offset="1"/>
+                    <GradientStop Color="#FF659E89"/>
+                </RadialGradientBrush>
+            </Frame.Background>
+        </Frame>
     </DockPanel>
 </Window>
