@@ -41,7 +41,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TabControl HorizontalAlignment="Left" Height="617" Margin="48,159,0,0" VerticalAlignment="Top" Width="891">
-            <TabItem x:Name="Client_View" Header="Client View" Height="22" VerticalAlignment="Bottom" Margin="-2,0">
+            <TabItem x:Name="Client_View" Header="Client View" Height="38" VerticalAlignment="Bottom" Margin="-2,-16,-17,0">
                 <Grid Background="#FFE5E5E5" Margin="0,0,-2,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="16*"/>
@@ -49,11 +49,11 @@
                         <ColumnDefinition Width="14*"/>
                         <ColumnDefinition Width="1054*"/>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="450" Margin="12,102,0,0" VerticalAlignment="Top" Width="770" ItemTemplate="{StaticResource ClientViewDataTemplate}" Grid.Column="3"/>
-                    <Label Content="Client View" HorizontalAlignment="Left" Margin="12,52,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="3"/>
+                    <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="487" Margin="12,65,0,0" VerticalAlignment="Top" Width="770" ItemTemplate="{StaticResource ClientViewDataTemplate}" Grid.Column="3"/>
+                    <Label Content="Client View" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="3"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tutor View">
+            <TabItem Header="Tutor View" Margin="17,0,-22,-2">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="9*"/>
@@ -67,7 +67,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="44" Click="BackButtonClick" Margin="50,794,0,0"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="44" Click="BackButtonClick" Margin="1032,732,0,0"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="1014,46.719,0,0" VerticalAlignment="Top" Width="91" Height="45" Click="CreateButtonClick" Visibility="Hidden"/>
         <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="50,28,670,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
     </Grid>
