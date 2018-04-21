@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess;
 using DataClasses;
+using Xceed.Wpf.Toolkit;
 
 namespace ScholarStationGUI
 {
@@ -42,6 +43,12 @@ namespace ScholarStationGUI
             textCheck();
         }
 
+        private void dateValUpdate(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("chagned Date");
+            CreateButton.Visibility = Visibility.Visible;
+        }
+
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
             if (this.NavigationService.CanGoBack)
@@ -56,26 +63,27 @@ namespace ScholarStationGUI
             {
                 Appointment newAppt = new Appointment();
                 newAppt.TutorID = manager.getLocalUser().UserID;
-                newAppt.Timeslot = text.Text;
+                // newAppt.Timeslot = text.Text;
+                newAppt.Timeslot = date.Value.ToString();
                 manager.AccessAppointmentStorage().createNewAppointment(newAppt);
             }
             catch (Exception e)
             {
-                MessageBox.Show("Could not create appointment", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                System.Windows.MessageBox.Show("Could not create appointment", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
             getTutorAppointments();
         }
 
         private void textCheck()
         {
-            if (text.Text.Length >= 1)
-            {
-                CreateButton.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                CreateButton.Visibility = Visibility.Hidden;
-            }
+          //  //if (text.Text.Length >= 1)
+           // {
+           //     CreateButton.Visibility = Visibility.Visible;
+          //  }
+          //  else
+          //  {
+          //      CreateButton.Visibility = Visibility.Hidden;
+          //  }
         }
 
         private void getClientAppointments()
@@ -88,7 +96,7 @@ namespace ScholarStationGUI
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine("could not load appointments");
-                MessageBox.Show("Could not load appointments", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                System.Windows.MessageBox.Show("Could not load appointments", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
        }
 
@@ -102,7 +110,7 @@ namespace ScholarStationGUI
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine("could not load appointments");
-                MessageBox.Show("Could not load appointments", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                System.Windows.MessageBox.Show("Could not load appointments", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
     }

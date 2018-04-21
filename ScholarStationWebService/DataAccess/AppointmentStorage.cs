@@ -92,7 +92,7 @@ namespace DataAccess
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID", connection);
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID order by timeslot", connection);
                     cmd.Parameters.AddWithValue("@tutorID", tutorID);
                     
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -135,7 +135,7 @@ namespace DataAccess
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NULL", connection);
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NULL order by timeslot", connection);
                     cmd.Parameters.AddWithValue("@tutorID", tutorID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -175,7 +175,7 @@ namespace DataAccess
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NOT NULL", connection);
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE tutorID = @tutorID AND clientID IS NOT NULL order by timeslot", connection);
                     cmd.Parameters.AddWithValue("@tutorID", tutorID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -216,7 +216,7 @@ namespace DataAccess
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE clientID = @clientID", connection);
+                    SqlCommand cmd = new SqlCommand("Select * From Appointment WHERE clientID = @clientID order by timeslot", connection);
                     cmd.Parameters.AddWithValue("@clientID", clientID);
 
                     SqlDataReader reader = cmd.ExecuteReader();
