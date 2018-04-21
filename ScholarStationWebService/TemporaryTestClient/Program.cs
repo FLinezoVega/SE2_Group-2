@@ -13,14 +13,8 @@ namespace TemporaryTestClient
         static void Main(string[] args)
         {
 
-
-
-
-            AppointmentStorage a = new AppointmentStorage();
-            Appointment g = new Appointment();
-            g.TutorID = "12345";
-            g.Timeslot = "testTimeSlot";
-            Console.WriteLine(a.createNewAppointment(g));
+            LoginManager l = new LoginManager();
+            Console.WriteLine(l.createNewAccount("bleh", "blehbleh"));
             
             Console.ReadKey();
            

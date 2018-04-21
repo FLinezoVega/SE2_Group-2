@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "ScholarStationWebService", "ScholarStationWebService\ScholarStationWebService.ccproj", "{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceWebRole1", "WCFServiceWebRole1\WCFServiceWebRole1.csproj", "{F8ADD83E-0D00-4A81-B768-C814FEF6D955}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\DataClasses.csproj", "{22DBEBD8-1A85-4854-9A33-8CC73B85A6FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATemporaryTestClient", "TemporaryTestClient\ATemporaryTestClient.csproj", "{5437AEF8-8D42-4BAF-9085-75D88072F4CB}"
@@ -27,38 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|ARM.Build.0 = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|x64.Build.0 = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Debug|x86.Build.0 = Debug|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|ARM.ActiveCfg = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|ARM.Build.0 = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|x64.ActiveCfg = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|x64.Build.0 = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|x86.ActiveCfg = Release|Any CPU
-		{9E3F8690-0195-49EB-ACBE-A29EA2CBBD09}.Release|x86.Build.0 = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|ARM.Build.0 = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|x64.Build.0 = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Debug|x86.Build.0 = Debug|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|ARM.ActiveCfg = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|ARM.Build.0 = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|x64.ActiveCfg = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|x64.Build.0 = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|x86.ActiveCfg = Release|Any CPU
-		{F8ADD83E-0D00-4A81-B768-C814FEF6D955}.Release|x86.Build.0 = Release|Any CPU
 		{22DBEBD8-1A85-4854-9A33-8CC73B85A6FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22DBEBD8-1A85-4854-9A33-8CC73B85A6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22DBEBD8-1A85-4854-9A33-8CC73B85A6FA}.Debug|ARM.ActiveCfg = Debug|Any CPU

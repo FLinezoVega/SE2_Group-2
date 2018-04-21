@@ -47,7 +47,32 @@ namespace DataAccess
             }
         }
 
+        public bool createNewAccount(string userName, string password)//not tested at all, be sure to test this to make sure it works
+        {
 
+            if (checkExisting(userName, password))
+            {
+                return false;
+            }
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand newUserCmd = new SqlCommand("Insert into Login(userName, PassHash,  password) values(@userName, @passHash, @password)", con);
+                    newUserCmd.Parameters.AddWithValue("@userName", userName);
+                    newUserCmd.Parameters.AddWithValue("@passHash", 12345);
+                    newUserCmd.Parameters.AddWithValue("@password", password);
+                    newUserCmd.ExecuteNonQuery();
+                }
+                return true;//add test to check if ExecuteNonQuery is 1 or whatever the value is
+            }
+            catch (SqlException e)
+            {//FIX this, maybe
+                return false;
+            }
+        }
 
     }
 }
