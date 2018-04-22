@@ -54,7 +54,7 @@ namespace DataClasses
             set { this.body = value; }
         }
 
-        public String AuthorVerfication
+        public String AuthorVerification
         {
             get; set;
         }

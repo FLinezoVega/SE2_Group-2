@@ -13,6 +13,7 @@ namespace TemporaryTestClient
         static void Main(string[] args)
         {
 
+            /*
             Console.WriteLine((int)UserType.User);
             UserStorage us = new UserStorage();
             User u = us.retrieveUser("testUser17");
@@ -25,6 +26,13 @@ namespace TemporaryTestClient
                 Console.WriteLine("uName: " + a.UserID + "  email: " + a.Email +  "  Verified: " + a.Verified.ToString());
             }
             Console.ReadKey();
+            */
+
+            ListingStorage l = new ListingStorage();
+            Listing list = l.retrieveListing(22);
+            Console.WriteLine(list.AuthorVerification);
+            Console.ReadKey();
+
         }
     }
 }
