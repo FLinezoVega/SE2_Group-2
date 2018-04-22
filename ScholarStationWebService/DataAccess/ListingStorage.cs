@@ -300,6 +300,11 @@ namespace DataAccess
                             {
                                 listing.University = reader.GetString(6);
                             }
+                            if (reader.GetValue(7) != DBNull.Value && (bool)reader.GetValue(7))
+                            {
+                               listing.AuthorVerification = "Verified";
+                                System.Diagnostics.Debug.WriteLine(reader.GetValue(7));
+                           }
 
                             s.Add(listing);
 
@@ -317,37 +322,38 @@ namespace DataAccess
         private string getListingListSqlString(string author, int ID, string heading, int ListingType, string Subject, string University)
         {
             bool hasOne = false;//if there is nothing added to the default select yet, this is false. 
-            StringBuilder s = new StringBuilder("Select author, listingID, heading, body, ListingType, Subject, University From Listing ");
+            //StringBuilder s = new StringBuilder("Select l.author, l.listingID, l.heading, l.body, l.ListingType, l.Subject, l.University, u.verified From Listing AS l, Customer AS u ");
+            StringBuilder s = new StringBuilder("Select distinct l.author, l.listingID, l.heading, l.body, l.ListingType, l.Subject, l.University, u.verified From Listing as l , Customer AS u ");
             if (!string.IsNullOrEmpty(author) || ID > 0 || !string.IsNullOrEmpty(heading) || ListingType > 0 || !string.IsNullOrEmpty(Subject) || !string.IsNullOrEmpty(University))
             {
                 s.Append("Where ");
                 if (!string.IsNullOrEmpty(author))
                 {
-                    s.Append("author = @author ");
+                    s.Append("l.author = @author ");
                     hasOne = true;
                 }
                 if (ID > 0)
                 {
-                    s.Append(hasOne ? "AND listingID = @ID " : "listingID = @ID ");
+                    s.Append(hasOne ? "AND l.listingID = @ID " : "l.listingID = @ID ");
                     hasOne = true;
                 }
                 if (!string.IsNullOrEmpty(heading))
                 {
-                    s.Append(hasOne ? "AND heading = @heading " : "heading = @heading ");
+                    s.Append(hasOne ? "AND l.heading = @heading " : "l.heading = @heading ");
                 }
                 if (ListingType > 0)
                 {
-                    s.Append(hasOne ? "AND ListingType = @ListingType " : "ListingType = @ListingType ");
+                    s.Append(hasOne ? "AND l.ListingType = @ListingType " : "l.ListingType = @ListingType ");
                 }
                 if (!string.IsNullOrEmpty(Subject))
                 {
-                    s.Append(hasOne ? "AND Subject = @Subject " : "Subject = @Subject ");
+                    s.Append(hasOne ? "AND l.Subject = @Subject " : "l.Subject = @Subject ");
                 }
                 if (!string.IsNullOrEmpty(University))
                 {
-                    s.Append(hasOne ? "AND University = @University " : "University = @University ");
+                    s.Append(hasOne ? "AND l.University = @University " : "l.University = @University ");
                 }
-
+                s.Append("AND u.userName = l.author");
 
             }
             Console.WriteLine(s.ToString());
