@@ -1,0 +1,19 @@
+﻿<Page x:Class="ScholarStationGUI.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScholarStationGUI"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      Width="1200" Height="900"
+      Title="HomePage">
+
+    <Grid>
+        <TabControl>
+            <TabItem Name="tabItem1" Header="Listing Search" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
+            <TabItem Name="tabItem3" Header="Create Listing" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
+            <TabItem Name="tabItem2" Header="Appointments" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
+        </TabControl>
+    </Grid>
+</Page>
