@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataClasses;
-
+using DataAccessInterfaces;
 using System.Data.SqlClient;
 
 
 
-namespace DataAccessInterfaces
+namespace DataAccess
 {
     public class UserStorage : IUserStorage
     {
@@ -55,7 +55,7 @@ namespace DataAccessInterfaces
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university, email FROM Customer WHERE userName = @userName", con);//add more fields when increasing the number of colums
+                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university, email, verified FROM Customer WHERE userName = @userName", con);//add more fields when increasing the number of colums
                     cmd.Parameters.AddWithValue("@userName", userName);//user.UserID);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
@@ -66,6 +66,7 @@ namespace DataAccessInterfaces
                         newUser.Bio = reader.GetString(1);
                         newUser.University = reader.GetString(2);
                         newUser.Email = reader.GetString(3);
+                        newUser.Verified = (bool)reader.GetValue(4);
                         return newUser;
                     }
                 }
@@ -84,10 +85,11 @@ namespace DataAccessInterfaces
                 using (SqlConnection con = new SqlConnection(ConnectionString))
                 {
                     con.Open();
-                    SqlCommand newUserCmd = new SqlCommand("Update Customer SET bio = @bio, university = @university WHERE userName = @userName", con);
+                    SqlCommand newUserCmd = new SqlCommand("Update Customer SET bio = @bio, university = @university, verified = @verified WHERE userName = @userName", con);
                     newUserCmd.Parameters.AddWithValue("@userName", user.UserID);
                     newUserCmd.Parameters.AddWithValue("@bio", user.Bio);
                     newUserCmd.Parameters.AddWithValue("@university", user.University);
+                    newUserCmd.Parameters.AddWithValue("@verified", user.Verified);
                     newUserCmd.ExecuteNonQuery();
                 }
                 return true;
@@ -115,6 +117,7 @@ namespace DataAccessInterfaces
                         temp.UserID = reader.GetString(0);
                         temp.Bio = reader.GetString(1);
                         temp.University = reader.GetString(2);
+                        temp.Verified = (bool)reader.GetValue(4);
                         userList.Add(temp);
                     }
 
@@ -127,5 +130,38 @@ namespace DataAccessInterfaces
                 return userList;
             }
         }
+
+        public List<User> getMatchingUsers(string keyword)
+        {
+            List<User> userList = new List<User>();
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT userName, bio, university, email, verified FROM Customer WHERE userName Like @search Order by userName", connection);
+                    cmd.Parameters.AddWithValue("@search", "%" + keyword + "%");
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        User temp = new User();
+                        temp.UserID = reader.GetString(0);
+                        temp.Bio = reader.GetString(1);
+                        temp.University = reader.GetString(2);
+                        temp.Verified = (bool)reader.GetValue(4);
+                        userList.Add(temp);
+                    }
+
+                    return userList;
+                }
+            }
+            catch (Exception e)
+            {
+                userList.Add(new User());
+                return userList;
+            }
+        }
+
     }
 }

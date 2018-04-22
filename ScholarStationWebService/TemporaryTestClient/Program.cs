@@ -13,11 +13,18 @@ namespace TemporaryTestClient
         static void Main(string[] args)
         {
 
-            LoginManager l = new LoginManager();
-            Console.WriteLine(l.createNewAccount("bleh", "blehbleh"));
-            
+            Console.WriteLine((int)UserType.User);
+            UserStorage us = new UserStorage();
+            User u = us.retrieveUser("testUser17");
+            Console.WriteLine(u.Verified);
+            u.Verified = true;
+            Console.WriteLine(us.updateUser(u));
+            List<User> muhList = us.getMatchingUsers("testUser");
+            foreach (User a in muhList)
+            {
+                Console.WriteLine("uName: " + a.UserID + "  email: " + a.Email +  "  Verified: " + a.Verified.ToString());
+            }
             Console.ReadKey();
-           
         }
     }
 }

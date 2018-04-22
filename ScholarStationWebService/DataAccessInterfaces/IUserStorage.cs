@@ -13,5 +13,6 @@ namespace DataAccessInterfaces
         User retrieveUser(string userName);
         bool updateUser(User user);
         List<User> getAllUsers();
+        List<User> getMatchingUsers(string keyWord);
     }
 }

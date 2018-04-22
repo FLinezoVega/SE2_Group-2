@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using DataAccessInterfaces;
 
-namespace DataAccessInterfaces
+namespace DataAccess
 {
     public class LoginManager : ILoginManager
     {
