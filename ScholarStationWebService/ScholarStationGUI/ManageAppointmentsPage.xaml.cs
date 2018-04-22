@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataAccess;
+using DataAccessInterfaces;
 using DataClasses;
 using Xceed.Wpf.Toolkit;
 
@@ -23,9 +23,9 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class ManageAppointmentsPage : Page
     {
-        DataManager manager;
+        IDataManager manager;
 
-        public ManageAppointmentsPage(DataManager man)
+        public ManageAppointmentsPage(IDataManager man)
         {
             InitializeComponent();
             manager = man;

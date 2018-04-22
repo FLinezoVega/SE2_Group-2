@@ -42,16 +42,16 @@
   <ItemGroup>
     <Compile Include="AppointmentStorage.cs" />
     <Compile Include="DataManager.cs" />
-    <Compile Include="IAppointmentStorage.cs" />
-    <Compile Include="IListingStorage.cs" />
-    <Compile Include="ILoginManager.cs" />
-    <Compile Include="IUserStorage.cs" />
     <Compile Include="ListingStorage.cs" />
     <Compile Include="LoginManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserStorage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessInterfaces\DataAccessInterfaces.csproj">
+      <Project>{a0e0be1f-7aee-4f01-b498-e8c656bf2cca}</Project>
+      <Name>DataAccessInterfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataClasses\DataClasses.csproj">
       <Project>{22dbebd8-1a85-4854-9a33-8cc73b85a6fa}</Project>
       <Name>DataClasses</Name>

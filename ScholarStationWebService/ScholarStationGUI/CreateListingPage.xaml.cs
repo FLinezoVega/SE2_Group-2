@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataAccess;
+using DataAccessInterfaces;
 using DataClasses;
 
 namespace ScholarStationGUI
@@ -22,8 +22,8 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class CreateListingPage : Page
     {
-        DataManager manager;
-        public CreateListingPage(DataManager man)
+        IDataManager manager;
+        public CreateListingPage(IDataManager man)
         {
             InitializeComponent();
             manager = man;

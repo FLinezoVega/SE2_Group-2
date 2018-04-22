@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataAccess;
+using DataAccessInterfaces;
 using DataClasses;
 
 namespace ScholarStationGUI
@@ -25,9 +25,9 @@ namespace ScholarStationGUI
         List<Listing> myList;
         string selectedUserName;
 
-        DataManager manager;
+        IDataManager manager;
 
-        public ListingSearchPage(DataManager man)
+        public ListingSearchPage(IDataManager man)
         {
             InitializeComponent();
 

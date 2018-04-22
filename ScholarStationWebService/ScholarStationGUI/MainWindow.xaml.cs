@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess;
+using DataAccessInterfaces;
 
 
 namespace ScholarStationGUI
@@ -22,7 +23,7 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        DataManager manager;
+        IDataManager manager;
         public MainWindow()
         {
             InitializeComponent();

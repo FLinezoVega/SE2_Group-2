@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\DataClasses.csproj", "{22DBEBD8-1A85-4854-9A33-8CC73B85A6FA}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{450897F6-02EF-4EC6-9BB6-47543015CAA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarStationGUI", "ScholarStationGUI\ScholarStationGUI.csproj", "{E1B80202-2729-4A13-A92E-7D9322C90398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessInterfaces", "DataAccessInterfaces\DataAccessInterfaces.csproj", "{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,22 @@ Global
 		{E1B80202-2729-4A13-A92E-7D9322C90398}.Release|x64.Build.0 = Release|Any CPU
 		{E1B80202-2729-4A13-A92E-7D9322C90398}.Release|x86.ActiveCfg = Release|Any CPU
 		{E1B80202-2729-4A13-A92E-7D9322C90398}.Release|x86.Build.0 = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|ARM.Build.0 = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|ARM.Build.0 = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|x64.Build.0 = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0E0BE1F-7AEE-4F01-B498-E8C656BF2CCA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

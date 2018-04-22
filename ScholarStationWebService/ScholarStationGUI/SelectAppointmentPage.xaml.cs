@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess;
 using DataClasses;
+using DataAccessInterfaces;
 
 namespace ScholarStationGUI
 {
@@ -22,11 +23,11 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class SelectAppointmentPage : Page
     {
-        DataManager manager;
+        IDataManager manager;
         User Tutor;
         List<Appointment> apptList;
 
-        public SelectAppointmentPage(DataManager man, User Tutor)
+        public SelectAppointmentPage(IDataManager man, User Tutor)
         {
             InitializeComponent();
             manager = man;

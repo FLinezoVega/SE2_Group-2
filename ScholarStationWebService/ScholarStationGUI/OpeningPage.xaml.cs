@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataAccess;
+using DataAccessInterfaces;
 
 namespace ScholarStationGUI
 {
@@ -21,8 +21,8 @@ namespace ScholarStationGUI
     /// </summary>
     public partial class OpeningPage : Page
     {
-        DataManager manager;
-        public OpeningPage(DataManager man)
+        IDataManager manager;
+        public OpeningPage(IDataManager man)
         {
             InitializeComponent();
             manager = man;
@@ -35,7 +35,8 @@ namespace ScholarStationGUI
 
         private void SignUpButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new LoginPage(manager));
+            this.NavigationService.Navigate(new HomePage(manager));
+            //this.NavigationService.Navigate(new LoginPage(manager));
         }
     }
 }

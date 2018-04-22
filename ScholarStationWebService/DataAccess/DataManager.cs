@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataClasses;
+using DataAccessInterfaces;
+
 
 namespace DataAccess
 {
-    public class DataManager
+    public class DataManager: IDataManager
     {
 
         private User localUser;
@@ -20,6 +22,7 @@ namespace DataAccess
         private List<string> UniversityList;
         private List<string> SubjectList;
         private List<string> TypeList;
+
         public DataManager(IListingStorage l, IUserStorage u, IAppointmentStorage a, ILoginManager login)
         {
             lStore = l;// new ListingStorage();

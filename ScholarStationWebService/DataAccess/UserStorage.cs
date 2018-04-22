@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 
 
-namespace DataAccess
+namespace DataAccessInterfaces
 {
     public class UserStorage : IUserStorage
     {

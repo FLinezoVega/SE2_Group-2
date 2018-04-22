@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataAccess;
+using DataAccessInterfaces;
 
 namespace ScholarStationGUI
 {
@@ -22,8 +22,8 @@ namespace ScholarStationGUI
     public partial class LoginPage : Page
     {
 
-        DataManager manager;
-        public LoginPage(DataManager man)
+        IDataManager manager;
+        public LoginPage(IDataManager man)
         {
             InitializeComponent();
             manager = man;
@@ -36,7 +36,8 @@ namespace ScholarStationGUI
                 if (manager.getLoginManager().checkExisting(UserNameBox.Text, PasswordTextBox.Password))
                 {
                     manager.setLocalUser(manager.AccessUserStorage().retrieveUser(UserNameBox.Text));
-                    this.NavigationService.Navigate(new ListingSearchPage(manager));
+                    //this.NavigationService.Navigate(new ListingSearchPage(manager));
+                    this.NavigationService.Navigate(new HomePage(manager));
                 }
                 else
                 {

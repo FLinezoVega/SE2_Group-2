@@ -13,7 +13,7 @@
                 <TextBlock x:Name="authorBox" Canvas.Left="570" TextWrapping="Wrap" Text="{Binding Author}" Canvas.Top="3"  FontSize="20"/>
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="University:" Canvas.Top="30" FontSize="20"/>
                 <TextBlock Canvas.Left="600" TextWrapping="Wrap" Text="{Binding University}" Canvas.Top="30" FontSize="20"/>
-                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="{Binding Heading}" Canvas.Top="0" Width="383.615" FontSize="25" FontWeight="Medium"/>
+                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="{Binding Heading}" Canvas.Top="0" Width="383.615" FontSize="15" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="5" TextWrapping="Wrap"  Text="{Binding Body}" Canvas.Top="30" Width="450" Height="65" FontSize="12"/>
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Subject:" Canvas.Top="53" FontSize="20"/>
                 <TextBlock Canvas.Left="580" TextWrapping="Wrap" Text="{Binding Subject}" Canvas.Top="53" FontSize="20"/>
@@ -39,8 +39,8 @@
             <Label Content="Type:" Height="40" Margin="10,0,10,0" FontSize="20" Visibility="Hidden"/>
             <ComboBox x:Name="TypeBox" Height="40" FontSize="20" Margin="5,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" Visibility="Hidden"/>
             <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>
-            <Button Content="Create New Listing" Margin="0, 150, 0, 0" Height="60" FontSize="18" Click="NavigateToCreateClick" Width="180" HorizontalAlignment="Left"/>
-            <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>
+            <!--<Button Content="Create New Listing" Margin="0, 150, 0, 0" Height="60" FontSize="18" Click="NavigateToCreateClick" Width="180" HorizontalAlignment="Left"/>-->
+           <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
         </StackPanel>
         <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="607,819,358,21" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False"/>
         <Label Content="Listing Info" HorizontalAlignment="Left" Margin="338,86,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>

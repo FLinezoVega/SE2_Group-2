@@ -14,6 +14,14 @@ namespace DataClasses
         private int id;
         private string clientMail;
 
+
+        //this is to be called when making an appointment as a tutor
+        public Appointment(string tutorID, string timeSlot)
+        {
+            this.tutorID = tutorID;
+            this.timeslot = timeSlot;
+        }
+
         public string TutorID
         {
             get { return this.tutorID; }
