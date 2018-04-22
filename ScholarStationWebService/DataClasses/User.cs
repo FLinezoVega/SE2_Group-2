@@ -79,5 +79,19 @@ namespace DataClasses
         {
             return (UserID.Equals("Null") && Bio.Equals("Null") &&  University.Equals("Null"));
         }
+
+        public string Verfication
+        {
+            get
+            {
+                if (verified)
+                {
+                    return "Verfied with " + University;
+                }
+                else {
+                    return "";
+                }
+            }
+        }
     }
 }

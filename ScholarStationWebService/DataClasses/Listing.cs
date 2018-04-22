@@ -18,6 +18,7 @@ namespace DataClasses
         private string university;
         private int listingType;
         private string subject;
+        private string authorVerification;
 
         public Listing(string author, string heading, string body, string university, string subject)
         {
@@ -51,6 +52,11 @@ namespace DataClasses
         {
             get { return this.body != null ? this.body : "Null"; }
             set { this.body = value; }
+        }
+
+        public String AuthorVerfication
+        {
+            get; set;
         }
 
         public string University

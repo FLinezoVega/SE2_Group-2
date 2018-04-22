@@ -9,15 +9,22 @@
     <Page.Resources>
         <DataTemplate x:Key="ListingViewDataTemplate">
             <Canvas HorizontalAlignment="Left" Height="105" Margin="20,5,0,0" VerticalAlignment="Top" Width="700">
-                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Author:" Canvas.Top="3"  FontSize="20"/>
-                <TextBlock x:Name="authorBox" Canvas.Left="570" TextWrapping="Wrap" Text="{Binding Author}" Canvas.Top="3"  FontSize="20"/>
-                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="University:" Canvas.Top="30" FontSize="20"/>
-                <TextBlock Canvas.Left="600" TextWrapping="Wrap" Text="{Binding University}" Canvas.Top="30" FontSize="20"/>
-                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="{Binding Heading}" Canvas.Top="0" Width="383.615" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Author:" Canvas.Top="3"  FontSize="18"/>
+                <TextBlock x:Name="authorBox" Canvas.Left="570" TextWrapping="Wrap" Text="{Binding Author}" Canvas.Top="3"  FontSize="18"/>
+               
+                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="University:" Canvas.Top="25" FontSize="18"/>
+                <TextBlock Canvas.Left="600" TextWrapping="Wrap" Text="{Binding University}" Canvas.Top="25" FontSize="18"/>
+                
+                <TextBlock Canvas.Left="5" TextWrapping="Wrap" Text="{Binding Heading}" Canvas.Top="0" Width="383.615" FontSize="16" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="5" TextWrapping="Wrap"  Text="{Binding Body}" Canvas.Top="30" Width="450" Height="65" FontSize="12"/>
-                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Subject:" Canvas.Top="53" FontSize="20"/>
-                <TextBlock Canvas.Left="580" TextWrapping="Wrap" Text="{Binding Subject}" Canvas.Top="53" FontSize="20"/>
+                
+                <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Subject:" Canvas.Top="45" FontSize="18"/>
+                <TextBlock Canvas.Left="580" TextWrapping="Wrap" Text="{Binding Subject}" Canvas.Top="45" FontSize="18"/>
+
+               <!-- <TextBlock Canvas.Left="500" TextWrapping="Wrap" Canvas.Top="65" FontSize="18" Text="{Binding Verfication}" Visibility="Hidden"/> -->
+
                 <TextBlock Canvas.Left="650" TextWrapping="Wrap" Text="{Binding ListingID}" Canvas.Top="10" Width="100" Height="29.291"  FontSize="20" Visibility="Hidden" />
+
             </Canvas>
         </DataTemplate>
     </Page.Resources>
