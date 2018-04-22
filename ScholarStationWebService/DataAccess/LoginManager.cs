@@ -22,6 +22,29 @@ namespace DataAccessInterfaces
         }
 
 
+        public bool checkExisting(string userName)// int hashedPassword)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) from Login WHERE userName = @userName", con);
+                    cmd.Parameters.AddWithValue("@userName", userName);
+                    int count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (SqlException e)
+            {
+                return false;
+            }
+        }
+
         public bool checkExisting(string userName,string password)// int hashedPassword)
         {
             try

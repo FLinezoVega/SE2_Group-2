@@ -16,6 +16,32 @@ namespace DataClasses
         private UserType uType;
         private bool verified;
 
+
+        public User()
+        {
+
+        }
+        //general purpose, such as when pulling from database
+        public User(string userID, string bio, string university, string email, UserType uType, bool verified)
+        {
+            this.userID = userID;
+            this.bio = bio;
+            this.university = university;
+            this.email = email;
+            this.uType = uType;
+            this.verified = verified;
+        }
+        //when creating new user from gui
+        public User(string userID, string bio, string university, string email)
+        {
+            this.userID = userID;
+            this.bio = bio;
+            this.university = university;
+            this.email = email;
+            this.uType = UserType.User;
+            this.verified = false;
+        }
+
         public string UserID
         {
             get { return this.userID != null ? this.userID : "Null"; }

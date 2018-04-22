@@ -61,10 +61,7 @@ namespace ScholarStationGUI
         {
             try
             {
-                Appointment newAppt = new Appointment();
-                newAppt.TutorID = manager.getLocalUser().UserID;
-                // newAppt.Timeslot = text.Text;
-                newAppt.Timeslot = date.Value.ToString();
+                Appointment newAppt = new Appointment(manager.getLocalUser().UserID, date.Value.ToString());
                 manager.AccessAppointmentStorage().createNewAppointment(newAppt);
             }
             catch (Exception e)

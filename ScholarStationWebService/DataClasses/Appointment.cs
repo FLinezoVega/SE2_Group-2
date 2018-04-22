@@ -14,6 +14,11 @@ namespace DataClasses
         private int id;
         private string clientMail;
 
+        public Appointment()
+        {
+
+        }
+
 
         //this is to be called when making an appointment as a tutor
         public Appointment(string tutorID, string timeSlot)

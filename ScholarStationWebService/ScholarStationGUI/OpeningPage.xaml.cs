@@ -35,7 +35,7 @@ namespace ScholarStationGUI
 
         private void SignUpButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HomePage(manager));
+            this.NavigationService.Navigate(new SignUpPage(manager));//new HomePage(manager));
             //this.NavigationService.Navigate(new LoginPage(manager));
         }
     }

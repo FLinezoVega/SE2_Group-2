@@ -46,12 +46,7 @@ namespace ScholarStationGUI
         {
             try
             {
-                Listing aListing = new Listing();
-                aListing.Author = manager.getLocalUser().UserID;
-                aListing.Heading = TitleBox.Text;
-                aListing.Body = BodyBox.Text;
-                aListing.University = UniversityBox.Text;
-                aListing.Subject = SubjectBox.Text;
+                Listing aListing = new Listing(manager.getLocalUser().UserID, TitleBox.Text, BodyBox.Text, UniversityBox.Text, SubjectBox.Text);
                 if (TypeBox.Text.Equals("Tutoring"))
                 {
                     aListing.ListingType = (int)ListingType.Tutoring;

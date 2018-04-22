@@ -8,6 +8,8 @@ namespace DataAccessInterfaces
 {
     public interface ILoginManager
     {
+        bool checkExisting(string userName);
+
         bool checkExisting(string userName, string password);
 
         bool createNewAccount(string userName, string password);

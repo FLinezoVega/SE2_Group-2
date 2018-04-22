@@ -19,6 +19,17 @@ namespace DataClasses
         private int listingType;
         private string subject;
 
+        public Listing(string author, string heading, string body, string university, string subject)
+        {
+            this.author = author;
+            this.listingID = -1;
+            this.heading = heading;
+            this.body = body;
+            this.university = university;
+            this.subject = subject;
+        }
+
+
         public string Author
         {
             get { return this.author != null ? this.author : "Null"; }

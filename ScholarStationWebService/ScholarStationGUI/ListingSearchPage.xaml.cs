@@ -30,11 +30,7 @@ namespace ScholarStationGUI
         public ListingSearchPage(IDataManager man)
         {
             InitializeComponent();
-
-
             manager = man;
-
-            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -45,23 +41,18 @@ namespace ScholarStationGUI
             TypeBox.SelectedIndex = 0;
             SubjectBox.ItemsSource = manager.getSubjects();
             SubjectBox.SelectedIndex = 0;
-
-
             getListings();
         }
 
         private async void getListings()
         {
-            //int listingType = TypeBox.Text.Equals(manager.getTypes()[0]) ? 1 : 2;
             try
             {
                 myList = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);
                 ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);   
-                //System.Diagnostics.Debug.WriteLine("xxxx" + SubjectBox.Text + "xxxx");
             }
             catch (Exception e)
             {
-              //  MessageBox.Show("Could not load listings", "OK", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
 
@@ -74,7 +65,7 @@ namespace ScholarStationGUI
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Listing l = e.AddedItems[0] as Listing;
-            selectedUserName = l.Author;// myList[ListingView.SelectedIndex].Author;//
+            selectedUserName = l.Author;
             ViewAppointmentButton.IsEnabled = true;
         }
 
