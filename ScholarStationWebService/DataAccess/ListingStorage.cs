@@ -249,7 +249,7 @@ namespace DataAccess
 
             }
             return new Listing();
-        }//currently broken based on Listing returning -1 for every listing. This is due to eventual plans of have an auto id assignment for database
+        }
 
         public List<Listing> getMatchingListings(string author, int ID, string heading, int ListingType, string Subject, string University)
         {
@@ -303,7 +303,6 @@ namespace DataAccess
                             if (reader.GetValue(7) != DBNull.Value && (bool)reader.GetValue(7))
                             {
                                listing.AuthorVerification = "Verified";
-                                System.Diagnostics.Debug.WriteLine(reader.GetValue(7));
                            }
 
                             s.Add(listing);
@@ -312,7 +311,7 @@ namespace DataAccess
                     }
                 }
             }
-            catch (Exception e)//FIXME, null object pattern
+            catch (Exception e)
             {
                 s.Add(new Listing());
             }
@@ -356,7 +355,7 @@ namespace DataAccess
                 s.Append("AND u.userName = l.author");
 
             }
-            Console.WriteLine(s.ToString());
+            //Console.WriteLine(s.ToString());
             return s.ToString();
         }
 

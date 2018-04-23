@@ -12,7 +12,8 @@ namespace DataAccessInterfaces
         bool createNewUser(User newUser);
         User retrieveUser(string userName);
         bool updateUser(User user);
+        bool toggleUserVerification(string userName);
         List<User> getAllUsers();
-        List<User> getMatchingUsers(string keyWord);
+        List<User> getMatchingUsers(string keyWord, string university);
     }
 }

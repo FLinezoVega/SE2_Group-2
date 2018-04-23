@@ -43,6 +43,14 @@ namespace ScholarStationGUI
             Frame f3 = new Frame();
             f3.Navigate(new CreateListingPage(manager));
             tabItem3.Content = f3;
+
+            if (manager.getLocalUser().UType >= DataClasses.UserType.Faculty)
+            {
+                tabItem4.Visibility = Visibility.Visible;
+            }
+            Frame f4 = new Frame();
+            f4.Navigate(new FacultyUserSearch(manager));
+            tabItem4.Content = f4;
         }
     }
 }

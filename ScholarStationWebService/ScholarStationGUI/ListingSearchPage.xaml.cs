@@ -76,7 +76,7 @@ namespace ScholarStationGUI
 
         private void NavigateToCreateAppointmentClick(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Clicked Manage appointment");
+            //System.Diagnostics.Debug.WriteLine("Clicked Manage appointment");
             this.NavigationService.Navigate(new ManageAppointmentsPage(manager));
         }
 

@@ -14,6 +14,7 @@
             <TabItem Name="tabItem1" Header="Listing Search" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
             <TabItem Name="tabItem3" Header="Create Listing" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
             <TabItem Name="tabItem2" Header="Appointments" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0"/>
+            <TabItem Name="tabItem4" Header="User Verification" Height="22" Width="100" VerticalAlignment="Bottom" Margin="1,-16,-17,0" Visibility="Hidden"/>
         </TabControl>
     </Grid>
 </Page>
