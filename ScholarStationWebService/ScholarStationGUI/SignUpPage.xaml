@@ -16,28 +16,29 @@
             </RadialGradientBrush>
         </Grid.Background>
 
-        <Image Margin="0,0,828,659" Source="sstationlogo.png" Stretch="Fill"/>
+        <Image Margin="187,257,423,230" Source="sstationlogo.png" Stretch="Fill"/>
 
-        <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="439,623,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
+        <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="771,611,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
 
-        <Label Content="UserName" HorizontalAlignment="Left" Margin="445,200,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
-        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="445,233,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" TextChanged="TextCheck"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="777,257,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
+        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="777,290,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" TextChanged="TextCheck"/>
 
-        <Label Content="Password" HorizontalAlignment="Left" Margin="445,268,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
-        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="445,301,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="777,325,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
+        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="777,358,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
 
-        <Label Content="Password Confirm" HorizontalAlignment="Left" Margin="439,333,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
-        <PasswordBox x:Name="PasswordConfirm"  HorizontalAlignment="Left" Margin="443,368,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
+        <Label Content="Password Confirm" HorizontalAlignment="Left" Margin="771,390,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <PasswordBox x:Name="PasswordConfirm"  HorizontalAlignment="Left" Margin="775,425,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
 
-        <Label Content="Email Address" HorizontalAlignment="Left" Margin="439,398,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
-        <TextBox x:Name="Email"  HorizontalAlignment="Left" Margin="443,433,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="771,455,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <TextBox x:Name="Email"  HorizontalAlignment="Left" Margin="775,490,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
 
-        <Label Content="University" HorizontalAlignment="Left" Margin="445,463,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
-        <TextBox x:Name="University"  HorizontalAlignment="Left" Margin="445,498,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
+        <Label Content="University" HorizontalAlignment="Left" Margin="775,520,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <TextBox x:Name="University"  HorizontalAlignment="Left" Margin="775,555,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
 
 
         <Label x:Name="mismatchMessage" Content="Passwords Must Match" HorizontalAlignment="Left" Margin="775,367,0,0" VerticalAlignment="Top" Width="265" Height="65" FontSize="24" Foreground="Red" Visibility="Hidden"/>
         <Label x:Name="DuplicateUser" Content="UserName taken" HorizontalAlignment="Left" Margin="777,225,0,0" VerticalAlignment="Top" Width="265" Height="50" FontSize="24" Foreground="Red" Visibility="Hidden"/>
+        <Label Content="Sign Up" HorizontalAlignment="Center" Margin="771,149,222,0" VerticalAlignment="Top" Width="207" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
 
 
 
