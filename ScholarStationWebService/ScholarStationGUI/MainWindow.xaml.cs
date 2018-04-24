@@ -32,8 +32,9 @@ namespace ScholarStationGUI
             IUserStorage u = new UserStorage();
             IAppointmentStorage a = new AppointmentStorage();
             ILoginManager login = new LoginManager();
+            IFeedbackStorage fStore = new FeedbackStorage();
 
-            manager = new DataManager(l, u, a, login);
+            manager = new DataManager(l, u, a, login, fStore);
             _mainFrame.Navigate(new OpeningPage(manager));
             //_mainFrame.Navigate(new CreateListingPage(manager));
         }

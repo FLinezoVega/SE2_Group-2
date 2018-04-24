@@ -15,5 +15,6 @@ namespace DataAccessInterfaces
         bool toggleUserVerification(string userName);
         List<User> getAllUsers();
         List<User> getMatchingUsers(string keyWord, string university);
+        List<User> getMatchingTutors(string userName);
     }
 }

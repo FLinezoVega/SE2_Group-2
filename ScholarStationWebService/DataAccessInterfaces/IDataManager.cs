@@ -17,6 +17,8 @@ namespace DataAccessInterfaces
 
         ILoginManager getLoginManager();
 
+        IFeedbackStorage getFeedbackStorage();
+
         List<string> getUniversities();
 
         List<string> getSubjects();

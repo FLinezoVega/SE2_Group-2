@@ -188,5 +188,42 @@ namespace DataAccess
                 return false;
             }
         }
+
+        public List<User> getMatchingTutors(string userName)
+        {
+            List<User> userList = new List<User>();
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Select u.userName, u.bio, u.university, u.email, u.verified, u.type, AVG(f.rating) as score from Customer as u inner join Appointment as a on u.userName = a.tutorID  left join Feedback as f on f.target = a.tutorID WHERE a.clientID = @userName GROUP BY u.userName, u.bio, u.university, u.email, u.verified, u.type ", connection);
+                    cmd.Parameters.AddWithValue("@userName", userName);
+                   // cmd.Parameters.AddWithValue("@university", university);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        User temp = new User();
+                        temp.UserID = reader.GetString(0);
+                        temp.Bio = reader.GetString(1);
+                        temp.University = reader.GetString(2);
+                        temp.Email = reader.GetString(3);
+                        temp.Verified = (bool)reader.GetValue(4);
+                        temp.UType = (UserType)reader.GetInt32(5);
+                        //temp.Score = reader.GetInt32(6);
+                        temp.Score = reader.GetValue(6) == DBNull.Value ? "" : "Score: " + reader.GetValue(6).ToString();
+                        userList.Add(temp);
+                    }
+
+                    return userList;
+                }
+            }
+            catch (Exception e)
+            {
+                userList.Add(new User());
+                return userList;
+            }
+        }
     }
 }

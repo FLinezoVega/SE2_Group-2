@@ -18,17 +18,19 @@ namespace DataAccess
         private IUserStorage uStore;
         private IAppointmentStorage aStore;
         private ILoginManager lManager;
+        private IFeedbackStorage fStore;
 
         private List<string> UniversityList;
         private List<string> SubjectList;
         private List<string> TypeList;
 
-        public DataManager(IListingStorage l, IUserStorage u, IAppointmentStorage a, ILoginManager login)
+        public DataManager(IListingStorage l, IUserStorage u, IAppointmentStorage a, ILoginManager login, IFeedbackStorage f)
         {
             lStore = l;// new ListingStorage();
             uStore = u;// new UserStorage();
             aStore = a;// new AppointmentStorage();
             lManager = login;// new LoginManager();
+            fStore = f;
 
             UniversityList = new List<string>() { "UWF", "FSU", "UCF", "UF", "UM" };
             SubjectList = new List<string>() { "Math", "CompSci", "History", "English", "Biology", "Chemistry" };
@@ -55,6 +57,11 @@ namespace DataAccess
             return lManager;
         }
 
+        public IFeedbackStorage getFeedbackStorage()
+        {
+            return fStore;
+        }
+
         public List<string> getUniversities()
         {
             return UniversityList;
@@ -74,6 +81,8 @@ namespace DataAccess
         {
             localUser = user;
         }
+
+
 
         public User getLocalUser()
         {

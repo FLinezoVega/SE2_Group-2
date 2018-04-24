@@ -47,10 +47,17 @@ namespace ScholarStationGUI
             if (manager.getLocalUser().UType >= DataClasses.UserType.Faculty)
             {
                 tabItem4.Visibility = Visibility.Visible;
+
+                Frame f4 = new Frame();
+                f4.Navigate(new FacultyUserSearch(manager));
+                tabItem4.Content = f4;
             }
-            Frame f4 = new Frame();
-            f4.Navigate(new FacultyUserSearch(manager));
-            tabItem4.Content = f4;
+            else {
+                tabItem5.Visibility = Visibility.Visible;
+                Frame f5 = new Frame();
+                f5.Navigate(new RateTutorPage(manager));
+                tabItem5.Content = f5;
+            }
         }
     }
 }

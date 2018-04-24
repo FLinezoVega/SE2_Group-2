@@ -15,6 +15,7 @@ namespace DataClasses
         private string email;
         private UserType uType;
         private bool verified;
+        private string score;
 
 
         public User()
@@ -78,6 +79,11 @@ namespace DataClasses
         public bool isNull()//Test this extensively
         {
             return (UserID.Equals("Null") && Bio.Equals("Null") &&  University.Equals("Null"));
+        }
+
+        public string Score
+        {
+            get; set;
         }
 
         public string Verfication

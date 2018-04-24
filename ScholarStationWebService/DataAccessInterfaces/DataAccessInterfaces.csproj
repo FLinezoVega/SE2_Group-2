@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IAppointmentStorage.cs" />
     <Compile Include="IDataManager.cs" />
+    <Compile Include="IFeedbackStorage.cs" />
     <Compile Include="IListingStorage.cs" />
     <Compile Include="ILoginManager.cs" />
     <Compile Include="IUserStorage.cs" />
