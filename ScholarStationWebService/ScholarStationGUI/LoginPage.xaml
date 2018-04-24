@@ -13,9 +13,9 @@
                 <GradientStop Color="#FF53ACB0" Offset="0.618"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="439,623,0,0" VerticalAlignment="Top" Width="333" Click="LoginButtonClick" Height="84" FontSize="40"/>
-        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="439,417,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" />
-        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="439,520,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Login" HorizontalAlignment="Left" Margin="439,664,0,0" VerticalAlignment="Top" Width="327" Click="LoginButtonClick" Height="60" FontSize="40"/>
+        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="439,453,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" />
+        <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="439,566,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5">
             <PasswordBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -25,9 +25,10 @@
                 </TransformGroup>
             </PasswordBox.RenderTransform>
         </PasswordBox>
-        <Label Content="UserName" HorizontalAlignment="Left" Margin="439,375,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="439,481,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
-        <Image Margin="407,171,421,488" Source="sstationlogo.png" Stretch="Fill"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="439,421,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="439,527,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
+        <Image Margin="413,111,415,548" Source="sstationlogo.png" Stretch="Fill"/>
+        <Label Content="Sign In" HorizontalAlignment="Center" Margin="509,325,513,0" VerticalAlignment="Top" Width="178" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
 
     </Grid>
 </Page>
