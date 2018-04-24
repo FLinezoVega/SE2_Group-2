@@ -23,7 +23,7 @@
         <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,466,0,0" VerticalAlignment="Top" Width="280" Height="76"/>
         <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,611,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
         <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
-        <Label Content="Body" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Listing Description" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="254" Height="50" FontSize="30"/>
         <Label Content="University" HorizontalAlignment="Left" Margin="870,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
         <Label Content="Type" HorizontalAlignment="Left" Margin="870,416,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
         <Label Content="Subject" HorizontalAlignment="Left" Margin="870,561,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
