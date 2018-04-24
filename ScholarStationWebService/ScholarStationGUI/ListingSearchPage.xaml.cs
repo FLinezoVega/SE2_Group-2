@@ -48,6 +48,7 @@ namespace ScholarStationGUI
         {
             try
             {
+                ListingView.UnselectAll();
                 myList = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);
                 ListingView.ItemsSource = manager.AccessListingStorage().getMatchingListings(null, -1, null, -1, "", UniversityBox.Text);//SubjectBox.Text, UniversityBox.Text);   
             }

@@ -57,11 +57,12 @@ namespace ScholarStationGUI
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
-
+            /*
            if (this.NavigationService.CanGoBack)
            {
                this.NavigationService.GoBack();
-           }
+           }*/
+            this.NavigationService.Navigate(new ListingSearchPage(manager));
         }
 
 

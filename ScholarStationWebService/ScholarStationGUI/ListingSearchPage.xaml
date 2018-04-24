@@ -21,7 +21,7 @@
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Subject:" Canvas.Top="45" FontSize="18"/>
                 <TextBlock Canvas.Left="580" TextWrapping="Wrap" Text="{Binding Subject}" Canvas.Top="45" FontSize="18"/>
 
-                <TextBlock Canvas.Left="530" TextWrapping="Wrap" Canvas.Top="65" FontSize="18" Text="{Binding AuthorVerification}" Foreground="Cyan"/>
+                <TextBlock Canvas.Left="530" TextWrapping="Wrap" Canvas.Top="65" FontSize="18" Text="{Binding AuthorVerification}" Foreground="RoyalBlue"/>
 
                 <TextBlock Canvas.Left="650" TextWrapping="Wrap" Text="{Binding ListingID}" Canvas.Top="10" Width="100" Height="29.291"  FontSize="20" Visibility="Hidden" />
 

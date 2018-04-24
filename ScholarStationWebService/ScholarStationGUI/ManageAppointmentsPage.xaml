@@ -60,7 +60,7 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="417*"/>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="559" Margin="6.5,55,0,-27" VerticalAlignment="Top" Width="426" ItemTemplate="{StaticResource TutorViewDataTemplate}" Grid.Column="2"/>
+                    <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="485" Margin="6,55,0,0" VerticalAlignment="Top" Width="426" ItemTemplate="{StaticResource TutorViewDataTemplate}" Grid.Column="2"/>
                     <xctk:DateTimePicker x:Name ="date" HorizontalAlignment="Left" Height="45" Margin="450,69,0,0" VerticalAlignment="Top" Width="360"  FontSize="20"  Grid.Column="2" ValueChanged="dateValUpdate"/>
                     <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="464.5,18,0,0" VerticalAlignment="Top" Width="236" Height="50" FontSize="30" Grid.Column="2"/>
                     <Label Content="Tutor View" HorizontalAlignment="Left" Margin="14.5,2,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="2"/>
