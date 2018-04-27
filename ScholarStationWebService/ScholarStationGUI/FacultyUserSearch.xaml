@@ -31,6 +31,23 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Ellipse HorizontalAlignment="Left" Height="120" Margin="-50,6,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.679"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF29AC7B" Offset="0.902"/>
+                    <GradientStop Color="#FF00FFE8" Offset="0.749"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
         <Rectangle HorizontalAlignment="Left" Height="257" Margin="10,160,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="216" Opacity="0.75">
             <Rectangle.Fill>
                 <RadialGradientBrush>
@@ -46,7 +63,9 @@
             <TextBox x:Name="SearchBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" TextChanged="SearchBox_TextChanged"/>
             <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>
             <!--<Button Content="Create New Listing" Margin="0, 150, 0, 0" Height="60" FontSize="18" Click="NavigateToCreateClick" Width="180" HorizontalAlignment="Left"/>-->
+
             <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
+
         </StackPanel>
         <Button x:Name ="VerifyButton" Content="Toggle Verification of Selected" Margin="607,819,358,21" FontSize="15" Click="VerifyClick" IsEnabled="False"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="338,96,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>

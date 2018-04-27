@@ -42,7 +42,7 @@
 
 
 
-        <Image Margin="187,257,423,230" Source="sstationlogo.png" Stretch="Fill"/>
+        <Image Margin="176,257,434,230" Source="sstationlogo.png" Stretch="None"/>
 
         <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="771,611,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
 
