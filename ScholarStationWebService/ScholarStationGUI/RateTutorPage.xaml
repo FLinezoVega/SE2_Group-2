@@ -32,16 +32,43 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="UserView" Margin="338,136,90,132" ItemTemplate="{StaticResource UserViewDataTemplate}" SelectionChanged="SelectionChanged"/>
-        <StackPanel HorizontalAlignment="Left" Height="880" Margin="5,82,0,-62" VerticalAlignment="Top" Width="235">
-            <Label Content="Choose a rating:" Height="40" Margin="10,5,10,0" FontSize="20"/>
-            <ComboBox x:Name="Rating" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" IsEnabled="false" SelectedIndex="0"/>
-           <!-- <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>-->
+        <Rectangle HorizontalAlignment="Left" Height="126" Margin="5,222,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Ellipse HorizontalAlignment="Left" Height="103" Margin="-31,26,0,0" VerticalAlignment="Top" Width="439" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.679"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF29AC7B" Offset="0.902"/>
+                    <GradientStop Color="#FF00FFE8" Offset="0.749"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <ListView x:Name="UserView" Margin="338,178,90,90" ItemTemplate="{StaticResource UserViewDataTemplate}" SelectionChanged="SelectionChanged"/>
+        <StackPanel HorizontalAlignment="Left" Height="880" Margin="16,222,0,-202" VerticalAlignment="Top" Width="235">
+            <Label Content="Choose a rating:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
+            <ComboBox x:Name="Rating" FontSize="20" Height="50" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="50" HorizontalAlignment="Left" IsEnabled="false" SelectedIndex="0"/>
+            <!-- <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>-->
+
         </StackPanel>
-        <Button x:Name ="RateButton" Content="Submit Rating" Margin="607,819,358,21" FontSize="15" Click="RateClick" IsEnabled="False"/>
-        <Label Content="userName" HorizontalAlignment="Left" Margin="338,86,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,92,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24"/>
-        <Label Content="Rate a Tutor" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name ="RateButton" Content="Submit Rating" Margin="85,268,996,582" FontSize="15" Click="RateClick" IsEnabled="False"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="338,128,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,134,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Rate a Tutor" HorizontalAlignment="Center" Margin="44,44,676,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
 
     </Grid>
 </Page>

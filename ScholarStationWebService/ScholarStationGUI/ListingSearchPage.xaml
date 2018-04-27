@@ -69,7 +69,7 @@
             </Ellipse.Fill>
         </Ellipse>
 
-        <ListView x:Name="ListingView" Margin="338,62,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Opacity="0.75" Grid.RowSpan="3"/>
+        <ListView x:Name="ListingView" Margin="338,62,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Grid.RowSpan="3"/>
         <StackPanel HorizontalAlignment="Left" Height="880" Margin="29,97,0,-151" VerticalAlignment="Top" Width="235" Grid.Row="1" Grid.RowSpan="3">
             <Label Content="University:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <ComboBox x:Name="UniversityBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left"/>
@@ -85,7 +85,7 @@
         </StackPanel>
         <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="607,117,358,21" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False" Grid.Row="3"/>
         <Label Content="Listing Info" HorizontalAlignment="Left" Margin="338,22,0,0" VerticalAlignment="Top" Width="175" Height="50" FontSize="30" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
-        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,18,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,27,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Listing Search" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic" Grid.RowSpan="2"/>
 
     </Grid>
