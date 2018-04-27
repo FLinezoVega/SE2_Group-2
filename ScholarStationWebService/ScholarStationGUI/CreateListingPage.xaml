@@ -14,6 +14,16 @@
                 <GradientStop Color="#FF89CFB5" Offset="0.438"/>
             </RadialGradientBrush>
         </Grid.Background>
+        <Rectangle HorizontalAlignment="Right" Height="485" Margin="0,244,24,0" StrokeThickness="5" VerticalAlignment="Top" Width="1118" Opacity="0.5">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
         <Ellipse HorizontalAlignment="Left" Height="170" Margin="210,12,0,0" VerticalAlignment="Top" Width="784" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
@@ -32,7 +42,7 @@
         </Ellipse>
 
 
-        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="43,739,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
+        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="90,778,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
         <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="90,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144" Opacity="0.75">
             <TextBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -41,7 +51,7 @@
                 </LinearGradientBrush>
             </TextBox.OpacityMask>
         </TextBox>
-        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="88,129,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="88,129,0,0" VerticalAlignment="Top" Width="192" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35" Opacity="0.75" Background="White">
             <TextBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -76,10 +86,10 @@
             </ComboBox.OpacityMask>
         </ComboBox>
         <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
-        <Label Content="Listing Description" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="254" Height="50" FontSize="30"/>
-        <Label Content="University" HorizontalAlignment="Left" Margin="870,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Type" HorizontalAlignment="Left" Margin="870,416,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Subject" HorizontalAlignment="Left" Margin="870,561,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Listing Description" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="284" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="University" HorizontalAlignment="Left" Margin="870,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="870,416,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Subject" HorizontalAlignment="Left" Margin="870,561,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
 
 

@@ -38,12 +38,6 @@
             </Rectangle.Fill>
         </Rectangle>
 
-
-
-
-
-        <Image Margin="176,257,434,230" Source="sstationlogo.png" Stretch="None"/>
-
         <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="771,611,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
 
         <Label Content="UserName" HorizontalAlignment="Left" Margin="777,257,0,0" VerticalAlignment="Top" Width="148" Height="63" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
@@ -65,6 +59,7 @@
         <Label x:Name="mismatchMessage" Content="Passwords Must Match" HorizontalAlignment="Left" Margin="775,367,0,0" VerticalAlignment="Top" Width="265" Height="65" FontSize="24" Foreground="Red" Visibility="Hidden"/>
         <Label x:Name="DuplicateUser" Content="UserName taken" HorizontalAlignment="Left" Margin="777,225,0,0" VerticalAlignment="Top" Width="265" Height="50" FontSize="24" Foreground="Red" Visibility="Hidden"/>
         <Label Content="Sign Up" HorizontalAlignment="Center" Margin="771,149,222,0" VerticalAlignment="Top" Width="207" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Image Margin="175,225,385,200" Source="sstationlogo.png" Stretch="Fill"/>
 
 
 
