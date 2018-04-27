@@ -58,7 +58,7 @@
             </TextBox.OpacityMask>
         </TextBox>
         <Button x:Name="CreateButton" Content="Create Listing" HorizontalAlignment="Left" Margin="416,778,0,0" Visibility="Hidden" VerticalAlignment="Top" Width="401" Height="67.96" Click="CreateListingButtonClick"/>
-        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,320,0,0" VerticalAlignment="Top" Width="280" Height="75">
+        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,320,0,0" VerticalAlignment="Top" Width="280" Height="45">
             <ComboBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -66,7 +66,7 @@
                 </LinearGradientBrush>
             </ComboBox.OpacityMask>
         </ComboBox>
-        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,466,0,0" VerticalAlignment="Top" Width="280" Height="76">
+        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,466,0,0" VerticalAlignment="Top" Width="280" Height="45">
             <ComboBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -74,7 +74,7 @@
                 </LinearGradientBrush>
             </ComboBox.OpacityMask>
         </ComboBox>
-        <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,611,0,0" VerticalAlignment="Top" Width="280" Height="75">
+        <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,611,0,0" VerticalAlignment="Top" Width="280" Height="45">
             <ComboBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
