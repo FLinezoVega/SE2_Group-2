@@ -33,16 +33,38 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid HorizontalAlignment="Left" Height="900" Margin="10,21.281,0,0" VerticalAlignment="Top" Width="1200">
+    <Grid HorizontalAlignment="Left" Height="921" Margin="0,0,-10,-21" VerticalAlignment="Top" Width="1210">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFA0E2CA" Offset="0"/>
                 <GradientStop Color="#FF40D19B" Offset="0.996"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Ellipse HorizontalAlignment="Left" Height="120" Margin="22,0,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.679"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF29AC7B" Offset="0.902"/>
+                    <GradientStop Color="#FF00FFE8" Offset="0.749"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
         <TabControl HorizontalAlignment="Left" Height="617" Margin="48,159,0,0" VerticalAlignment="Top" Width="891">
             <TabItem x:Name="Client_View" Header="Client View" Height="38" VerticalAlignment="Bottom" Margin="-2,-16,-17,0">
-                <Grid Background="#FFE5E5E5" Margin="0,0,-2,0">
+                <Grid Margin="0,0,-2,0">
+                    <Grid.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF5F5B5B" Offset="0"/>
+                            <GradientStop Color="#FF5EC194" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Grid.Background>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="16*"/>
                         <ColumnDefinition Width="17*"/>
@@ -50,24 +72,30 @@
                         <ColumnDefinition Width="1054*"/>
                     </Grid.ColumnDefinitions>
                     <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="487" Margin="12,65,0,0" VerticalAlignment="Top" Width="770" ItemTemplate="{StaticResource ClientViewDataTemplate}" Grid.Column="3"/>
-                    <Label Content="Client View" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="3"/>
+                    <Label Content="Client View" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="180" Height="50" FontSize="30" Grid.Column="3" FontFamily="Arial Rounded MT Bold"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tutor View" Margin="17,0,-22,-2">
-                <Grid Background="#FFE5E5E5">
+            <TabItem Header="Tutor View" Margin="17,0,-22,-2" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5">
+                <Grid>
+                    <Grid.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFC7C6C6" Offset="0"/>
+                            <GradientStop Color="#FF56AE85" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Grid.Background>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="9*"/>
-                        <ColumnDefinition Width="17*"/>
-                        <ColumnDefinition Width="417*"/>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="833*"/>
                     </Grid.ColumnDefinitions>
                     <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="485" Margin="6,55,0,0" VerticalAlignment="Top" Width="426" ItemTemplate="{StaticResource TutorViewDataTemplate}" Grid.Column="2"/>
                     <xctk:DateTimePicker x:Name ="date" HorizontalAlignment="Left" Height="45" Margin="450,69,0,0" VerticalAlignment="Top" Width="360"  FontSize="20"  Grid.Column="2" ValueChanged="dateValUpdate"/>
-                    <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="464.5,18,0,0" VerticalAlignment="Top" Width="236" Height="50" FontSize="30" Grid.Column="2"/>
-                    <Label Content="Tutor View" HorizontalAlignment="Left" Margin="14.5,2,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="2"/>
+                    <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="465,18,0,0" VerticalAlignment="Top" Width="248" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
+                    <Label Content="Tutor View" HorizontalAlignment="Left" Margin="14.5,2,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
                 </Grid>
             </TabItem>
         </TabControl>
-       <!-- <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="44" Click="BackButtonClick" Margin="1032,732,0,0"/>-->
+        <!-- <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="44" Click="BackButtonClick" Margin="1032,732,0,0"/>-->
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="1014,46.719,0,0" VerticalAlignment="Top" Width="91" Height="45" Click="CreateButtonClick" Visibility="Hidden"/>
         <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="50,28,670,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
     </Grid>

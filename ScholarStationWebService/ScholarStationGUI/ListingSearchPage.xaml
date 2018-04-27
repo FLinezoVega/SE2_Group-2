@@ -11,13 +11,13 @@
             <Canvas HorizontalAlignment="Left" Height="105" Margin="20,5,0,0" VerticalAlignment="Top" Width="700">
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Author:" Canvas.Top="3"  FontSize="18"/>
                 <TextBlock x:Name="authorBox" Canvas.Left="570" TextWrapping="Wrap" Text="{Binding Author}" Canvas.Top="3"  FontSize="18"/>
-               
+
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="University:" Canvas.Top="25" FontSize="18"/>
                 <TextBlock Canvas.Left="600" TextWrapping="Wrap" Text="{Binding University}" Canvas.Top="25" FontSize="18"/>
-                
+
                 <TextBlock Canvas.Left="5" TextWrapping="Wrap" Text="{Binding Heading}" Canvas.Top="0" Width="383.615" FontSize="16" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="5" TextWrapping="Wrap"  Text="{Binding Body}" Canvas.Top="30" Width="450" Height="65" FontSize="12"/>
-                
+
                 <TextBlock Canvas.Left="500" TextWrapping="Wrap" Text="Subject:" Canvas.Top="45" FontSize="18"/>
                 <TextBlock Canvas.Left="580" TextWrapping="Wrap" Text="{Binding Subject}" Canvas.Top="45" FontSize="18"/>
 
@@ -30,6 +30,12 @@
     </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="228*"/>
+            <RowDefinition Height="99*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="#FF4DBFBF" Offset="0"/>
@@ -37,9 +43,35 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="ListingView" Margin="338,136,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged"/>
-        <StackPanel HorizontalAlignment="Left" Height="880" Margin="5,82,0,-62" VerticalAlignment="Top" Width="235">
-            <Label Content="University:" Height="40" Margin="10,5,10,0" FontSize="20"/>
+        <Rectangle HorizontalAlignment="Left" Height="395" Margin="10,97,0,0" Grid.Row="1" Grid.RowSpan="2" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Ellipse HorizontalAlignment="Left" Height="120" Margin="-50,6,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.679"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF29AC7B" Offset="0.902"/>
+                    <GradientStop Color="#FF00FFE8" Offset="0.749"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <ListView x:Name="ListingView" Margin="338,62,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Opacity="0.75" Grid.RowSpan="3"/>
+        <StackPanel HorizontalAlignment="Left" Height="880" Margin="29,97,0,-151" VerticalAlignment="Top" Width="235" Grid.Row="1" Grid.RowSpan="3">
+            <Label Content="University:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <ComboBox x:Name="UniversityBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left"/>
             <Label Content="Subject:" Height="40" Margin="10,0,10,0" FontSize="20" Visibility="Hidden"/>
             <ComboBox x:Name="SubjectBox" Height="40" FontSize="20" Margin="5,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" Visibility="Hidden"/>
@@ -47,12 +79,14 @@
             <ComboBox x:Name="TypeBox" Height="40" FontSize="20" Margin="5,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" Visibility="Hidden"/>
             <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>
             <!--<Button Content="Create New Listing" Margin="0, 150, 0, 0" Height="60" FontSize="18" Click="NavigateToCreateClick" Width="180" HorizontalAlignment="Left"/>-->
-           <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
+
+            <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
+
         </StackPanel>
-        <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="607,819,358,21" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False"/>
-        <Label Content="Listing Info" HorizontalAlignment="Left" Margin="338,86,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,92,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24"/>
-        <Label Content="Listing Search" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="607,117,358,21" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False" Grid.Row="3"/>
+        <Label Content="Listing Info" HorizontalAlignment="Left" Margin="338,22,0,0" VerticalAlignment="Top" Width="175" Height="50" FontSize="30" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,18,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Listing Search" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>

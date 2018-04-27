@@ -20,19 +20,19 @@
 
         <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="771,611,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
 
-        <Label Content="UserName" HorizontalAlignment="Left" Margin="777,257,0,0" VerticalAlignment="Top" Width="126" Height="63" FontSize="24"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="777,257,0,0" VerticalAlignment="Top" Width="148" Height="63" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="777,290,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" TextChanged="TextCheck"/>
 
-        <Label Content="Password" HorizontalAlignment="Left" Margin="777,325,0,0" VerticalAlignment="Top" Width="107" Height="65" FontSize="24"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="777,325,0,0" VerticalAlignment="Top" Width="126" Height="65" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="777,358,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
 
-        <Label Content="Password Confirm" HorizontalAlignment="Left" Margin="771,390,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <Label Content="Password Confirm" HorizontalAlignment="Left" Margin="771,390,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <PasswordBox x:Name="PasswordConfirm"  HorizontalAlignment="Left" Margin="775,425,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" PasswordChanged="PasswordChange"/>
 
-        <Label Content="Email Address" HorizontalAlignment="Left" Margin="771,455,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="771,455,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name="Email"  HorizontalAlignment="Left" Margin="775,490,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
 
-        <Label Content="University" HorizontalAlignment="Left" Margin="775,520,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24"/>
+        <Label Content="University" HorizontalAlignment="Left" Margin="775,520,0,0" VerticalAlignment="Top" Width="223" Height="65" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name="University"  HorizontalAlignment="Left" Margin="775,555,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5" TextChanged="TextCheck"/>
 
 
