@@ -16,6 +16,32 @@
             </RadialGradientBrush>
         </Grid.Background>
 
+        <Ellipse HorizontalAlignment="Left" Height="621" Margin="175,119,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="602" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+
+
+
+
+        <Rectangle HorizontalAlignment="Left" Height="583" Margin="756,149,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="368" Opacity="0.5">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+
+
+
         <Image Margin="187,257,423,230" Source="sstationlogo.png" Stretch="Fill"/>
 
         <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Margin="771,611,0,0" VerticalAlignment="Top" Width="333"  Height="84" FontSize="40" IsEnabled="False" Click="CreateClick"/>
