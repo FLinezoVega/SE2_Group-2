@@ -40,7 +40,15 @@
                 <GradientStop Color="#FF40D19B" Offset="0.996"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-8,-4,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
+        <Rectangle HorizontalAlignment="Left" Height="656" Margin="139,173,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="966" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-9,-19,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
             <Ellipse.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF53ACB0" Offset="0.812"/>
@@ -48,7 +56,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <Image Margin="31,56,981,722" Source="sstationlogo.png" Stretch="Fill"/>
+        <Image Margin="30,41,982,737" Source="sstationlogo.png" Stretch="Fill"/>
         <Ellipse HorizontalAlignment="Left" Height="120" Margin="376,30,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
