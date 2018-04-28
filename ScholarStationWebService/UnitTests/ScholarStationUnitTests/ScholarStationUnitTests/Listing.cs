@@ -29,7 +29,7 @@ namespace DataClasses
         [DataMember]
         public int ListingID//fix m, update to reflect final decision on database ID incrementing or whatever
         {
-            get { return this.listingID < 0 ? this.listingID : -1; }
+            get { return this.listingID; }
             set { this.listingID = value; }
         }
         [DataMember]
@@ -44,6 +44,12 @@ namespace DataClasses
         {
             get { return this.body != null ? this.body : "Null"; }
             set { this.body = value; }
+        }
+
+        [DataMember]
+        public String AuthorVerification
+        {
+            get; set;
         }
 
         [DataMember]
@@ -67,15 +73,13 @@ namespace DataClasses
             set { this.subject = value; }
         }
 
-
         public Listing()
         {
             listingID = -1;
             listingType = -1;
         }
 
-
-
+        
         public bool isNull()
         {
             return (author == null && listingID < 0 && heading == null && body == null);
