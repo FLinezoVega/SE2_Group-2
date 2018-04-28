@@ -26,5 +26,10 @@ namespace DataClasses
             get;  set;
         }
 
+        string Email
+        {
+            get; set;
+        }
+
     }
 }

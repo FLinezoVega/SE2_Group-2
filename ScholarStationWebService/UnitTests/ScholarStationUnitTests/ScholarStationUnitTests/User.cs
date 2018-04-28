@@ -29,6 +29,40 @@ namespace DataClasses
             set { this.bio = value; }
         }
 
+        [DataMember(Name = "UType")]
+        public UserType UType
+        {
+            get; set;
+        }
+
+        [DataMember(Name = "Verified")]
+        public bool Verified
+        {
+            get; set;
+        }
+
+        [DataMember(Name = "Score")]
+        public string Score
+        {
+            get; set;
+        }
+
+        [DataMember(Name = "Verification")]
+        public string Verfication
+        {
+            get
+            {
+                if (Verified)
+                {
+                    return "Verfied with " + University;
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
         [DataMember(Name = "University")]
         public string University
         {

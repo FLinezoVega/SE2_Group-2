@@ -17,6 +17,7 @@ namespace ScholarStationUnitTests
             userB.University = "Clown College";
             userB.Bio = "One time I ate sand in math class.";
             userB.Email = "sandy@students.uwf.edu";
+            userB.Score = "5";
             var sut = userB;
 
             var userA = new User();
@@ -24,15 +25,24 @@ namespace ScholarStationUnitTests
             userA.University = null;
             userA.Bio = null;
             userA.Email = null;
+            userA.Score = null;
             var sut1 = userA;
+
+            var userVerified = new User();
+            var userScore = new User();
 
             //Act
             var sutResult = sut.isNull();
             var sut1Result = sut1.isNull();
 
+            userVerified.Verified = true;
+            
+
             //Assert
             Assert.AreNotEqual(sutResult, true);
             Assert.AreEqual(sut1Result, true);
+            Assert.IsTrue(userVerified.Verified);
+
 
         }
     }

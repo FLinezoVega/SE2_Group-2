@@ -8,6 +8,6 @@ namespace DataClasses
 {
     public enum UserType
     {
-        Basic, Tutor, Admin, Faculty
+        User, Faculty, Admin
     };
 }
