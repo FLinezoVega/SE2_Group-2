@@ -34,7 +34,7 @@
         <ListView x:Name="AppointmentView" HorizontalAlignment="Left" Height="516" Margin="346,132,0,0" VerticalAlignment="Top" Width="613" ItemTemplate="{StaticResource AppointmentDataTemplate}" SelectionChanged="SelectionChanged"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="60" Height="29.96" Click="BackButtonClick"/>
         <Label Content="Appointments for" HorizontalAlignment="Left" Margin="346,55,0,0" VerticalAlignment="Top" Height="52" Width="236" FontSize=" 25" FontFamily="Arial Rounded MT Bold"/>
-        <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="582,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="186" FontSize="25" FontFamily="Arial Rounded MT Bold"/>
+        <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="573,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="186" FontSize="25" FontFamily="Arial Rounded MT Bold"/>
         <Button x:Name="ChooseButton" Content="Choose" HorizontalAlignment="Left" Margin="504,653,0,0" VerticalAlignment="Top" Width="301" Height="40" Click="ChooseButtonClick" IsEnabled="False"/>
         <Ellipse HorizontalAlignment="Left" Height="247" Margin="6,42,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
             <Ellipse.Fill>
