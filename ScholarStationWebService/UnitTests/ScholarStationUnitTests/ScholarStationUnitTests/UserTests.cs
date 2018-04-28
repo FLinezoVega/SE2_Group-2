@@ -18,6 +18,7 @@ namespace ScholarStationUnitTests
             userB.Bio = "One time I ate sand in math class.";
             userB.Email = "sandy@students.uwf.edu";
             userB.Score = "5";
+            userB.Verified = true;
             var sut = userB;
 
             var userA = new User();
@@ -36,12 +37,14 @@ namespace ScholarStationUnitTests
             var sut1Result = sut1.isNull();
 
             userVerified.Verified = true;
-            
+            userB.Verfication.Equals(userB);
 
             //Assert
             Assert.AreNotEqual(sutResult, true);
             Assert.AreEqual(sut1Result, true);
             Assert.IsTrue(userVerified.Verified);
+            Assert.AreEqual("Verfied with " + userB.University, userB.Verfication);
+
 
 
         }
