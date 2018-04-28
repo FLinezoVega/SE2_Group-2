@@ -13,8 +13,24 @@
                 <GradientStop Color="#FF63A88F" Offset="1"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button Content="Sign In" HorizontalAlignment="Left" Margin="425,589,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="425,701,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="254" Margin="375,573,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="438" Opacity="0.5">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="654" Margin="239,31,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="688" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button Content="Sign In" HorizontalAlignment="Left" Margin="425,603,0,0" VerticalAlignment="Top" Width="333" Click="SignInButtonClick" Height="84" FontSize="40"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="425,713,0,0" VerticalAlignment="Top" Width="333" Click="SignUpButtonClick" Height="84" FontSize="40"/>
         <Image Margin="321,169,333,346" Source="sstationlogo.png" Stretch="Fill"/>
         <Label Content="Scholar Station" HorizontalAlignment="Center" Margin="403,499,415,0" VerticalAlignment="Top" Width="382" Height="77" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
     </Grid>

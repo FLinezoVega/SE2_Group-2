@@ -13,6 +13,24 @@
                 <GradientStop Color="#FF53ACB0" Offset="0.618"/>
             </RadialGradientBrush>
         </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="427" Margin="417,325,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="368" Opacity="0.5">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Ellipse HorizontalAlignment="Left" Height="512" Margin="339,-12,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="510" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
         <Button Content="Login" HorizontalAlignment="Left" Margin="439,664,0,0" VerticalAlignment="Top" Width="327" Click="LoginButtonClick" Height="60" FontSize="40"/>
         <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="30" Margin="439,453,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" FontSize="20" />
         <PasswordBox x:Name="PasswordTextBox"  HorizontalAlignment="Left" Margin="439,566,0,0" VerticalAlignment="Top" Width="327" Height="30" FontSize="20" RenderTransformOrigin="0.5,0.5">

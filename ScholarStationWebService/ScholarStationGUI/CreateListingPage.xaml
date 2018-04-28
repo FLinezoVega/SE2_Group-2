@@ -14,19 +14,90 @@
                 <GradientStop Color="#FF89CFB5" Offset="0.438"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Button x:Name="Back" Content="Go Back" HorizontalAlignment="Left" Margin="43,739,0,0" VerticalAlignment="Top" Width="158" Height="68" Click="BackButtonClick"/>
-        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="90,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144"/>
-        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="88,129,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35"/>
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-8,-10,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="31,58,971,705" Source="sstationlogo.png" Stretch="Fill"/>
+
+
+        <Rectangle HorizontalAlignment="Right" Height="485" Margin="0,282,24,0" StrokeThickness="5" VerticalAlignment="Top" Width="1118" Opacity="0.5">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Ellipse HorizontalAlignment="Left" Height="170" Margin="210,12,0,0" VerticalAlignment="Top" Width="784" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.679"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF29AC7B" Offset="0.902"/>
+                    <GradientStop Color="#FF00FFE8" Offset="0.749"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="62,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144">
+            <TextBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.OpacityMask>
+        </TextBox>
+        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="60,177,0,0" VerticalAlignment="Top" Width="192" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35" Background="White">
+            <TextBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.OpacityMask>
+        </TextBox>
         <Button x:Name="CreateButton" Content="Create Listing" HorizontalAlignment="Left" Margin="416,778,0,0" Visibility="Hidden" VerticalAlignment="Top" Width="401" Height="67.96" Click="CreateListingButtonClick"/>
-        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,320,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
-        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,466,0,0" VerticalAlignment="Top" Width="280" Height="76"/>
-        <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,611,0,0" VerticalAlignment="Top" Width="280" Height="75"/>
+        <ComboBox x:Name="UniversityBox" HorizontalAlignment="Left" Margin="870,358,0,0" VerticalAlignment="Top" Width="280" Height="45">
+            <ComboBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.OpacityMask>
+        </ComboBox>
+        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="870,504,0,0" VerticalAlignment="Top" Width="280" Height="45">
+            <ComboBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.OpacityMask>
+        </ComboBox>
+        <ComboBox x:Name="SubjectBox" HorizontalAlignment="Left" Margin="870,649,0,0" VerticalAlignment="Top" Width="280" Height="45">
+            <ComboBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.OpacityMask>
+        </ComboBox>
         <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
-        <Label Content="Listing Description" HorizontalAlignment="Left" Margin="88,265,0,0" VerticalAlignment="Top" Width="254" Height="50" FontSize="30"/>
-        <Label Content="University" HorizontalAlignment="Left" Margin="870,265,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Type" HorizontalAlignment="Left" Margin="870,416,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
-        <Label Content="Subject" HorizontalAlignment="Left" Margin="870,561,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30"/>
+        <Label Content="Listing Description" HorizontalAlignment="Left" Margin="88,303,0,0" VerticalAlignment="Top" Width="284" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="University" HorizontalAlignment="Left" Margin="870,303,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="870,454,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Subject" HorizontalAlignment="Left" Margin="870,599,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Create New Listing" HorizontalAlignment="Center" Margin="368,58,352,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
 
 
