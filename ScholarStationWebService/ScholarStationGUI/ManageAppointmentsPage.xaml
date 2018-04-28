@@ -88,7 +88,15 @@
                         <ColumnDefinition Width="14*"/>
                         <ColumnDefinition Width="1054*"/>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="487" Margin="12,65,0,0" VerticalAlignment="Top" Width="770" ItemTemplate="{StaticResource ClientViewDataTemplate}" Grid.Column="3"/>
+                    <Rectangle HorizontalAlignment="Left" Height="535" Margin="0,10,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="752" Opacity="0.75" Grid.Column="3">
+                        <Rectangle.Fill>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF37AEAE" Offset="0.851"/>
+                                <GradientStop Color="#FF7D9593" Offset="0.514"/>
+                            </RadialGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="443" Margin="12,65,0,0" VerticalAlignment="Top" Width="708" ItemTemplate="{StaticResource ClientViewDataTemplate}" Grid.Column="3"/>
                     <Label Content="Client View" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="180" Height="50" FontSize="30" Grid.Column="3" FontFamily="Arial Rounded MT Bold"/>
                 </Grid>
             </TabItem>
@@ -105,10 +113,26 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="833*"/>
                     </Grid.ColumnDefinitions>
+                    <Rectangle HorizontalAlignment="Left" Height="400" Margin="450,14,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="391" Opacity="0.75" Grid.Column="2">
+                        <Rectangle.Fill>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF7DAE4D" Offset="0.847"/>
+                                <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                            </RadialGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="546" Margin="16,10,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="444" Opacity="0.75" Grid.ColumnSpan="3">
+                        <Rectangle.Fill>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF7DAE4D" Offset="0.847"/>
+                                <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                            </RadialGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
                     <ListView x:Name ="TutorView" HorizontalAlignment="Left" Height="485" Margin="6,55,0,0" VerticalAlignment="Top" Width="426" ItemTemplate="{StaticResource TutorViewDataTemplate}" Grid.Column="2"/>
-                    <xctk:DateTimePicker x:Name ="date" HorizontalAlignment="Left" Height="45" Margin="450,69,0,0" VerticalAlignment="Top" Width="360"  FontSize="20"  Grid.Column="2" ValueChanged="dateValUpdate"/>
-                    <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="465,18,0,0" VerticalAlignment="Top" Width="248" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
-                    <Label Content="Tutor View" HorizontalAlignment="Left" Margin="14.5,2,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
+                    <xctk:DateTimePicker x:Name ="date" HorizontalAlignment="Left" Height="45" Margin="462,56,0,0" VerticalAlignment="Top" Width="360"  FontSize="20"  Grid.Column="2" ValueChanged="dateValUpdate"/>
+                    <Label Content="New Appt. Time" HorizontalAlignment="Left" Margin="462,15,0,0" VerticalAlignment="Top" Width="248" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
+                    <Label Content="Tutor View" HorizontalAlignment="Left" Margin="15,12,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" Grid.Column="2" FontFamily="Arial Rounded MT Bold"/>
                 </Grid>
             </TabItem>
         </TabControl>
