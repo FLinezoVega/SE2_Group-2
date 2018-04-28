@@ -43,24 +43,6 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Ellipse HorizontalAlignment="Left" Height="247" Margin="24,12,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5" Grid.RowSpan="2" Grid.Row="1">
-            <Ellipse.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
-                    <GradientStop Color="White" Offset="0.647"/>
-                </RadialGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Image Margin="63,68,939,428" Source="sstationlogo.png" Stretch="Fill" Grid.Row="1" Grid.RowSpan="2"/>
-
-        <Rectangle HorizontalAlignment="Left" Height="395" Margin="44,20,0,0" Grid.Row="2" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
-                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
 
         <Ellipse HorizontalAlignment="Left" Height="120" Margin="-50,6,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
             <Ellipse.RenderTransform>
@@ -79,8 +61,36 @@
             </Ellipse.Fill>
         </Ellipse>
 
-        <ListView x:Name="ListingView" Margin="338,62,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Grid.RowSpan="3"/>
-        <StackPanel HorizontalAlignment="Left" Height="465" Margin="63,20,0,0" VerticalAlignment="Top" Width="235" Grid.Row="2" Grid.RowSpan="2">
+        <Rectangle HorizontalAlignment="Left" Height="702" Margin="321,12,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="802" Opacity="0.75" Grid.Row="1" Grid.RowSpan="3">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="24,24,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5" Grid.RowSpan="2" Grid.Row="1">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="63,80,939,416" Source="sstationlogo.png" Stretch="Fill" Grid.Row="1" Grid.RowSpan="2"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="395" Margin="44,32,0,0" Grid.Row="2" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <ListView x:Name="ListingView" Margin="338,62,90,41" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Grid.RowSpan="2"/>
+        <StackPanel HorizontalAlignment="Left" Height="465" Margin="63,32,0,0" VerticalAlignment="Top" Width="235" Grid.Row="2" Grid.RowSpan="2">
             <Label Content="University:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <ComboBox x:Name="UniversityBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left"/>
             <Label Content="Subject:" Height="40" Margin="10,0,10,0" FontSize="20" Visibility="Hidden"/>
@@ -93,7 +103,7 @@
             <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
 
         </StackPanel>
-        <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="607,117,358,21" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False" Grid.Row="3"/>
+        <Button x:Name ="ViewAppointmentButton" Content="View Appointments for Selected" Margin="595,449,370,145" FontSize="15" Click="ViewAppointmentsClick" IsEnabled="False" Grid.Row="2" Grid.RowSpan="2"/>
         <Label Content="Listing Info" HorizontalAlignment="Left" Margin="338,22,0,0" VerticalAlignment="Top" Width="175" Height="50" FontSize="30" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Author &amp; Location" HorizontalAlignment="Left" Margin="871,27,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" Grid.Row="1" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Listing Search" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic" Grid.RowSpan="2"/>

@@ -32,6 +32,15 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="734" Margin="324,120,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="799" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
         <Ellipse HorizontalAlignment="Left" Height="247" Margin="14,86,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
             <Ellipse.Fill>
                 <RadialGradientBrush>

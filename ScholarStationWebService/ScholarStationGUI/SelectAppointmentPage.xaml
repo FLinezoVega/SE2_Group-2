@@ -23,12 +23,19 @@
                 <GradientStop Color="#FF659E89" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="AppointmentView" HorizontalAlignment="Left" Height="716" Margin="277,102,0,0" VerticalAlignment="Top" Width="613" ItemTemplate="{StaticResource AppointmentDataTemplate}" SelectionChanged="SelectionChanged">
-        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="684" Margin="348,75,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="688" Opacity="0.75">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6B8787" Offset="0.851"/>
+                    <GradientStop Color="#FF7D9593" Offset="0.075"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ListView x:Name="AppointmentView" HorizontalAlignment="Left" Height="516" Margin="382,132,0,0" VerticalAlignment="Top" Width="613" ItemTemplate="{StaticResource AppointmentDataTemplate}" SelectionChanged="SelectionChanged"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="60" Height="29.96" Click="BackButtonClick"/>
-        <Label Content="Appointments for" HorizontalAlignment="Left" Margin="266,45,0,0" VerticalAlignment="Top" Height="52" Width="236" FontSize=" 25" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Appointments for" HorizontalAlignment="Left" Margin="382,75,0,0" VerticalAlignment="Top" Height="52" Width="236" FontSize=" 25" FontFamily="Arial Rounded MT Bold"/>
         <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="482,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="186" FontSize="25"/>
-        <Button x:Name="ChooseButton" Content="Choose" HorizontalAlignment="Left" Margin="430,823,0,0" VerticalAlignment="Top" Width="301" Height="40" Click="ChooseButtonClick" IsEnabled="False"/>
+        <Button x:Name="ChooseButton" Content="Choose" HorizontalAlignment="Left" Margin="540,673,0,0" VerticalAlignment="Top" Width="301" Height="40" Click="ChooseButtonClick" IsEnabled="False"/>
         <Ellipse HorizontalAlignment="Left" Height="247" Margin="6,42,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
             <Ellipse.Fill>
                 <RadialGradientBrush>
