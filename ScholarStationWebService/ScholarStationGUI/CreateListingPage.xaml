@@ -51,7 +51,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="62,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144">
+        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="92,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="619" FontSize="30" TextChanged ="textCheck" MaxLength="144">
             <TextBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -59,7 +59,7 @@
                 </LinearGradientBrush>
             </TextBox.OpacityMask>
         </TextBox>
-        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="60,177,0,0" VerticalAlignment="Top" Width="192" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Listing Title" HorizontalAlignment="Left" Margin="90,175,0,0" VerticalAlignment="Top" Width="192" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name ="BodyBox" HorizontalAlignment="Left" Height="366" Margin="90,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="727" TextChanged ="textCheck" MaxLength="500" FontSize="35" Background="White">
             <TextBox.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
