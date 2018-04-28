@@ -40,7 +40,7 @@
                 <GradientStop Color="#FF40D19B" Offset="0.996"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-2,2,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-8,-4,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
             <Ellipse.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF53ACB0" Offset="0.812"/>
@@ -48,7 +48,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <Image Margin="37,62,975,730" Source="sstationlogo.png" Stretch="Fill"/>
+        <Image Margin="31,56,981,722" Source="sstationlogo.png" Stretch="Fill"/>
         <Ellipse HorizontalAlignment="Left" Height="120" Margin="376,30,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
@@ -65,7 +65,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <TabControl HorizontalAlignment="Left" Height="617" Margin="150,159,0,0" VerticalAlignment="Top" Width="891">
+        <TabControl HorizontalAlignment="Left" Height="617" Margin="172,173,0,0" VerticalAlignment="Top" Width="891">
             <TabItem x:Name="Client_View" Header="Client View" Height="38" VerticalAlignment="Bottom" Margin="-2,-16,-17,0">
                 <Grid Margin="0,0,-2,0">
                     <Grid.Background>

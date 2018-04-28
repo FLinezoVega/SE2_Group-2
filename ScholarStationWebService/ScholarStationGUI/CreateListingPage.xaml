@@ -22,7 +22,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <Image Margin="31,58,971,727" Source="sstationlogo.png" Stretch="Fill"/>
+        <Image Margin="31,58,971,705" Source="sstationlogo.png" Stretch="Fill"/>
 
 
         <Rectangle HorizontalAlignment="Right" Height="485" Margin="0,282,24,0" StrokeThickness="5" VerticalAlignment="Top" Width="1118" Opacity="0.5">
