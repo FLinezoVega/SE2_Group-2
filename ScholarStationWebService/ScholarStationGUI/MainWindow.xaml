@@ -8,10 +8,11 @@
     <DockPanel Background="#06225e">
         <Frame NavigationUIVisibility ="Hidden" x:Name="_mainFrame" >
             <Frame.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF45EAAE" Offset="1"/>
-                    <GradientStop Color="#FF659E89"/>
-                </RadialGradientBrush>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF45EAAE" Offset="0.231"/>
+                    <GradientStop Color="#FF5E937F" Offset="0.035"/>
+                    <GradientStop Color="#FF00C5FF" Offset="0.129"/>
+                </LinearGradientBrush>
             </Frame.Background>
         </Frame>
     </DockPanel>

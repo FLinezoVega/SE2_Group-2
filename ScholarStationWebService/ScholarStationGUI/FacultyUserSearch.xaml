@@ -31,6 +31,16 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Ellipse HorizontalAlignment="Left" Height="240" Margin="-8,82,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="280" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="36,139,968,626" Source="sstationlogo.png" Stretch="Fill"/>
+
         <Ellipse HorizontalAlignment="Left" Height="120" Margin="-50,6,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
@@ -48,7 +58,7 @@
             </Ellipse.Fill>
         </Ellipse>
 
-        <Rectangle HorizontalAlignment="Left" Height="422" Margin="10,160,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="248" Opacity="0.75">
+        <Rectangle HorizontalAlignment="Left" Height="422" Margin="8,260,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="248" Opacity="0.75">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF6B8787" Offset="0.851"/>
@@ -58,8 +68,8 @@
         </Rectangle>
 
         <ListView x:Name="UserView" Margin="338,136,90,132" ItemTemplate="{StaticResource UserViewDataTemplate}" SelectionChanged="SelectionChanged"/>
-        <StackPanel HorizontalAlignment="Left" Height="880" Margin="23,160,0,-140" VerticalAlignment="Top" Width="235">
-            <Label Content="Search for a User:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
+        <StackPanel HorizontalAlignment="Left" Height="880" Margin="37,260,0,-240" VerticalAlignment="Top" Width="235">
+            <Label Content="Search for a User:" Height="40" Margin="0,5,20,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <TextBox x:Name="SearchBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left" TextChanged="SearchBox_TextChanged"/>
             <Button x:Name="SearchButton" Content="Search" Margin="0, 45, 0, 0" Height="60" FontSize="22" FontWeight="Bold" Click="SearchButtonClick" Width="180" HorizontalAlignment="Left"/>
             <!--<Button Content="Create New Listing" Margin="0, 150, 0, 0" Height="60" FontSize="18" Click="NavigateToCreateClick" Width="180" HorizontalAlignment="Left"/>-->
@@ -67,7 +77,7 @@
             <!-- <Button Content="Manage Appointments" Margin="0, 30, 0, 0" Height="60" FontSize="17" Click="NavigateToCreateAppointmentClick" Width="180" HorizontalAlignment="Left"/>-->
 
         </StackPanel>
-        <Button x:Name ="VerifyButton" Content="Toggle Verification of Selected" Margin="10,465,955,375" FontSize="15" Click="VerifyClick" IsEnabled="False"/>
+        <Button x:Name ="VerifyButton" Content="Toggle Verification of Selected" Margin="12,565,953,275" FontSize="15" Click="VerifyClick" IsEnabled="False"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="338,96,0,0" VerticalAlignment="Top" Width="168" Height="50" FontSize="30" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Status" HorizontalAlignment="Left" Margin="871,100,0,0" VerticalAlignment="Top" Width="252" Height="50" FontSize="24" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Verify Users" HorizontalAlignment="Center" Margin="10,32,710,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="48" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>

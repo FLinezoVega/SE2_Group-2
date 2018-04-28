@@ -29,5 +29,14 @@
         <Label Content="Appointments for" HorizontalAlignment="Left" Margin="266,45,0,0" VerticalAlignment="Top" Height="52" Width="236" FontSize=" 25" FontFamily="Arial Rounded MT Bold"/>
         <TextBlock x:Name="TutorBox" HorizontalAlignment="Left" Margin="482,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="186" FontSize="25"/>
         <Button x:Name="ChooseButton" Content="Choose" HorizontalAlignment="Left" Margin="430,823,0,0" VerticalAlignment="Top" Width="301" Height="40" Click="ChooseButtonClick" IsEnabled="False"/>
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="6,42,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="45,102,957,660" Source="sstationlogo.png" Stretch="Fill"/>
     </Grid>
 </Page>

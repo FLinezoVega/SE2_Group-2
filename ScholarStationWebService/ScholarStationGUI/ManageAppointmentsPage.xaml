@@ -40,7 +40,16 @@
                 <GradientStop Color="#FF40D19B" Offset="0.996"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Ellipse HorizontalAlignment="Left" Height="120" Margin="22,0,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="-2,2,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="37,62,975,730" Source="sstationlogo.png" Stretch="Fill"/>
+        <Ellipse HorizontalAlignment="Left" Height="120" Margin="376,30,0,0" VerticalAlignment="Top" Width="450" Opacity="0.255" StrokeThickness="5" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -56,7 +65,7 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <TabControl HorizontalAlignment="Left" Height="617" Margin="48,159,0,0" VerticalAlignment="Top" Width="891">
+        <TabControl HorizontalAlignment="Left" Height="617" Margin="150,159,0,0" VerticalAlignment="Top" Width="891">
             <TabItem x:Name="Client_View" Header="Client View" Height="38" VerticalAlignment="Bottom" Margin="-2,-16,-17,0">
                 <Grid Margin="0,0,-2,0">
                     <Grid.Background>
@@ -97,6 +106,6 @@
         </TabControl>
         <!-- <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="44" Click="BackButtonClick" Margin="1032,732,0,0"/>-->
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="1014,46.719,0,0" VerticalAlignment="Top" Width="91" Height="45" Click="CreateButtonClick" Visibility="Hidden"/>
-        <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="50,28,670,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Appointment Manager" HorizontalAlignment="Center" Margin="409,58,321,0" VerticalAlignment="Top" Width="480" Height="76" FontSize="36" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" FontStyle="Italic"/>
     </Grid>
 </Page>

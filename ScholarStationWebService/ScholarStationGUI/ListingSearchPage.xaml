@@ -43,7 +43,17 @@
                 <GradientStop Color="#FF879B93" Offset="0.536"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="395" Margin="10,97,0,0" Grid.Row="1" Grid.RowSpan="2" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
+        <Ellipse HorizontalAlignment="Left" Height="247" Margin="24,12,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="271" Opacity="0.5" Grid.RowSpan="2" Grid.Row="1">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF53ACB0" Offset="0.812"/>
+                    <GradientStop Color="White" Offset="0.647"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image Margin="63,68,939,428" Source="sstationlogo.png" Stretch="Fill" Grid.Row="1" Grid.RowSpan="2"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="395" Margin="44,20,0,0" Grid.Row="2" StrokeThickness="5" VerticalAlignment="Top" Width="225" Opacity="0.75">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF6B8787" Offset="0.851"/>
@@ -70,7 +80,7 @@
         </Ellipse>
 
         <ListView x:Name="ListingView" Margin="338,62,90,132" ItemTemplate="{StaticResource ListingViewDataTemplate}" SelectionChanged="SelectionChanged" Grid.Row="1" Grid.RowSpan="3"/>
-        <StackPanel HorizontalAlignment="Left" Height="880" Margin="29,97,0,-151" VerticalAlignment="Top" Width="235" Grid.Row="1" Grid.RowSpan="3">
+        <StackPanel HorizontalAlignment="Left" Height="465" Margin="63,20,0,0" VerticalAlignment="Top" Width="235" Grid.Row="2" Grid.RowSpan="2">
             <Label Content="University:" Height="40" Margin="10,5,10,0" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <ComboBox x:Name="UniversityBox" FontSize="20" Height="40" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Left"/>
             <Label Content="Subject:" Height="40" Margin="10,0,10,0" FontSize="20" Visibility="Hidden"/>
