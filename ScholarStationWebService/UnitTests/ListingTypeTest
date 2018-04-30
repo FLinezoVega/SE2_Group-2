@@ -1,0 +1,39 @@
+/* does not currently work
+ * 
+ * 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ScholarStationUnitTests;
+using Moq;
+using DataClasses;
+
+
+namespace ScholarStationUnitTests
+{
+    [TestClass]
+    public class ListingTypeTest
+    {
+      
+
+        [TestMethod]
+        public void TestListingType()
+        {
+            //Arrange
+            var type1 = new ListingType();
+            type1 = 1;
+            var sut = type1;
+
+            var type2 = new ListingType();
+            type2 = 2;
+            var sut = type2;
+
+            //Act
+            var sutResult = sut.ListingType();
+
+            //Assert
+            Assert.AreEqual(sutResult, 1);
+            Assert.AreEqual(sutResult, 2);
+
+        }
+    }
+
+}
